@@ -4,8 +4,8 @@ import "./Carousel.css";
 
 export default function Carouselbar() {
   return (
-    <section class="home" id="home">
-    <div class="slide">
+    <section className="home" id="home">
+    <div className="slide">
     <Carousel fade>
       <Carousel.Item className="image">
         <img
@@ -14,7 +14,7 @@ export default function Carouselbar() {
           alt="trekking"
         />
         <Carousel.Caption>
-        <div class="content">
+        <div className="content">
             <h3>Trekking Collections</h3>
             <span>Best Deals- Upto 70% Off</span>
             <p>
@@ -22,7 +22,7 @@ export default function Carouselbar() {
               the essential trekking items that should be a part of your
               backpack.Top Brands. Huge Selection. No Cost EMI Available.
             </p>
-            <a href="#" class="btns">Explore Products</a>
+            <a href="#" className="btns">Explore Products</a>
           </div>   
                </Carousel.Caption>
       </Carousel.Item>
@@ -35,7 +35,7 @@ export default function Carouselbar() {
         />
 
         <Carousel.Caption>
-        <div class="content">
+        <div className="content">
             <h3>Travel Essential Bags</h3>
             <span>Lowest Price- Best Value</span>
             <p>
@@ -43,7 +43,7 @@ export default function Carouselbar() {
               Buy now! Best Deals. Top Brands. Huge Selection. No Cost EMI
               Available. Low Prices. Great Offers. Easy & Fast Delivery.
             </p>
-            <a href="#" class="btns">Explore Products</a>
+            <a href="#" className="btns">Explore Products</a>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
@@ -59,15 +59,15 @@ export default function Carouselbar() {
               alt="shoe-text"
             />
         <Carousel.Caption>
-        <div class="content">
-            <h3 class="type-store">Nike Travel Shoes</h3>
-            <span class="discount">Min. 40% Off</span>
-            <p class="desc-store">
+        <div className="content">
+            <h3 className="type-store">Nike Travel Shoes</h3>
+            <span className="discount">Min. 40% Off</span>
+            <p className="desc-store">
               Want to run faster? Not ready yet? Try our Travel Shoes to help
               you step towards running faster- FOREVER FASTER. Shop from the
               latest collection of shoes available in various brands.
             </p>
-            <a href="./pages/products.html" class="btns">Explore Products</a>
+            <a href="./pages/products.html" className="btns">Explore Products</a>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
