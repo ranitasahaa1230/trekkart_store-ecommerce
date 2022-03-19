@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./component/Header/header";
-// import {Home} from "./pages";
+import {Home} from "./pages";
 import Carouselbar from "./pages/Carousel/Carousel";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
         <Header/>
         <Carouselbar/>
-        {/* <Home/> */}
+        <Home/>
     </div>
   );
 }
