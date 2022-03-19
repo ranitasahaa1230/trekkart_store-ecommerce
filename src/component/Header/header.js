@@ -27,9 +27,9 @@ export default function Header() {
       </form>
 
       <div className="font-icons">
-        <a href="#" className="fas fa-heart"></a>
-        <a href="#" className="fas fa-shopping-cart"></a>
-        <a href="#" className="fas fa-user"></a>
+        <a href="/product.html" className="fas fa-heart"></a>
+        <a href="/product.html" className="fas fa-shopping-cart"></a>
+        <a href="/product.html" className="fas fa-user"></a>
       </div>
     </header>
     </div>
