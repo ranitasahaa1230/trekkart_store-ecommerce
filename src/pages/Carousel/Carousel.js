@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Carousel.css";
 
 export default function Carouselbar() {
@@ -22,7 +23,7 @@ export default function Carouselbar() {
               the essential trekking items that should be a part of your
               backpack.Top Brands. Huge Selection. No Cost EMI Available.
             </p>
-            <a href="#" className="btns">Explore Products</a>
+            <Link to="#" className="btns">Explore Products</Link>
           </div>   
                </Carousel.Caption>
       </Carousel.Item>
@@ -43,7 +44,7 @@ export default function Carouselbar() {
               Buy now! Best Deals. Top Brands. Huge Selection. No Cost EMI
               Available. Low Prices. Great Offers. Easy & Fast Delivery.
             </p>
-            <a href="#" className="btns">Explore Products</a>
+            <Link to="#" className="btns">Explore Products</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
@@ -67,7 +68,7 @@ export default function Carouselbar() {
               you step towards running faster- FOREVER FASTER. Shop from the
               latest collection of shoes available in various brands.
             </p>
-            <a href="./pages/products.html" className="btns">Explore Products</a>
+            <Link to="./pages/products.html" className="btns">Explore Products</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>

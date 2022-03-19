@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./header.css"
 
 export default function Header() {
@@ -27,9 +28,9 @@ export default function Header() {
       </form>
 
       <div className="font-icons">
-        <a href="/product.html" className="fas fa-heart"></a>
-        <a href="/product.html" className="fas fa-shopping-cart"></a>
-        <a href="/product.html" className="fas fa-user"></a>
+        <Link to="/product.html" className="fas fa-heart"></Link>
+        <Link to="/product.html" className="fas fa-shopping-cart"></Link>
+        <Link to="/product.html" className="fas fa-user"></Link>
       </div>
     </header>
     </div>
