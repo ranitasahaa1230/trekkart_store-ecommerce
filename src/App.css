@@ -46,8 +46,8 @@ body {
   --cta-color: #7e17c8;
   --wishlist: #ae2012;
   --shadow-card: 0 0 12px 0 var(--primary-color);
+  --shadow-colors: rgba(0, 0, 0, 0.616);
 }
-
 
 
 
@@ -92,15 +92,12 @@ body {
     color: var(--primary-color);
     font-weight: 800;
   }
-  .home .slide-container .slide .image .text {
+  .home .slide .image .text {
     width: 60%;
   }
-  .home #prev,
-  .home #next {
-    top: 85%;
-  }
-  .home .slide-container:nth-child(3) .slide .image .shoes {
-    margin: 0 2rem;
+
+  .home .slide .image:nth-child(3) img{
+    margin: 5rem 2rem;
   }
 
   header{
@@ -108,10 +105,10 @@ body {
   }
 
   header .class-form {
-    width: 100%;
+    /* width: 100%; */
     margin: 2rem 0;
   }
-  .home .slide-container .slide .content h3 {
+  .home .slide .content h3 {
     margin-top: 15rem;
   }
   .form-box, .cart-grid {
@@ -127,7 +124,7 @@ body {
   html {
     font-size: 50%;
   }
-  .home .slide-container .slide .image .text {
+  .home .slide .image .text {
     padding-bottom: 6rem;
   }
 }

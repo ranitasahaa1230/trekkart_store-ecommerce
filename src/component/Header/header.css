@@ -1,0 +1,90 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--primary-color);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 12px black;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(var(--secondary-color), var(--bg-code));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 900;
+}
+
+header .navbar a {
+  font-size: 1.7rem;
+  color: var(--bg-code);
+  margin: 0 1rem;
+}
+
+header .navbar a:hover {
+  color: var(--secondary-hover);
+}
+
+header .class-form {
+  display: flex;
+  align-items: center;
+  width: 40rem;
+  border-radius: 5rem;
+  height: 5rem;
+  border: 2px solid var(--bg-code);
+  background: var(--bg-code);
+  overflow: hidden;
+}
+
+header form .search-input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  padding: 0 2rem;
+  text-transform: none;
+}
+header form .search-label {
+  font-size: 2rem;
+  padding-right: 2rem;
+  color: var(--black-bg);
+  cursor: pointer;
+}
+
+header form label:hover {
+  color: var(--secondary-hover);
+}
+
+header .font-icons a {
+  font-size: 2.5rem;
+  color: var(--bg-code);
+  margin-left: 2rem;
+}
+
+header .font-icons a:hover {
+  color: var(--secondary-hover);
+}
+.logo-header {
+  display: flex;
+  align-items: center;
+}
+.logo-design {
+  width: 4rem;
+}
+
+.menu-bar {
+  font-size: 2.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--black-bg);
+  color: var(--bg-code);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: none;
+}

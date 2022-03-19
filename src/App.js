@@ -1,12 +1,14 @@
 import "./App.css";
+import Header from "./component/Header/header";
 import {Home} from "./pages";
-import Navbar from "./component/Navbar/Navbar";
+import Carouselbar from "./pages/Carousel/Carousel";
 
 function App() {
   return (
     <div className="App">
-        <Navbar/>
-        <Home/>
+        <Header/>
+        <Carouselbar/>
+        {/* <Home/> */}
     </div>
   );
 }

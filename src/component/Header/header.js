@@ -1,10 +1,10 @@
 import React from 'react'
-import "./Navbar.css"
+import "./header.css"
 
-export default function Navbar() {
+export default function Header() {
   return (
     <div>
-        <header>
+      <header>
       <div id="menu-bar" className="fas fa-bars menu-bar"></div>
       <div className="logo-header">
         <img src={require('../../assets/images/logo.png')} alt="logo" className="logo-design"/>
