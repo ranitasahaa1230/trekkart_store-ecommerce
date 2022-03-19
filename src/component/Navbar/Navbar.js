@@ -7,11 +7,7 @@ export default function Navbar() {
         <header>
       <div id="menu-bar" className="fas fa-bars menu-bar"></div>
       <div className="logo-header">
-        <img
-          src="assets\images\home-logo.png"
-         alt="logo"
-          className="logo-design"
-        />
+        <img src={require('../../assets/images/logo.png')} alt="logo" className="logo-design"/>
         <a href="/" className="logo">Trekkart Store</a>
       </div>
 
@@ -31,9 +27,9 @@ export default function Navbar() {
       </form>
 
       <div className="font-icons">
-        <a href="./pages/wishlist.html" className="fas fa-heart"></a>
-        <a href="./pages/cart.html" className="fas fa-shopping-cart"></a>
-        <a href="./pages/login.html" className="fas fa-user"></a>
+        <a href="#" className="fas fa-heart"></a>
+        <a href="#" className="fas fa-shopping-cart"></a>
+        <a href="#" className="fas fa-user"></a>
       </div>
     </header>
     </div>
