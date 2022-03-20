@@ -1,0 +1,40 @@
+.footer .box-container {
+    border: 2px solid var(--bg-code);
+    border-radius: 2rem 2rem 0 0;
+    background: var(--card-border-color);
+    padding: 3rem 1rem ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+ 
+  .footer .box-container .box h3 {
+    color: var(--black-bg);
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer .box-container .box h3:hover{
+      border-bottom: 2px solid var(--black-bg);
+      padding: 0;
+  }
+ 
+  .footer .box-container .box a,.footer .box-container .box span{
+    color: var(--card-color);
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+    display: block;
+    font-weight: 590;
+  }
+
+  
+  .footer .box-container .credit {
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid var(--card-color);
+    font-size: 1.6rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    color: var(--black-bg);
+  }

@@ -1,0 +1,106 @@
+.home .slide{
+    min-height: 100vh;
+    padding: 0 3%;
+    padding-top: 4rem;
+  }
+  .home .slide .image:nth-child(3) img{
+    padding-top: 8rem;
+  }
+  .home .slide .content {
+    animation: slideContent 0.5s linear 1s backwards;
+    margin: 0 0 -1rem 0;
+    background: var(--shadow-colors);
+    padding: 0.8rem 0;
+    border-radius: 2rem;
+  }
+  @keyframes slideContent {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+  }
+  .home .slide .image {
+    position: relative;
+    z-index: 0;
+    border-radius: 5rem;
+  }
+  
+  .home .slide .image .travel {
+    transform: rotate(0deg);
+    animation: shoeContent 0.3s linear;
+    border-radius: 5rem;
+    width: 100%;
+    height: 80vh;
+    padding: 1rem 0;
+  }
+   .home .slide .image .shoes {
+    transform: rotate(-35deg);
+    margin: 1rem 9rem;
+  }
+  @keyframes shoeContent {
+    0% {
+      transform: rotate(0deg) scale(0.5);
+    }
+  }
+  
+  .home .slide .image .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: shoeText 0.5s linear 0.5s backwards;
+  }
+  @keyframes shoeText {
+    0% {
+      opacity: 0;
+      top: -10rem;
+    }
+  }
+  .home .slide .content span {
+    font-size:2rem;
+    color: var(--secondary-hover);
+    font-weight: bold;
+  }
+  .home .slide .content h3 {
+    font-size: 3rem;
+    color: var(--bg-code);
+    font-style: italic;
+  }
+  .home .slide .content p {
+    font-size: 1.7rem;
+    color:var(--bg-code);
+    padding: 0.5rem 0;
+  } 
+  .btns {
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    font-size: 1.7rem;
+    color: var(--bg-code);
+    cursor: pointer;
+    background: var(--primary-color);
+    padding: 8px 10px ;
+   }
+
+  .btns:hover {
+    color: var(--bg-code);
+    opacity: 0.8;
+  }
+  .home .image:nth-child(3){
+    background: url("../../assets/images/home-bg-1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .home .image:nth-child(2){
+    background: url("../../assets/images/home-bg-2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .home .image:nth-child(1){
+    background: url("../../assets/images/home-bg-3.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+  } 
+  
