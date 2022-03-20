@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import {ProductCard, Filters} from "../../component";
+import {ProductCard, Filters} from "../../component/index";
+import "./Products.css";
 
 export function Products() {
   const [products, setProducts] = useState([]);
@@ -19,14 +20,16 @@ export function Products() {
   }, []);
 
   return(
-    <main class="main-product">
-    {/* <Filters/> */}
+  <div className="products-container">
+    <Filters/>
+    <main className="main-product">
     <h2>Showing All Products</h2>
-    <div class="section-products">
+    <div className="section-products">
       {products.map((product) => (
-        {/* <ProductCard product={product}/> */}
+        <ProductCard product={product} key={product._id}/>
       ))}
     </div>
     </main>
+    </div>
     )
 }

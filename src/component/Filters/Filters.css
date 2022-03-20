@@ -1,0 +1,58 @@
+h2{
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+.aside-product {
+    grid-area: aside;
+    box-shadow: var(--shadow-card);
+    border-right: 2px solid var(--black-bg);
+    margin: 0.5rem;
+    border-radius: 5px;
+    width: 270px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    z-index: 5;
+  }
+  ul {
+    list-style: none;
+  }
+
+  .flex-filters {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+  .btm-b {
+    border-bottom: 1px solid var(--black-bg);
+  }
+  .filters-desc {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .filters-desc:hover {
+    text-decoration: underline;
+    color: 1rem solid var(--primary-color);
+  }
+  .flex-categories {
+    padding: 12px;
+    margin: 5px 12px;
+  }
+  .filter-desc-categories {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .filter-sorts {
+    margin: 8px;
+    font-size: 1.5rem;
+  }
+  .filter-categories {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+input.filter-categories{
+    width: 1.5rem;
+    height: 1.2rem;
+}

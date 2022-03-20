@@ -1,20 +1,4 @@
-.main-product {
-    grid-area: main;
-    box-shadow: var(--shadow-card);
-    margin: 2rem;
-    border-radius: 5px;
-  }
-
-  .section-products {
-    margin: 2rem;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 4rem;
-  }
-  .cards {
+.cards {
     width: 25rem;
     overflow: hidden;
     height: max-content;
@@ -28,12 +12,12 @@
   }
   .cards-img {
     width: 100%;
-    height: auto;
+    height: 22rem;
     cursor: pointer;
   }
   .card-content {
     font-size: 1.6rem;
-    margin: 1rem;
+    /* margin:1rem 0.5rem; */
     color: var(--gray);
   }
   .card-grid {
@@ -42,13 +26,16 @@
     color: var(--black-bg);
     cursor: pointer;
     margin: 5px;
+    font-size: 1.8rem;
   }
+  
   .sm-gap,
   .cards-desc {
-    margin: 5px;
+    /* margin:0 5px; */
+    padding: 0;
+    margin: 0;
   }
   .cards-icon {
-    font-size: 2.4rem;
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--primary-color);
@@ -71,7 +58,6 @@
   }
   
   .grid-cards-icons {
-    margin: 5px;
     width: 22rem;
     border-radius: 5px;
     border: 2px solid var(--bg-code);
@@ -79,10 +65,14 @@
     color: var(--bg-code);
     cursor: pointer;
     background: var(--primary-color);
-    padding: 10px;
+    /* padding: 10px; */
+  }
+  .card-footer{
+    background: none;
+    border: 0;
   }
   .card-footer:hover {
-    opacity: 0.9;
+    opacity: 0.99;
   }
   .tag {
     position: absolute;

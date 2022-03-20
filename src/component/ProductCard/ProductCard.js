@@ -14,39 +14,39 @@ export function ProductCard({ product }) {
     rating,
   } = product;
   return (
-    <div class="section-main">
-         <div class="cards">
-              <div class="img-container">
+    <div className="section-main" key={id}>
+         <div className="cards">
+              <div className="img-container">
                 <Link to="/">
                   <img
                     src={img} alt={alt}
-                    class="grid-col-img cards-img"
+                    className="grid-col-img cards-img"
                 /></Link>
               </div>
               
-              <div class="card-content padding-s">
-                <h3 class="card-grid">
-                  Stylish Bags <i class="fas fa-heart cards-icon"></i>
+              <div className="card-content padding-s">
+                <h3 className="card-grid">
+                  Stylish Bags <i className="fas fa-heart cards-icon"></i>
                 </h3>
 
-                <span class="cards-desc">{description}</span>
+                {/* <span className="cards-desc">{description}</span> */}
 
-                <div class="sm-gap">
-                  <span class="txt-bold"> Rs.{newPrice}</span>
-                  <span class="txt-crossed-off">Rs.{originalPrice}</span>
-                  <span class="txt-high-light">10% Off</span>
+                <div className="sm-gap">
+                  <span className="txt-bold"> Rs.{newPrice}</span>
+                  <span className="txt-crossed-off">Rs.{originalPrice}</span>
+                  <span className="txt-high-light">10% Off</span>
                 </div>
 
-                <div class="card-footer">
+                <div className="card-footer">
                   <a href="./cart.html"
-                    ><button class="btn btn-text-icon-primary grid-cards-icons">
-                      <span class="btn-card-icon"
-                        ><i class="fas fa-shopping-cart"></i> </span>Add to Cart
+                    ><button className="btn btn-text-icon-primary grid-cards-icons">
+                      <span className="btn-card-icon"
+                        ><i className="fas fa-shopping-cart"></i> </span>Add to Cart
                     </button>
                   </a>
                 </div>
               </div>
-              <span class="tag">New</span>
+              <span className="tag">New</span>
             </div>
             </div>
   );

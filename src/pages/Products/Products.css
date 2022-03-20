@@ -1,0 +1,23 @@
+.products-container {
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 4.6fr;
+    grid-template-areas: "aside main";
+    gap: 10px;
+  }
+  
+.main-product {
+    grid-area: main;
+    margin: 2rem;
+    border-radius: 5px;
+  }
+
+  .section-products {
+    margin: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 4rem;
+  }
