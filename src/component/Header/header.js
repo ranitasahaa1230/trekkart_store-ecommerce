@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./header.css"
+import logo from "../../assets/images/logo.png"
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
       <header>
       <div id="menu-bar" className="fas fa-bars menu-bar"></div>
       <div className="logo-header">
-        <img src={require('../../assets/images/logo.png')} alt="logo" className="logo-design"/>
+        <img src={logo} alt="logo" className="logo-design"/>
         <a href="/" className="logo">Trekkart Store</a>
       </div>
 

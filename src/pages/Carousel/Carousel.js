@@ -5,7 +5,7 @@ import "./Carousel.css";
 
 export default function Carouselbar() {
   return (
-    <section className="home" id="home">
+    <div className="home" id="home">
     <div className="slide">
     <Carousel fade>
       <Carousel.Item className="image">
@@ -74,6 +74,6 @@ export default function Carouselbar() {
       </Carousel.Item>
     </Carousel>
     </div>
-    </section>
+    </div>
   );
 }
