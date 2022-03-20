@@ -195,9 +195,9 @@ export function Category() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="box"
+              className="inputbox"
             />
-            <input type="submit" value="Send" className="btns" />
+            <button type="submit" className="send-btns">Send</button>
           </form>
         </div>
       </section>

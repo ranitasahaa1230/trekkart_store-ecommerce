@@ -1,5 +1,5 @@
 .footer .box-container {
-    border: 2px solid var(--card-border-colo);
+    border: 2px solid var(--bg-code);
     border-radius: 2rem 2rem 0 0;
     background: var(--card-border-color);
     padding: 3rem 1rem ;

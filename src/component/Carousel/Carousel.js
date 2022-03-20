@@ -2,6 +2,10 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Carousel.css";
+import trekking from "../../assets/images/trekking.png"
+import travel from "../../assets/images/travel.jpg"
+import shoe from "../../assets/images/shoe.png"
+import text from "../../assets/images/text.png"
 
 export function Carouselbar() {
   return (
@@ -11,7 +15,7 @@ export function Carouselbar() {
       <Carousel.Item className="image">
         <img
           className="travel"
-          src={require("../../assets/images/trekking.png")}
+          src={trekking}
           alt="trekking"
         />
         <Carousel.Caption>
@@ -31,7 +35,7 @@ export function Carouselbar() {
       <Carousel.Item className="image">
         <img
           className="travel"
-          src={require("../../assets/images/travel.jpg")}
+          src={travel}
           alt="travel bags"
         />
 
@@ -51,11 +55,11 @@ export function Carouselbar() {
       <Carousel.Item className="image">
         <img
           className="shoes"
-          src={require("../../assets/images/home-shoe-1.png")}
+          src={shoe}
           alt="shoes"
         />
         <img
-          src={require("../../assets/images/home-text-1.png")}
+          src={text}
           className="text"
               alt="shoe-text"
             />

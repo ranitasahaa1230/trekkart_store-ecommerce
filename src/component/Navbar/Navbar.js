@@ -14,8 +14,8 @@ export function Navbar() {
       </div>
 
       <nav className="navbar">
-        <a href="/" className="href">Home</a>
-        <a href="./pages/products.html" className="href">Shop Now</a>
+        <Link to="/" className="href">Home</Link>
+        <Link to="./pages/products.html" className="href">Shop Now</Link>
       </nav>
 
       <form  className="class-form">

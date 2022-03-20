@@ -137,19 +137,25 @@
     margin: 1rem auto;
     max-width: 50rem;
     display: flex;
+    align-items: center;
   }
   
-  .newsletter .content form .box {
+  .newsletter .content form .inputbox {
     width: 100%;
     font-size: 1.5rem;
     text-transform: none;
     color: var(--black-bg);
-    padding: 0.5rem 1rem;
     border: 2px solid var(--black-bg);
     margin-top: 1rem;
+    border-radius: 6px;
   }
   
-  .newsletter .content form .btns {
-    border-radius: 4px;
-    padding:1rem;
+  .newsletter .content form .send-btns {
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--bg-code);
+    cursor: pointer;
+    background: var(--primary-color);
+    padding: 0.8rem 1rem;
   }
