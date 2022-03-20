@@ -8,15 +8,15 @@ export function Footer() {
       <div className="box-container">
         <div className="box">
           <h3>Our Stores</h3>
-          <a href="#">India</a>
-          <a href="#">USA</a>
-          <a href="#">Japan</a>
-          <a href="#">Paris</a>
+          <span>India</span>
+          <span>USA</span>
+          <span>Japan</span>
+          <span>Paris</span>
         </div>
 
         <div className="box">
           <h3>Quick Links</h3>
-          <a href="#">Home</a>
+          <a href="https://trekkart-stores.netlify.app/">Home</a>
           <a href="#products">Products</a>
           <a href="#brands">Featured Brands</a>
           <a href="#review">Reviews</a>
@@ -24,9 +24,9 @@ export function Footer() {
 
         <div className="box">
           <h3>Extra Links</h3>
-          <a href="#">My Account</a>
-          <a href="#">My Favorite</a>
-          <a href="#">My 0rders</a>
+          <a href="https://trekkart-stores.netlify.app/">My Account</a>
+          <a href="https://trekkart-stores.netlify.app/">My Favorite</a>
+          <a href="https://trekkart-stores.netlify.app/">My 0rders</a>
           <a href="#newsletter">Newsletter</a>
         </div>
 

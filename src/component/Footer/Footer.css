@@ -20,7 +20,7 @@
       padding: 0;
   }
  
-  .footer .box-container .box a {
+  .footer .box-container .box a,.footer .box-container .box span{
     color: var(--card-color);
     font-size: 1.6rem;
     padding-bottom: 1.5rem;
