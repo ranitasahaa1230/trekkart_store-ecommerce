@@ -7,10 +7,10 @@ export function ProductCard({ product }) {
     _id: id,
     alt,
     img,
-    description,
+    // description,
     newPrice,
     originalPrice,
-    isBestSeller,
+    // isBestSeller,
     rating,
   } = product;
   return (
@@ -26,10 +26,9 @@ export function ProductCard({ product }) {
               
               <div className="card-content padding-s">
                 <h3 className="card-grid">
-                  Stylish Bags <i className="fas fa-heart cards-icon"></i>
-                </h3>
+                  Stylish Bags<span className="cards-rating">{rating}<i className="fa-solid fa-star star-rating"></i></span>
 
-                {/* <span className="cards-desc">{description}</span> */}
+                </h3>
 
                 <div className="sm-gap">
                   <span className="txt-bold"> Rs.{newPrice}</span>
@@ -47,6 +46,8 @@ export function ProductCard({ product }) {
                 </div>
               </div>
               <span className="tag">New</span>
+              <span><i className="fas fa-heart cards-icon"></i></span>
+
             </div>
             </div>
   );

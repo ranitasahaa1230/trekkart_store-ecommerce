@@ -17,7 +17,7 @@
   }
   .card-content {
     font-size: 1.6rem;
-    /* margin:1rem 0.5rem; */
+    margin:1rem 1.5rem;
     color: var(--gray);
   }
   .card-grid {
@@ -25,20 +25,35 @@
     justify-content: space-between;
     color: var(--black-bg);
     cursor: pointer;
-    margin: 5px;
-    font-size: 1.8rem;
+    margin:10px 8px;
+    font-size: 1.9rem;
   }
-  
-  .sm-gap,
-  .cards-desc {
-    /* margin:0 5px; */
-    padding: 0;
-    margin: 0;
+  .star-rating{
+    font-size: 1.4rem;
+    color: yellow;
+    padding: 2px;
+  }
+  .cards-rating{
+    background: var(--secondary-color);
+    font-size: 1.4rem;
+    color: var(--bg-code);
+    font-weight: 500;
+    border-radius: 5px;
+    padding:0.2rem 0.5rem;
+  }
+  .sm-gap{
+    margin-right:0.8rem
   }
   .cards-icon {
-    color: transparent;
+    color: var(--bg-code);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--primary-color);
+    position: absolute;
+    border-radius: 6px;
+    padding: 8px;
+    top: 1%;
+    right: 3%;
+    font-size: 2rem;
   }
   .cards-icon:hover {
     color: var(--wishlist);
@@ -58,14 +73,13 @@
   }
   
   .grid-cards-icons {
-    width: 22rem;
+    width: 20rem;
     border-radius: 5px;
     border: 2px solid var(--bg-code);
     font-size: 1.7rem;
     color: var(--bg-code);
     cursor: pointer;
     background: var(--primary-color);
-    /* padding: 10px; */
   }
   .card-footer{
     background: none;
@@ -84,6 +98,4 @@
     color: var(--bg-code);
     font-size: 1.6rem;
   }
-  .btn-card-icon {
-    margin: 10px;
-  }
+  

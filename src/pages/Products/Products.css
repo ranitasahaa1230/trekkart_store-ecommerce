@@ -15,8 +15,7 @@
   .section-products {
     margin: 2rem;
     display: flex;
-    justify-content: start;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     list-style: none;
     gap: 4rem;

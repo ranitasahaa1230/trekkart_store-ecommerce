@@ -4,14 +4,6 @@ import Mockman from "mockman-js";
 import { Navbar } from "./component/index";
 import { Home, Products } from "./pages/index";
 
-// function MockAPI() {
-//   return (
-//     <div className="MockAPI">
-//       <Mockman />
-//     </div>
-//   );
-// }
-
 function App() {
   return (
     <div className="App">
