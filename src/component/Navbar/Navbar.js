@@ -15,7 +15,7 @@ export function Navbar() {
 
       <nav className="navbar">
         <Link to="/" className="href">Home</Link>
-        <Link to="./pages/products.html" className="href">Shop Now</Link>
+        <Link to="/products" className="href">Shop Now</Link>
       </nav>
 
       <form  className="class-form">

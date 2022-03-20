@@ -4,7 +4,8 @@
     height: max-content;
     outline: none;
     border-radius: 8px;
-    position: relative;  
+    position: relative; 
+    border: 2px solid var(--bg-code); 
   }
   .cards:hover {
     transform: scale(1.04);
