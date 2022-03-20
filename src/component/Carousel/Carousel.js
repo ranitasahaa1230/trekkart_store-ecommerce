@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Carousel.css";
 
-export default function Carouselbar() {
+export function Carouselbar() {
   return (
     <div className="home" id="home">
     <div className="slide">

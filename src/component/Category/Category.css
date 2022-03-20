@@ -141,15 +141,15 @@
   
   .newsletter .content form .box {
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-transform: none;
     color: var(--black-bg);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border: 2px solid var(--black-bg);
     margin-top: 1rem;
   }
   
   .newsletter .content form .btns {
     border-radius: 4px;
-    padding: 1rem;
+    padding:1rem;
   }

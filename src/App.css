@@ -47,10 +47,17 @@ body {
   --wishlist: #ae2012;
   --shadow-card: 0 0 12px 0 var(--primary-color);
   --shadow-colors: rgba(0, 0, 0, 0.616);
+  --secondary-colors: #274156;
+    --secondary-active-color: #1e3344;
+    --card-border-color: #9e9eff;
+    --card-color: #001219;
 }
 
 h2.heading {
   font-size: 2.5rem;
+  font-weight: bold;
+}
+h3{
   font-weight: bold;
 }
 section {
