@@ -59,7 +59,7 @@ export function Cart() {
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
                     >
                       Move to Wishlist
                     </button></Link>
@@ -119,7 +119,7 @@ export function Cart() {
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
                     >
                       Move to Wishlist
                     </button></Link>
@@ -178,7 +178,7 @@ export function Cart() {
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
                     >
                       Move to Wishlist
                     </button></Link>

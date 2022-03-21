@@ -40,7 +40,7 @@ export function Wishlist() {
                 </div>
 
                 <div class="card-footer">
-                  <Link to="./cart">
+                  <Link to="/cart">
                     <button class="btn btn-text-icon-primary grid-cards-icons">
                       <span class="btn-card-icon">
                         <i class="fas fa-shopping-cart"></i>{" "}
