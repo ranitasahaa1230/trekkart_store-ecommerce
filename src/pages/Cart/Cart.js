@@ -231,8 +231,8 @@ export function Cart() {
             </div>
   
             <div>
-              <a href="./checkout.html"> 
-              <button className="btn btn-text-icon-primary grid-cards-icons details-icon">PLACE ORDER</button></a>
+              <Link to="#"> 
+              <button className="btn btn-text-icon-primary grid-cards-icons details-icon">PLACE ORDER</button></Link>
             </div>
     </section>
 
