@@ -6,233 +6,233 @@ import "./Cart.css";
 export function Cart() {
   return (
     <div>
-    <h3 class="cart-heading">My Cart <span class="cart-desc">(5)</span></h3>
+    <h3 className="cart-heading">My Cart <span className="cart-desc">(5)</span></h3>
     <h4 className="empty-list">Your Cart Is Empty ! ☹️</h4>
-    <div class="cart-grid">
-    <main class="main-cart">
-        <ul class="cart-products">           
+    <div className="cart-grid">
+    <main className="main-cart">
+        <ul className="cart-products">           
 
-            <li class="cart-main">
-                <div class="cardss cards-horizontals">
-                    <div class="img-container">
+            <li className="cart-main">
+                <div className="cardss cards-horizontals">
+                    <div className="img-container">
                     <img
                   src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
                   alt="hiking"
-                  class="grid-col-img cards-horizontal-img"
+                  className="grid-col-img cards-horizontal-img"
                 />
               </div>
                      
-                    <div class="card-content padding-s">
-                      <h3 class="card-horizontal-grid">
+                    <div className="card-content padding-s">
+                      <h3 className="card-horizontal-grid">
                         Stylish Bags
                       </h3>
       
-                      <div class="sm-gap md-gap">
-                        <span class="txt-bold"> Rs.3899</span>
-                        <span class="txt-crossed-off">Rs.2999</span>
-                        <span class="txt-high-light">10% Off</span>
+                      <div className="sm-gap md-gap">
+                        <span className="txt-bold"> Rs.3899</span>
+                        <span className="txt-crossed-off">Rs.2999</span>
+                        <span className="txt-high-light">10% Off</span>
                       </div>
                       
-                      <div class="txt-gray">
+                      <div className="txt-gray">
                         Quantity :
                             <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-minus cart-icons"></i>
+                          <i className="fas fa-minus cart-icons"></i>
                         </button>
                         <input
               type="text"
-              class="cart-input"
+              className="cart-input"
               value="18"
             />
                         <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-plus cart-icons"></i>
+                          <i className="fas fa-plus cart-icons"></i>
                         </button>
                       </div>
                       
-                      <div class="card-footer">
+                      <div className="card-footer">
                       <button
-                        class="btn btn-text-icon-primary grid-horizontal-icons"
+                        className="btn btn-text-icon-primary grid-horizontal-icons"
                       >
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      class="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons"
                     >
                       Move to Wishlist
                     </button></Link>
                       </div>
                     </div>
-                    <span class="horizontal-tag">New</span>
-                    <button type="button" class="btn-dismissal">
-                <i class="fa-solid fa-xmark card-btn-dismissal"></i>
+                    <span className="horizontal-tag">New</span>
+                    <button type="button" className="btn-dismissal">
+                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
               </button>            
               </div>
             </li>
 
-            <li class="cart-main">
-                <div class="cardss cards-horizontals">
-                    <div class="img-container">
+            <li className="cart-main">
+                <div className="cardss cards-horizontals">
+                    <div className="img-container">
                     <img
                   src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
                   alt="hiking"
-                  class="grid-col-img cards-horizontal-img"
+                  className="grid-col-img cards-horizontal-img"
                 />
               </div>
                      
-                    <div class="card-content padding-s">
-                      <h3 class="card-horizontal-grid">
+                    <div className="card-content padding-s">
+                      <h3 className="card-horizontal-grid">
                         Stylish Bags
                       </h3>
       
-                      <div class="sm-gap md-gap">
-                        <span class="txt-bold"> Rs.3899</span>
-                        <span class="txt-crossed-off">Rs.2999</span>
-                        <span class="txt-high-light">10% Off</span>
+                      <div className="sm-gap md-gap">
+                        <span className="txt-bold"> Rs.3899</span>
+                        <span className="txt-crossed-off">Rs.2999</span>
+                        <span className="txt-high-light">10% Off</span>
                       </div>
                       
-                      <div class="txt-gray">
+                      <div className="txt-gray">
                         Quantity :
                             <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-minus cart-icons"></i>
+                          <i className="fas fa-minus cart-icons"></i>
                         </button>
                         <input
               type="text"
-              class="cart-input"
+              className="cart-input"
               value="18"
             />
                         <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-plus cart-icons"></i>
+                          <i className="fas fa-plus cart-icons"></i>
                         </button>
                       </div>
                       
-                      <div class="card-footer">
+                      <div className="card-footer">
                       <button
-                        class="btn btn-text-icon-primary grid-horizontal-icons"
+                        className="btn btn-text-icon-primary grid-horizontal-icons"
                       >
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      class="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons"
                     >
                       Move to Wishlist
                     </button></Link>
                       </div>
                     </div>
-                    <span class="horizontal-tag">New</span>
-                    <button type="button" class="btn-dismissal">
-                <i class="fa-solid fa-xmark card-btn-dismissal"></i>
+                    <span className="horizontal-tag">New</span>
+                    <button type="button" className="btn-dismissal">
+                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
               </button>            
               </div>
             </li>
-            <li class="cart-main">
-                <div class="cardss cards-horizontals">
-                    <div class="img-container">
+            <li className="cart-main">
+                <div className="cardss cards-horizontals">
+                    <div className="img-container">
                     <img
                   src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
                   alt="hiking"
-                  class="grid-col-img cards-horizontal-img"
+                  className="grid-col-img cards-horizontal-img"
                 />
               </div>
                      
-                    <div class="card-content padding-s">
-                      <h3 class="card-horizontal-grid">
+                    <div className="card-content padding-s">
+                      <h3 className="card-horizontal-grid">
                         Stylish Bags
                       </h3>
       
-                      <div class="sm-gap md-gap">
-                        <span class="txt-bold"> Rs.3899</span>
-                        <span class="txt-crossed-off">Rs.2999</span>
-                        <span class="txt-high-light">10% Off</span>
+                      <div className="sm-gap md-gap">
+                        <span className="txt-bold"> Rs.3899</span>
+                        <span className="txt-crossed-off">Rs.2999</span>
+                        <span className="txt-high-light">10% Off</span>
                       </div>
                       
-                      <div class="txt-gray">
+                      <div className="txt-gray">
                         Quantity :
                             <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-minus cart-icons"></i>
+                          <i className="fas fa-minus cart-icons"></i>
                         </button>
                         <input
               type="text"
-              class="cart-input"
+              className="cart-input"
               value="18"
             />
                         <button
-                          class="cart-md-icons"
+                          className="cart-md-icons"
                         >
-                          <i class="fas fa-plus cart-icons"></i>
+                          <i className="fas fa-plus cart-icons"></i>
                         </button>
                       </div>
                       
-                      <div class="card-footer">
+                      <div className="card-footer">
                       <button
-                        class="btn btn-text-icon-primary grid-horizontal-icons"
+                        className="btn btn-text-icon-primary grid-horizontal-icons"
                       >
                         Remove from Cart
                       </button>
                      <Link to="/wishlist"> <button
-                      class="btn btn-text-icon-primary grid-cards-icons"
+                      className="btn btn-text-icon-primary grid-cards-icons"
                     >
                       Move to Wishlist
                     </button></Link>
                       </div>
                     </div>
-                    <span class="horizontal-tag">New</span>
-                    <button type="button" class="btn-dismissal">
-                <i class="fa-solid fa-xmark card-btn-dismissal"></i>
+                    <span className="horizontal-tag">New</span>
+                    <button type="button" className="btn-dismissal">
+                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
               </button>            
               </div>
             </li>  
         </ul>
     </main>
         
-    <section class="section-cart">
-        <h3 class="heading-carts btm-b">Price Details</h3>
+    <section className="section-cart">
+        <h3 className="heading-carts btm-b">Price Details</h3>
 
-            <div class="btm-b">
-              <div class="my-cart-sm">
+            <div className="btm-b">
+              <div className="my-cart-sm">
                 <span>Price <span>(2 items)</span></span>
   
-                <span class="bold-txt">₹699</span>
+                <span className="bold-txt">₹699</span>
               </div>
   
-              <div class="my-cart-sm">
+              <div className="my-cart-sm">
                 <span>Discount</span>
   
-                <span class="txt-primary">- ₹234</span>
+                <span className="txt-primary">- ₹234</span>
               </div>
   
-              <div class="my-cart-sm">
+              <div className="my-cart-sm">
                 <span>Delivery Charges</span>
   
-                <span class="bold-txt">₹50</span>
+                <span className="bold-txt">₹50</span>
               </div>
             </div>
   
-            <div class="btm-b">
-              <div class="my-cart-sm">
-                <span class="bold-txt bolder-txt">Total Amount</span>
+            <div className="btm-b">
+              <div className="my-cart-sm">
+                <span className="bold-txt bolder-txt">Total Amount</span>
   
-                <span class="bold-txt bolder-txt">₹2000</span>
+                <span className="bold-txt bolder-txt">₹2000</span>
               </div>
             </div>
   
-            <div class="my-cart-sm">
-              <span class="txt-primary bolder-txt"
+            <div className="my-cart-sm">
+              <span className="txt-primary bolder-txt"
                 >You will save ₹2000 on this order</span
               >
             </div>
   
             <div>
               <a href="./checkout.html"> 
-              <button class="btn btn-text-icon-primary grid-cards-icons details-icon">PLACE ORDER</button></a>
+              <button className="btn btn-text-icon-primary grid-cards-icons details-icon">PLACE ORDER</button></a>
             </div>
     </section>
 
