@@ -29,7 +29,7 @@ export function Navbar() {
       </form>
 
       <div className="font-icons">
-        <Link to="/product.html">
+        <Link to="/login">
             <span class="badges-container"><i class="fas fa-user"></i>
             </span>
         </Link>

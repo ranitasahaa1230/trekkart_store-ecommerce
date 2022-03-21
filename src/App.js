@@ -10,7 +10,7 @@ import {
   UserProfile,
   Wishlist,
 } from "./pages";
-import { Login } from "./pages/Auth";
+import { Login, SignUp } from "./pages/Auth";
 
 function App() {
   return (
@@ -24,7 +24,9 @@ function App() {
         {/* <Route path="/:productId" element={<ProductPage />} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/userProfile" element={<UserProfile />} />
+        
       </Routes>
     </div>
   );
