@@ -26,11 +26,9 @@ body {
   width: 10px;
   height: 6px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-blue);
 }
-
 :root {
   /* --primary: #621a9a; */
   --primary-color: #571089;
