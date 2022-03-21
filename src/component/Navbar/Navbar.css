@@ -64,13 +64,27 @@ header form label:hover {
 }
 
 header .font-icons a {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--bg-code);
   margin-left: 2rem;
+  position: relative;
 }
-
+.badge-number{
+  position: absolute;
+  background: none;
+  bottom: 2.55vh;
+  left: 2vh;
+  font-family:Cambria;
+  background: var(--wishlist);
+  border-radius: 50%;
+  padding: 0 0.6rem;
+  font-size: 1.32rem;
+}
 header .font-icons a:hover {
   color: var(--secondary-hover);
+}
+.badge-number:hover{
+  color: var(--bg-code);
 }
 .logo-header {
   display: flex;

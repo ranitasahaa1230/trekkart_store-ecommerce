@@ -1,5 +1,5 @@
 import React from "react";
-import { landingPageImages } from "../../assets/LandingPage/";
+import { landingPageImages } from "../../assets/LandingPage/index";
 import { Link } from "react-router-dom";
 import "./Category.css";
 

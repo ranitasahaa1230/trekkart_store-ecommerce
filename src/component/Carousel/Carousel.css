@@ -1,7 +1,7 @@
 .home .slide{
     min-height: 100vh;
-    padding: 0 3%;
-    padding-top: 4rem;
+    padding: 0 1.5%;
+    padding-top: 3rem;
   }
   .home .slide .image:nth-child(3) img{
     padding-top: 8rem;

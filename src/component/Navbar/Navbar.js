@@ -15,7 +15,7 @@ export function Navbar() {
 
       <nav className="navbar">
         <Link to="/" className="href">Home</Link>
-        <Link to="./pages/products.html" className="href">Shop Now</Link>
+        <Link to="/products" className="href">Shop Now</Link>
       </nav>
 
       <form  className="class-form">
@@ -29,9 +29,21 @@ export function Navbar() {
       </form>
 
       <div className="font-icons">
-        <Link to="/product.html" className="fas fa-heart"></Link>
-        <Link to="/product.html" className="fas fa-shopping-cart"></Link>
-        <Link to="/product.html" className="fas fa-user"></Link>
+        <Link to="/product.html">
+            <span class="badges-container"><i class="fas fa-user"></i>
+            </span>
+        </Link>
+
+        <Link to="/product.html">
+        <span class="badges-container"><i class="fas fa-heart"></i>
+                <span class="badge-number">99</span>
+            </span>
+        </Link>
+        <Link to="/product.html">
+        <span class="badges-container"><i class="fas fa-shopping-cart"></i>
+                <span class="badge-number">2</span>
+            </span>
+        </Link>
       </div>
     </header>
     </div>
