@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carouselbar, Category, Footer } from "../../component/index";
+import { Carouselbar, Category, Footer } from "../../component";
 
 export function Home() {
  

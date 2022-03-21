@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {ProductCard, Filters} from "../../component/index";
+import {ProductCard, Filters} from "../../component";
 import "./Products.css";
 
 export function Products() {
