@@ -27,7 +27,7 @@ export function Carouselbar() {
               the essential trekking items that should be a part of your
               backpack.Top Brands. Huge Selection. No Cost EMI Available.
             </p>
-            <Link to="#" className="btns">Explore Products</Link>
+            <Link to="/products" className="btns">Explore Products</Link>
           </div>   
                </Carousel.Caption>
       </Carousel.Item>
@@ -48,7 +48,7 @@ export function Carouselbar() {
               Buy now! Best Deals. Top Brands. Huge Selection. No Cost EMI
               Available. Low Prices. Great Offers. Easy & Fast Delivery.
             </p>
-            <Link to="#" className="btns">Explore Products</Link>
+            <Link to="/products" className="btns">Explore Products</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
@@ -72,7 +72,7 @@ export function Carouselbar() {
               you step towards running faster- FOREVER FASTER. Shop from the
               latest collection of shoes available in various brands.
             </p>
-            <Link to="./pages/products.html" className="btns">Explore Products</Link>
+            <Link to="/products" className="btns">Explore Products</Link>
           </div>
         </Carousel.Caption>
       </Carousel.Item>

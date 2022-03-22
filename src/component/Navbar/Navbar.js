@@ -29,17 +29,17 @@ export function Navbar() {
       </form>
 
       <div className="font-icons">
-        <Link to="/product.html">
+        <Link to="/login">
             <span class="badges-container"><i class="fas fa-user"></i>
             </span>
         </Link>
 
-        <Link to="/product.html">
+        <Link to="/wishlist">
         <span class="badges-container"><i class="fas fa-heart"></i>
                 <span class="badge-number">99</span>
             </span>
         </Link>
-        <Link to="/product.html">
+        <Link to="/cart">
         <span class="badges-container"><i class="fas fa-shopping-cart"></i>
                 <span class="badge-number">2</span>
             </span>

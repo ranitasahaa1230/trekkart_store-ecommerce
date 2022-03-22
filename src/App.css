@@ -123,7 +123,9 @@ section {
   .home .slide .content h3 {
     margin-top: 15rem;
   }
-  .form-box, .cart-grid {
+  .form-box 
+  /* .cart-grid */
+   {
     margin-top: 18rem;
   }
   .wishlist-main, .products-container, .single-product-page{

@@ -37,12 +37,12 @@ export function ProductCard({ product }) {
                 </div>
 
                 <div className="card-footer">
-                  <a href="./cart.html"
+                  <Link to="/cart"
                     ><button className="btn btn-text-icon-primary grid-cards-icons">
                       <span className="btn-card-icon"
                         ><i className="fas fa-shopping-cart"></i> </span>Add to Cart
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <span className="tag">New</span>

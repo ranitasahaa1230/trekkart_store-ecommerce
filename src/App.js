@@ -1,8 +1,16 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
-import { Navbar } from "./component/index";
-import { Home, Products } from "./pages/index";
+import { Navbar } from "./component";
+import {
+  Cart,
+  Home,
+  Products,
+  // ProductPage,
+  UserProfile,
+  Wishlist,
+} from "./pages";
+import { Login, SignUp } from "./pages/Auth";
 
 function App() {
   return (
@@ -12,6 +20,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        {/* <Route path="/:productId" element={<ProductPage />} /> */}
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/userProfile" element={<UserProfile />} />
+        
       </Routes>
     </div>
   );
