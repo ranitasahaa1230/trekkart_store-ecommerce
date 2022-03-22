@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import {ProductCard, Filters} from "../../component";
+import { useData } from "../../contexts";
 import "./Products.css";
 
 export function Products() {
-  const [products, setProducts] = useState([]);
+  const { products, loader, error } = useData();
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const {
-          data: { products },
-        } = await axios.get("/api/products");
-        setProducts(products);
-      } catch (error) {
-        console.log("No products to show.");
-      }
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const {
+  //         data: { products },
+  //       } = await axios.get("/api/products");
+  //       setProducts(products);
+  //     } catch (error) {
+  //       console.log("No products to show.");
+  //     }
+  //   })();
+  // }, []);
 
   return(
   <div className="products-container">
