@@ -6,19 +6,6 @@ import "./Products.css";
 export function Products() {
   const { products, loader, error } = useData();
 
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       const {
-  //         data: { products },
-  //       } = await axios.get("/api/products");
-  //       setProducts(products);
-  //     } catch (error) {
-  //       console.log("No products to show.");
-  //     }
-  //   })();
-  // }, []);
-
   return(
   <div className="products-container">
     <Filters/>
