@@ -1,6 +1,8 @@
 import React from "react";
 import "./Filters.css";
 import {useData} from "../../contexts"
+// const categoryNames=["jackets","suitcases","backPacks", "shoes"]
+// console.log(categoryNames)
 
 export function Filters() {
   const {state:{sortBy,categories},dispatch}=useData()
@@ -29,7 +31,7 @@ export function Filters() {
               Price - Low to High
             </label>        
           </li>
-          
+
           <li className="filter-sorts">
             <label htmlFor="high-to-low" className="filter-categories">
               <input
@@ -60,6 +62,22 @@ export function Filters() {
               Jackets
             </label>
           </li>
+
+          {/* {categoryNames.map(({category})=>{
+            return(  
+            <li className="filter-sorts" key={category}>
+            <label htmlFor={category} className="filter-categories">
+            <input
+                type="checkbox"
+                name="category"
+                id="category"
+                className="filter-categories"
+                value={category}
+              />
+              {category}
+            </label>
+          </li>
+          )})} */}
           <li className="filter-sorts">
             <label htmlFor="suitcase" className="filter-categories">
               <input
@@ -72,6 +90,7 @@ export function Filters() {
               Suitcases
             </label>
           </li>
+
           <li className="filter-sorts">
             <label htmlFor="backpacks" className="filter-categories">
               <input

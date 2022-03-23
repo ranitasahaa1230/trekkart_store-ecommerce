@@ -17,7 +17,7 @@ const [products, setProducts] = useState([]);
 
   const [state, dispatch] = useReducer(productReducer,{
     sortBy: "",
-    categories: { jackets: false, suitcases: false, backpacks:false, shoes: false},
+    category:[],
     priceRange: 1000,
     byRating: 3,
   })

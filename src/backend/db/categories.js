@@ -8,20 +8,32 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
+    categoryName: "Jackets",
+    description: "Get your Jackets now at Best Price. For Limited Period Only.",
+    image:
+      "https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/feature-1.jpg?raw=true",
+    },
+  {
+    _id: uuid(),
+    categoryName: "Travel Bags",
     description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+      "Get your Travel Bags now at Best Price. Offer only for Today!",
+    image:
+      "https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/feature-3.jpg?raw=true",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "Hiking Bags",
+    description: "Get your Hiking Bags now at Best Price. Grab it now.",
+    image:
+      "https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/feature-2.jpg?raw=true",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
+    categoryName: "Hiking Boots",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Get your Hiking Boots now at Best Price. For Limited Period Only.",
+    image:
+      "https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/feature-4.jpg?raw=true",
   },
 ];

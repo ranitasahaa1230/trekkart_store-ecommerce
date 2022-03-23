@@ -7,6 +7,7 @@ export function ProductCard({ product }) {
     _id: id,
     alt,
     img,
+    name,
     // description,
     newPrice,
     originalPrice,
@@ -26,7 +27,7 @@ export function ProductCard({ product }) {
               
               <div className="card-content padding-s">
                 <h3 className="card-grid">
-                  Stylish Bags<span className="cards-rating">{rating}<i className="fa-solid fa-star star-rating"></i></span>
+                  {name}<span className="cards-rating">{rating}<i className="fa-solid fa-star star-rating"></i></span>
 
                 </h3>
 
