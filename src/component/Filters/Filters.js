@@ -76,18 +76,6 @@ export function Filters() {
             </label>
           </li>
           <li className="filter-sorts">
-            <label htmlFor="trekking-gears" className="filter-categories">
-              <input
-                type="checkbox"
-                name="category"
-                id="trekking-gears"
-                className="filter-categories"
-                value="trekking-gears"
-              />
-              Trekking Gears
-            </label>
-          </li>
-          <li className="filter-sorts">
             <label htmlFor="shoes" className="filter-categories">
               <input
                 type="checkbox"
@@ -101,7 +89,7 @@ export function Filters() {
           </li>
         </ul>
 
-        <ul className="flex-categories">
+        <ul className="flex-categories btm-b">
           <h3 className="filter-desc-categories">Brands</h3>
           <li className="filter-sorts">
             <label htmlFor="arnisa" className="filter-categories">
@@ -151,6 +139,50 @@ export function Filters() {
               Gucci
             </label>
           </li>
+        </ul>
+
+        <ul className="flex-categories">
+          <h3 className="filter-desc-categories">Ratings</h3>
+          <label htmlFor="ratings" className="filter-categories">
+                <input
+                  type="radio"
+                  name="rating"
+                  className="filter-categories"
+                  // checked={byRating === rating}
+                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
+                />
+                4 stars and above
+              </label>
+              <label htmlFor="ratings" className="filter-categories">
+                <input
+                  type="radio"
+                  name="rating"
+                  className="filter-categories"
+                  // checked={byRating === rating}
+                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
+                />
+                4 stars and above
+              </label>
+              <label htmlFor="ratings" className="filter-categories">
+                <input
+                  type="radio"
+                  name="rating"
+                  className="filter-categories"
+                  // checked={byRating === rating}
+                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
+                />
+                4 stars and above
+              </label>
+              <label htmlFor="ratings" className="filter-categories">
+                <input
+                  type="radio"
+                  name="rating"
+                  className="filter-categories"
+                  // checked={byRating === rating}
+                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
+                />
+                4 stars and above
+              </label>
         </ul>
       </aside>
     </div>

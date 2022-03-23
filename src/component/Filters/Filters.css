@@ -22,7 +22,7 @@ h2{
   .flex-filters {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .btm-b {
     border-bottom: 1px solid var(--black-bg);
@@ -36,16 +36,16 @@ h2{
     color: 1rem solid var(--primary-color);
   }
   .flex-categories {
-    padding: 12px;
-    margin: 5px 12px;
+    padding:8px 12px;
+    margin: 2px 12px;
   }
   .filter-desc-categories {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     font-weight: bold;
   }
   .filter-sorts {
-    margin: 8px;
-    font-size: 1.5rem;
+    margin: 2px;
+    font-size: 1.6rem;
   }
   .filter-categories {
     margin: 0 5px;
