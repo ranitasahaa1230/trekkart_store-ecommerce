@@ -6,6 +6,7 @@ import {
   useReducer,
   useState,
 } from 'react';
+import { productReducer } from '../../reducers/productReducer';
 
 const DataContext=createContext();
 
@@ -13,6 +14,13 @@ const DataProvider=({children})=>{
 const [products, setProducts] = useState([]);
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
+
+  const [state, dispatch] = useReducer(productReducer,{
+    sortBy: "",
+    categories: { jackets: false, suitcases: false, backpacks:false, shoes: false},
+    priceRange: 1000,
+    byRating: 3,
+  })
   
   useEffect(() => {
     (async () => {
@@ -32,7 +40,7 @@ const [products, setProducts] = useState([]);
   }, []);
 
   return (
-    <DataContext.Provider value={{products, loader, error}}>
+    <DataContext.Provider value={{products, loader, error, state, dispatch }}>
         {children}
     </DataContext.Provider>
   )

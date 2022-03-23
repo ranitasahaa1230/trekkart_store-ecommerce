@@ -1,7 +1,11 @@
 import React from "react";
 import "./Filters.css";
+import {useData} from "../../contexts"
 
 export function Filters() {
+  const {state:{sortBy,categories},dispatch}=useData()
+  // console.log(state)
+
   return (
     <div>
       <aside className="aside-product">
@@ -19,10 +23,13 @@ export function Filters() {
                 id="low-to-high"
                 className="filter-categories"
                 value="low to high"
+                checked={sortBy === "LOW_TO_HIGH"}
+                onChange={()=>dispatch({type:"LOW_TO_HIGH"})}
               />
               Price - Low to High
-            </label>
+            </label>        
           </li>
+          
           <li className="filter-sorts">
             <label htmlFor="high-to-low" className="filter-categories">
               <input
@@ -31,6 +38,8 @@ export function Filters() {
                 id="high-to-low"
                 className="filter-categories"
                 value="high to low"
+                checked={sortBy === "HIGH_TO_LOW"}
+                onChange={()=>dispatch({type:"HIGH_TO_LOW"})}
               />
               Price - High to Low
             </label>
