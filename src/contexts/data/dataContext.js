@@ -19,7 +19,7 @@ const [products, setProducts] = useState([]);
     sortBy: "",
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
     priceRange: 1000,
-    byRating: 3,
+    byRating: "",
   })
   
   useEffect(() => {
