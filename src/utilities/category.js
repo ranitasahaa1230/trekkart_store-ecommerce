@@ -58,5 +58,4 @@ const getBrandProducts=(brands, brandArnisa, brandGucci, brandCeline, brandBiany
         return brands;
 }
 
-
     export { getCategoryProducts,getBrandProducts };
