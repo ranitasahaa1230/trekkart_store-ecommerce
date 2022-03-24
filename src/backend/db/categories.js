@@ -15,7 +15,7 @@ export const categories = [
     },
   {
     _id: uuid(),
-    categoryName: "Travel Bags",
+    categoryName: "Suitcases",
     description:
       "Get your Travel Bags now at Best Price. Offer only for Today!",
     image:
@@ -23,14 +23,14 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Hiking Bags",
+    categoryName: "Backpacks",
     description: "Get your Hiking Bags now at Best Price. Grab it now.",
     image:
       "https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/feature-2.jpg?raw=true",
   },
   {
     _id: uuid(),
-    categoryName: "Hiking Boots",
+    categoryName: "Travelling Shoes",
     description:
       "Get your Hiking Boots now at Best Price. For Limited Period Only.",
     image:

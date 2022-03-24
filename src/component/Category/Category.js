@@ -1,5 +1,6 @@
 import React from "react";
 import { landingPageImages } from "../../assets/LandingPage";
+import {Loader} from "../Loader/Loader";
 import { Link } from "react-router-dom";
 import "./Category.css";
 import { useCategory } from "../../contexts/data/categoryContext";
@@ -49,11 +50,13 @@ export function Category() {
       </section>
 
       <section className="latest-products" id="products">
+      {loader && <Loader/>}
+    {error && <div>{error}</div>}
         <h2 className="heading">Latest Collections</h2>
         <div className="products-containerbox">
             {
               categories.map(({_id,categoryName,description,image})=>(
-                <div className="product-box">
+                <div className="product-box" key={_id}>
                 <img src={image} alt="product" />
             <div className="content-product">
               <h3 className="desc-products">

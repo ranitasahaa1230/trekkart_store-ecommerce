@@ -1,12 +1,13 @@
 import React from "react";
 import "./Filters.css";
 import {useData} from "../../contexts"
-// const categoryNames=["jackets","suitcases","backPacks", "shoes"]
-// console.log(categoryNames)
+// import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Filters() {
-  const {state:{sortBy,categories},dispatch}=useData()
-  // console.log(state)
+  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase},dispatch}=useData()
+  // const {categories}=useCategory();
+  // const categoryNames = categories.map(category => category.categoryName);
+  // console.log(categoryNames)
 
   return (
     <div>
@@ -50,20 +51,7 @@ export function Filters() {
 
         <ul className="flex-categories btm-b">
           <h3 className="filter-desc-categories">Category</h3>
-          <li className="filter-sorts">
-            <label htmlFor="jackets" className="filter-categories">
-              <input
-                type="checkbox"
-                name="category"
-                id="jackets"
-                className="filter-categories"
-                value="jackets"
-              />
-              Jackets
-            </label>
-          </li>
-
-          {/* {categoryNames.map(({category})=>{
+          {/* {categoryNames.map(category=>{
             return(  
             <li className="filter-sorts" key={category}>
             <label htmlFor={category} className="filter-categories">
@@ -73,36 +61,44 @@ export function Filters() {
                 id="category"
                 className="filter-categories"
                 value={category}
+                checked={category.includes(category)}
+                onChange={() => dispatch({ type: "ADD_CATEGORY", payload: category })}
               />
               {category}
             </label>
           </li>
-          )})} */}
-          <li className="filter-sorts">
-            <label htmlFor="suitcase" className="filter-categories">
-              <input
-                type="checkbox"
-                name="category"
-                id="suitcase"
-                className="filter-categories"
-                value="suitcase"
-              />
-              Suitcases
-            </label>
-          </li>
+          )})}  */}
 
           <li className="filter-sorts">
-            <label htmlFor="backpacks" className="filter-categories">
+            <label htmlFor="jackets" className="filter-categories">
               <input
                 type="checkbox"
                 name="category"
-                id="backpacks"
+                id="jackets"
                 className="filter-categories"
-                value="backpacks"
+                value="jackets"
+                checked={includeJackets} 
+                onChange={ ()=> dispatch({type:"INCLUDE_JACKETS"})}
+              />
+              Jackets
+            </label>
+          </li>
+          
+           <li className="filter-sorts">
+            <label htmlFor="bags" className="filter-categories">
+              <input
+                type="checkbox"
+                name="category"
+                id="bags"
+                className="filter-categories"
+                value="bags"
+                checked={includeBags} 
+                onChange={ ()=> dispatch({type:"INCLUDE_BAGS"})}
               />
               Backpacks
             </label>
           </li>
+
           <li className="filter-sorts">
             <label htmlFor="shoes" className="filter-categories">
               <input
@@ -111,8 +107,25 @@ export function Filters() {
                 id="shoes"
                 className="filter-categories"
                 value="shoes"
+                checked={includeShoes} 
+                onChange={ ()=> dispatch({type:"INCLUDE_SHOES"})}
               />
               Travelling Shoes
+            </label>
+          </li>
+
+          <li className="filter-sorts">
+            <label htmlFor="suitcase" className="filter-categories">
+              <input
+                type="checkbox"
+                name="category"
+                id="suitcase"
+                className="filter-categories"
+                value="suitcase"
+                checked={includeSuitcase} 
+               onChange={ ()=> dispatch({type:"INCLUDE_SUITCASE"})}
+              />
+              Suitcases
             </label>
           </li>
         </ul>

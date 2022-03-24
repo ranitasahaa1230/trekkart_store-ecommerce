@@ -17,7 +17,7 @@ export const products = [
     isBestSeller: true,
     rating: 2.6,
     brand: "arnisa",
-    category: "suitcases",
+    category: "Suitcases",
     inStock:true,
   },
   {
@@ -31,7 +31,7 @@ export const products = [
     isBestSeller: true,
     rating: 4.6,
     brand: "gucci",
-    category: "backPacks",
+    category: "Backpacks",
 		inStock: false,
   },
   {
@@ -45,7 +45,7 @@ export const products = [
     isBestSeller: true,
     rating: 3.5,
     brand: "arnisa",
-    category: "backPacks",
+    category: "Backpacks",
 		inStock: false,
   },
   {
@@ -59,7 +59,7 @@ export const products = [
     isBestSeller: true,
     rating: 3.6,
     brand: "arnisa",
-    category: "shoes",
+    category: "Shoes",
     inStock:true,
   },
   {
@@ -73,7 +73,7 @@ export const products = [
     isBestSeller: true,
     rating: 4,
     brand: "gucci",
-    category: "shoes",
+    category: "Shoes",
 		inStock: false,
   },
   {
@@ -87,7 +87,7 @@ export const products = [
     isBestSeller: true,
     rating: 3.2,
     brand: "arnisa",
-    category: "backPacks",
+    category: "Backpacks",
 		inStock: false,
   }, 
   {
@@ -101,7 +101,7 @@ export const products = [
     isBestSeller: true,
     rating: 4.8,
     brand: "arnisa",
-    category: "jackets",
+    category: "Jackets",
     inStock:true,
   },
   {
@@ -115,7 +115,7 @@ export const products = [
     isBestSeller: true,
     rating: 4.2,
     brand: "gucci",
-    category: "suitcases",
+    category: "Suitcases",
 		inStock: false,
   },
   {
@@ -129,7 +129,7 @@ export const products = [
     isBestSeller: true,
     rating: 3.5,
     brand: "arnisa",
-    category: "travel bags",
+    category: "Suitcases",
 		inStock: false,
   },
   {
