@@ -14,12 +14,24 @@ export const productReducer=(state,action)=>{
             return {...state, includeSuitcase: !state.includeSuitcase }
         case "RATING":
                 return { ...state, byRating: action.payload };
+        case "BRAND_ARNISA":
+            return {...state, brandArnisa: !state.brandArnisa }
+        case "BRAND_BIANYO":
+            return {...state, brandBianyo: !state.brandBianyo }
+        case "BRAND_CELINE":
+            return {...state, brandCeline: !state.brandCeline }
+        case "BRAND_GUCCI":
+            return {...state, brandGucci: !state.brandGucci }
+        case "RATING":
+                return { ...state, byRating: action.payload };
+
         case "RESET":
              return {
                 sortBy: "",
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
+    brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
     priceRange: 1000,
-    byRating: "",};
+    byRating: ""};
         default:
             return state;
     }

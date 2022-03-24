@@ -33,5 +33,30 @@ const getCategoryProducts=(products, includeJackets, includeBags, includeShoes, 
         return products;
 }
 
+const getBrandProducts=(brands, brandArnisa, brandGucci, brandCeline, brandBianyo,)=>{
+    let newBrandData = [];
+    let flag = false;
+    if (brandArnisa) {
+        flag = true;
+        newBrandData = union(newBrandData, brands.filter(item => item.brand === "Arnisa"));
+    }
+    if (brandBianyo) {
+        flag = true;
+        newBrandData = union(newBrandData, brands.filter(item => item.brand === "Bianyo"));
+    }
+    if (brandCeline) {
+        flag = true;
+        newBrandData = union(newBrandData, brands.filter(item => item.brand === "Celine"));
+    }
+    if (brandGucci) {
+        flag = true;
+        newBrandData = union(newBrandData, brands.filter(item => item.brand === "Gucci"));
+    }
+    if (flag)
+        return newBrandData;
+    else
+        return brands;
+}
 
-    export { getCategoryProducts };
+
+    export { getCategoryProducts,getBrandProducts };

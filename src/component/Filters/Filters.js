@@ -4,7 +4,7 @@ import {useData} from "../../contexts"
 // import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Filters() {
-  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, byRating},dispatch}=useData()
+  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, byRating, brandArnisa, brandGucci, brandCeline, brandBianyo,},dispatch}=useData()
   // const {categories}=useCategory();
   // const categoryNames = categories.map(category => category.categoryName);
   // console.log(categoryNames)
@@ -141,6 +141,8 @@ export function Filters() {
                 id="arnisa"
                 className="filter-categories"
                 value="arnisa"
+                checked={brandArnisa}
+                onChange={ ()=> dispatch({type:"BRAND_ARNISA"})}
               />
               Arnisa
             </label>
@@ -153,6 +155,8 @@ export function Filters() {
                 id="bianyo"
                 className="filter-categories"
                 value="bianyo"
+                checked={brandBianyo}
+                onChange={ ()=> dispatch({type:"BRAND_BIANYO"})}
               />
               Bianyo
             </label>
@@ -165,6 +169,8 @@ export function Filters() {
                 id="celine"
                 className="filter-categories"
                 value="celine"
+                checked={brandCeline}
+                onChange={ ()=> dispatch({type:"BRAND_CELINE"})}
               />
               Celine
             </label>
@@ -177,6 +183,8 @@ export function Filters() {
                 id="gucci"
                 className="filter-categories"
                 value="gucci"
+                checked={brandGucci}
+                onChange={ ()=> dispatch({type:"BRAND_GUCCI"})}
               />
               Gucci
             </label>
