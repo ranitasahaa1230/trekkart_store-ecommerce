@@ -24,6 +24,8 @@ export const productReducer = (state, action) => {
       return { ...state, brandGucci: !state.brandGucci };
     case "PRICE":
         return { ...state, priceRange: action.payload };
+    case "FILTER_BY_SEARCH":
+            return { ...state, searchQuery: action.payload };
     case "RESET":
       return {
         sortBy: "",

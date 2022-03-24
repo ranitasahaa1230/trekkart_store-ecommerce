@@ -21,6 +21,7 @@ const [products, setProducts] = useState([]);
     brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
     priceRange: 1500,
     byRating: 1,
+    searchQuery:''
   })
   
   useEffect(() => {

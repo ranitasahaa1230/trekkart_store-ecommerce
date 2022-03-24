@@ -2,17 +2,18 @@ import React from "react";
 import {ProductCard, Filters, Loader} from "../../component";
 import { useData } from "../../contexts";
 import "./Products.css";
-import {getSortedProducts,getCategoryProducts, getRatingProducts,getBrandProducts, getPricedProducts} from "../../utilities/index"
+import {getSortedProducts,getCategoryProducts, getRatingProducts,getBrandProducts, getPricedProducts, getSearchedProducts} from "../../utilities/index"
 
 export function Products() {
-  const { products, loader, error,state:{sortBy,priceRange, includeJackets,includeBags, includeShoes, includeSuitcase,byRating,brandArnisa, brandGucci, brandCeline, brandBianyo} } = useData();
+  const { products, loader, error,state:{sortBy,priceRange, searchQuery, includeJackets,includeBags, includeShoes, includeSuitcase,byRating,brandArnisa, brandGucci, brandCeline, brandBianyo} } = useData();
 
   const sortedProductList=getSortedProducts(products,sortBy)
   const categoryProductList=getCategoryProducts(sortedProductList,includeJackets,includeBags, includeShoes, includeSuitcase )
   const ratingProductList=getRatingProducts(categoryProductList,byRating)
   const brandProductList=getBrandProducts(ratingProductList,brandArnisa, brandGucci, brandCeline, brandBianyo)
   const pricedProductList=getPricedProducts(brandProductList,priceRange)
-  console.log(priceRange)
+  const searchedList=getSearchedProducts(pricedProductList,searchQuery)
+  // console.log(searchQuery)
 
   return(
   <div className="products-container">
@@ -22,7 +23,7 @@ export function Products() {
     {error && <div>{error}</div>}
     <h2>Showing All Products</h2>
     <div className="section-products">
-      {pricedProductList.map((product) => (
+      {searchedList.map((product) => (
         <ProductCard product={product} key={product._id}/>
       ))}
     </div>
