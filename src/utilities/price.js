@@ -1,5 +1,6 @@
-const getPricedProducts = (pricedProductList, byRating) => {
-    return pricedProductList.filter(({ ratings }) => ratings >= byRating);
-  };
-  export { getPricedProducts };
-  
+const getPricedProducts = (filteredProduct, priceRange) => {
+  return filteredProduct.filter(
+    ({ newPrice }) => Number(newPrice) <= Number(priceRange)
+  );
+};
+export { getPricedProducts };

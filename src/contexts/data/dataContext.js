@@ -19,7 +19,7 @@ const [products, setProducts] = useState([]);
     sortBy: "",
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
     brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
-    priceRange: 1000,
+    priceRange: 1500,
     byRating: 1,
   })
   

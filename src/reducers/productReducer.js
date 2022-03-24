@@ -22,7 +22,8 @@ export const productReducer = (state, action) => {
       return { ...state, brandCeline: !state.brandCeline };
     case "BRAND_GUCCI":
       return { ...state, brandGucci: !state.brandGucci };
-
+    case "PRICE":
+        return { ...state, priceRange: action.payload };
     case "RESET":
       return {
         sortBy: "",
@@ -34,7 +35,7 @@ export const productReducer = (state, action) => {
         brandGucci: false,
         brandCeline: false,
         brandBianyo: false,
-        priceRange: 1000,
+        priceRange: 1500,
         byRating: 1,
       };
     default:

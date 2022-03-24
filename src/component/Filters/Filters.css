@@ -1,19 +1,19 @@
 h2{
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 .aside-product {
     grid-area: aside;
     box-shadow: var(--shadow-card);
     border-right: 2px solid var(--black-bg);
-    margin: 0.5rem;
+    margin: 0.2rem;
     border-radius: 5px;
-    width: 270px;
-    height: 100%;
     position: fixed;
     left: 0;
     overflow-y: auto;
     z-index: 5;
+    height: 100%;
+    width: 300px;
   }
   ul {
     list-style: none;
@@ -22,7 +22,7 @@ h2{
   .flex-filters {
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
   .btm-b {
     border-bottom: 1px solid var(--black-bg);
@@ -35,18 +35,19 @@ h2{
     text-decoration: underline;
     color: 1rem solid var(--primary-color);
   }
+  
   .flex-categories {
-    padding:8px 12px;
+    padding:4px 12px;
     margin: 2px 12px;
   }
+  .flex-height{
+    margin: 1rem 12px;
+  }
   .filter-desc-categories {
-    /* font-size: 1.8rem; */
     font-weight: bold;
   }
-  .filter-sorts {
-    margin: 0.5px;
-    /* font-size: 1rem; */
-  }
+ 
+  
   .filter-categories {
     margin: 0 5px;
     cursor: pointer;
@@ -55,4 +56,18 @@ h2{
 input.filter-categories{
     width: 1.5rem;
     height: 1.2rem;
+}
+datalist {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  gap: 0.8rem;
+}
+
+.filter-range{
+  margin: 0.6rem;
+}
+.filter-ranges{
+  margin: 0.5rem 12px;
 }

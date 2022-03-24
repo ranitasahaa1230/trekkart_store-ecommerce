@@ -4,7 +4,7 @@ import {useData} from "../../contexts"
 // import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Filters() {
-  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, byRating, brandArnisa, brandGucci, brandCeline, brandBianyo,},dispatch}=useData()
+  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, priceRange, byRating, brandArnisa, brandGucci, brandCeline, brandBianyo,},dispatch}=useData()
   // const {categories}=useCategory();
   // const categoryNames = categories.map(category => category.categoryName);
   // console.log(categoryNames)
@@ -12,7 +12,7 @@ export function Filters() {
   return (
     <div>
       <aside className="aside-product">
-        <div className="flex-filters flex-categories btm-b">
+        <div className="flex-filters flex-categories btm-b flex-height">
           <h2>Filters</h2>
           <span className="filters-desc" onClick={() => dispatch({ type: "RESET" })}>Clear All</span>
         </div>
@@ -49,6 +49,55 @@ export function Filters() {
             </label>
           </li>
         </ul>
+
+
+      {/* <div className="filter-price">
+        <h4>Price</h4>
+        <div className="flex-gap">
+          <div className="price-range">
+            <p>100</p>
+            <p>500</p>
+            <p>1000</p>
+          </div>
+          <input
+            type="range"
+            name="rangeInput"
+            className="slider"
+            min="100"
+            max="1000"
+            value={priceRange}
+            onChange={(e) =>
+              changeHandler(ACTION_TYPE.PRICE_RANGE, e.target.value, e)
+            }
+          />
+        </div>
+      </div> */}
+
+      <ul className="flex-categories btm-b filter-ranges">
+      <h3 className="filter-desc-categories">Select Price Range</h3>
+      <li className="filter-range">
+      <datalist id="tickmarks">
+            <option value="0" label="0"></option>
+            <option value="200" label="200"></option>
+            <option value="800" label="800"></option>
+            <option value="1500" label="1500"></option>
+            <option value="3000" label="3000"></option>
+            <option value="5000" label="5000"></option>
+          </datalist>
+          <input
+            list="tickmarks"
+            type="range"
+            name="rangeInput"
+            className="slider"
+            min="0"
+            max="5000"
+            value={priceRange}
+            onChange={(e) =>
+              dispatch({ type: "PRICE", payload: e.target.value })
+            }
+          />
+      </li>
+      </ul>
 
         <ul className="flex-categories btm-b">
           <h3 className="filter-desc-categories">Category</h3>
@@ -193,7 +242,7 @@ export function Filters() {
 
         <ul className="flex-categories">
           <h3 className="filter-desc-categories">Ratings</h3>
-          {[5, 4, 3, 2, 1].map((rating) => (
+          {[4, 3, 2, 1].map((rating) => (
             <label className="filter-categories" key={rating}>
                 <input
                   type="radio"
