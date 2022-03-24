@@ -14,8 +14,9 @@ export function Filters() {
       <aside className="aside-product">
         <div className="flex-filters flex-categories btm-b">
           <h2>Filters</h2>
-          <span className="filters-desc">Clear All</span>
+          <span className="filters-desc" onClick={() => dispatch({ type: "RESET" })}>Clear All</span>
         </div>
+
         <ul className="flex-categories btm-b">
           <h3 className="filter-desc-categories">Sort By</h3>
           <li className="filter-sorts">
@@ -125,7 +126,7 @@ export function Filters() {
                 checked={includeSuitcase} 
                onChange={ ()=> dispatch({type:"INCLUDE_SUITCASE"})}
               />
-              Suitcases
+              Travel Bags
             </label>
           </li>
         </ul>
@@ -190,7 +191,9 @@ export function Filters() {
                 <input
                   type="radio"
                   name="rating"
-                  className="filter-categories"
+                  id="ratings"
+                  value="rating"
+                className="filter-categories"
                   checked={byRating === rating}
                   onChange={() => dispatch({ type: "RATING", payload: rating })}
                 />

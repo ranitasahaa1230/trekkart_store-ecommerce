@@ -14,6 +14,12 @@ export const productReducer=(state,action)=>{
             return {...state, includeSuitcase: !state.includeSuitcase }
         case "RATING":
                 return { ...state, byRating: action.payload };
+        case "RESET":
+             return {
+                sortBy: "",
+    includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
+    priceRange: 1000,
+    byRating: "",};
         default:
             return state;
     }
