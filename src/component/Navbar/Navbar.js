@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png"
 import { useData } from '../../contexts'
 
 export function Navbar() {
-  const {state:{sortBy},dispatch}=useData()
+  const {dispatch}=useData()
   return (
     <div>
       <header>
