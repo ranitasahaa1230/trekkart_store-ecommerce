@@ -4,7 +4,7 @@ import {useData} from "../../contexts"
 // import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Filters() {
-  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase},dispatch}=useData()
+  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, byRating},dispatch}=useData()
   // const {categories}=useCategory();
   // const categoryNames = categories.map(category => category.categoryName);
   // console.log(categoryNames)
@@ -184,46 +184,20 @@ export function Filters() {
 
         <ul className="flex-categories">
           <h3 className="filter-desc-categories">Ratings</h3>
-          <label htmlFor="ratings" className="filter-categories">
+          {[5, 4, 3, 2, 1].map((rating) => (
+            <div key={rating}>
+            <label htmlFor="ratings" className="filter-categories">
                 <input
                   type="radio"
                   name="rating"
                   className="filter-categories"
-                  // checked={byRating === rating}
-                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
+                  checked={byRating === rating}
+                  onChange={() => dispatch({ type: "RATING", payload: rating })}
                 />
-                4 stars and above
+                {rating} stars and above
               </label>
-              <label htmlFor="ratings" className="filter-categories">
-                <input
-                  type="radio"
-                  name="rating"
-                  className="filter-categories"
-                  // checked={byRating === rating}
-                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
-                />
-                4 stars and above
-              </label>
-              <label htmlFor="ratings" className="filter-categories">
-                <input
-                  type="radio"
-                  name="rating"
-                  className="filter-categories"
-                  // checked={byRating === rating}
-                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
-                />
-                4 stars and above
-              </label>
-              <label htmlFor="ratings" className="filter-categories">
-                <input
-                  type="radio"
-                  name="rating"
-                  className="filter-categories"
-                  // checked={byRating === rating}
-                  // onChange={() => dispatch({ type: "RATING", payload: rating })}
-                />
-                4 stars and above
-              </label>
+            </div>
+          ))}
         </ul>
       </aside>
     </div>

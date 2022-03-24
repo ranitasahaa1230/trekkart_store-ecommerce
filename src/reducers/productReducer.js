@@ -12,6 +12,8 @@ export const productReducer=(state,action)=>{
             return {...state, includeShoes: !state.includeShoes }
         case "INCLUDE_SUITCASE":
             return {...state, includeSuitcase: !state.includeSuitcase }
+        case "RATING":
+                return { ...state, byRating: action.payload };
         default:
             return state;
     }
