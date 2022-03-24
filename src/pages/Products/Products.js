@@ -12,7 +12,7 @@ export function Products() {
   const ratingProductList=getRatingProducts(categoryProductList,byRating)
   const brandProductList=getBrandProducts(ratingProductList,brandArnisa, brandGucci, brandCeline, brandBianyo)
   const pricedProductList=getPricedProducts(brandProductList,priceRange)
-  const searchedList=getSearchedProducts(pricedProductList,searchQuery)
+  const searchedProductList=getSearchedProducts(pricedProductList,searchQuery)
   // console.log(searchQuery)
 
   return(
@@ -23,7 +23,7 @@ export function Products() {
     {error && <div>{error}</div>}
     <h2>Showing All Products</h2>
     <div className="section-products">
-      {searchedList.map((product) => (
+      {searchedProductList.map((product) => (
         <ProductCard product={product} key={product._id}/>
       ))}
     </div>

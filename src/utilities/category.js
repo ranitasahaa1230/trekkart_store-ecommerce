@@ -8,29 +8,29 @@ const union = (...arr) => {
 };
 
 
-const getCategoryProducts=(products, includeJackets, includeBags, includeShoes, includeSuitcase)=>{
+const getCategoryProducts=(categories, includeJackets, includeBags, includeShoes, includeSuitcase)=>{
     let newData = [];
     let flag = false;
     if (includeJackets) {
         flag = true;
-        newData = union(newData, products.filter(item => item.category === "Jackets"));
+        newData = union(newData, categories.filter(item => item.category === "Jackets"));
     }
     if (includeBags) {
         flag = true;
-        newData = union(newData, products.filter(item => item.category === "Backpacks"));
+        newData = union(newData, categories.filter(item => item.category === "Backpacks"));
     }
     if (includeShoes) {
         flag = true;
-        newData = union(newData, products.filter(item => item.category === "Shoes"));
+        newData = union(newData, categories.filter(item => item.category === "Shoes"));
     }
     if (includeSuitcase) {
         flag = true;
-        newData = union(newData, products.filter(item => item.category === "Suitcases"));
+        newData = union(newData, categories.filter(item => item.category === "Suitcases"));
     }
     if (flag)
         return newData;
     else
-        return products;
+        return categories;
 }
 
 const getBrandProducts=(brands, brandArnisa, brandGucci, brandCeline, brandBianyo,)=>{

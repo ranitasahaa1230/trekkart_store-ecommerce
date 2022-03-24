@@ -50,29 +50,6 @@ export function Filters() {
           </li>
         </ul>
 
-
-      {/* <div className="filter-price">
-        <h4>Price</h4>
-        <div className="flex-gap">
-          <div className="price-range">
-            <p>100</p>
-            <p>500</p>
-            <p>1000</p>
-          </div>
-          <input
-            type="range"
-            name="rangeInput"
-            className="slider"
-            min="100"
-            max="1000"
-            value={priceRange}
-            onChange={(e) =>
-              changeHandler(ACTION_TYPE.PRICE_RANGE, e.target.value, e)
-            }
-          />
-        </div>
-      </div> */}
-
       <ul className="flex-categories btm-b filter-ranges">
       <h3 className="filter-desc-categories">Select Price Range</h3>
       <li className="filter-range">
@@ -89,7 +66,7 @@ export function Filters() {
             type="range"
             name="rangeInput"
             className="slider"
-            min="0"
+            min="10"
             max="5000"
             value={priceRange}
             onChange={(e) =>
