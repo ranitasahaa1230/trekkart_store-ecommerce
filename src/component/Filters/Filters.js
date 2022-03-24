@@ -194,20 +194,18 @@ export function Filters() {
         <ul className="flex-categories">
           <h3 className="filter-desc-categories">Ratings</h3>
           {[5, 4, 3, 2, 1].map((rating) => (
-            <div key={rating}>
-            <label htmlFor="ratings" className="filter-categories">
+            <label className="filter-categories" key={rating}>
                 <input
                   type="radio"
                   name="rating"
-                  id="ratings"
-                  value="rating"
+                  id="ratingbar"
+                  value="rating-bar"
                 className="filter-categories"
                   checked={byRating === rating}
                   onChange={() => dispatch({ type: "RATING", payload: rating })}
                 />
                 {rating} stars and above
               </label>
-            </div>
           ))}
         </ul>
       </aside>

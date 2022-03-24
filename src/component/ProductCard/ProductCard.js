@@ -11,7 +11,7 @@ export function ProductCard({ product }) {
     // description,
     newPrice,
     originalPrice,
-    // isBestSeller,
+    brand,
     ratings,
   } = product;
   return (
@@ -28,13 +28,14 @@ export function ProductCard({ product }) {
               <div className="card-content padding-s">
                 <h3 className="card-grid">
                   {name}<span className="cards-rating">{ratings}<i className="fa-solid fa-star star-rating"></i></span>
-
                 </h3>
 
                 <div className="sm-gap">
                   <span className="txt-bold"> Rs.{newPrice}</span>
                   <span className="txt-crossed-off">Rs.{originalPrice}</span>
                   <span className="txt-high-light">10% Off</span>
+                  <div className="brand-name"><b>Brand: </b><em className="brand-italic">{brand}</em></div>
+
                 </div>
 
                 <div className="card-footer">

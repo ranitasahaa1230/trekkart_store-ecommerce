@@ -44,7 +44,7 @@ export const products = [
     originalPrice: 3999,
     isBestSeller: true,
     ratings: 3.5,
-    brand: "celine",
+    brand: "Celine",
     category: "Backpacks",
 		inStock: false,
   },

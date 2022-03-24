@@ -20,7 +20,7 @@ const [products, setProducts] = useState([]);
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
     brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
     priceRange: 1000,
-    byRating: "",
+    byRating: 1,
   })
   
   useEffect(() => {

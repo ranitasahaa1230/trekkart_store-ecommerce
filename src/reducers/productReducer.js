@@ -35,7 +35,7 @@ export const productReducer = (state, action) => {
         brandCeline: false,
         brandBianyo: false,
         priceRange: 1000,
-        byRating: "",
+        byRating: 1,
       };
     default:
       return state;
