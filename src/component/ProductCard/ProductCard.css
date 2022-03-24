@@ -18,7 +18,7 @@
   }
   .card-content {
     font-size: 1.6rem;
-    margin:1rem 1.5rem;
+    margin:0.5rem 0.8rem;
     color: var(--gray);
   }
   .card-grid {
@@ -26,7 +26,7 @@
     justify-content: space-between;
     color: var(--black-bg);
     cursor: pointer;
-    margin:10px 8px;
+    margin:8px 2px;
     font-size: 1.9rem;
   }
   .star-rating{
@@ -40,10 +40,10 @@
     color: var(--bg-code);
     font-weight: 500;
     border-radius: 5px;
-    padding:0.2rem 0.5rem;
+    padding:0.2rem 0.4rem;
   }
-  .sm-gap{
-    margin-right:0.8rem
+  .card-content .sm-gap{
+    margin-left:1rem;
   }
   .cards-icon {
     color: var(--bg-code);
@@ -98,5 +98,8 @@
     background-color: var(--primary-color);
     color: var(--bg-code);
     font-size: 1.6rem;
+  }
+  .brand-name{
+    font-size: 1.7rem;
   }
   

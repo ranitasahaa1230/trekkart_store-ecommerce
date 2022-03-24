@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import logo from "../../assets/images/logo.png"
+import { useData } from '../../contexts'
 
 export function Navbar() {
+  const {dispatch}=useData()
   return (
     <div>
       <header>
@@ -24,6 +26,7 @@ export function Navbar() {
           id="search-bar"
           className="search-input"
           placeholder="Search for products, brands and more..."
+          onChange={(e)=>dispatch({type:"FILTER_BY_SEARCH",payload:e.target.value})}
         />
         <label htmlFor="search-bar" className="fas fa-search search-label"></label>
       </form>

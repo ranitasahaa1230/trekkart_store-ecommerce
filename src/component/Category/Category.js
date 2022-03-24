@@ -1,18 +1,20 @@
 import React from "react";
 import { landingPageImages } from "../../assets/LandingPage";
+import {Loader} from "../Loader/Loader";
 import { Link } from "react-router-dom";
 import "./Category.css";
+import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Category() {
-  const {
-    collections: { jackets, travelbags, hikingbags, boots },
-  } = landingPageImages;
   const {
     brands: { bianyo, arnisa, celine, gucci },
   } = landingPageImages;
   const {
     review: { john, lara, mohit },
   } = landingPageImages;
+
+  const { categories, loader, error} = useCategory();
+
 
   return (
     <div>
@@ -48,58 +50,26 @@ export function Category() {
       </section>
 
       <section className="latest-products" id="products">
+      {loader && <Loader/>}
+    {error && <div>{error}</div>}
         <h2 className="heading">Latest Collections</h2>
-
         <div className="products-containerbox">
-          <div className="product-box">
-            <img src={jackets} alt="product" />
+            {
+              categories.map(({_id,categoryName,description,image})=>(
+                <div className="product-box" key={_id}>
+                <img src={image} alt="product" />
             <div className="content-product">
               <h3 className="desc-products">
-                Get your Jackets now at Best Price. For Limited Period Only.
+                {description}
               </h3>
-              <Link to="./pages/products.html" className="btns">
+              <Link to="/products" className="btns">
                 Explore More
               </Link>
             </div>
-          </div>
-
-          <div className="product-box">
-            <img src={travelbags} alt="product" />
-            <div className="content-product">
-              <h3 className="desc-products">
-                Get your Travel Bags now at Best Price. Offer only for Today!
-              </h3>
-              <Link to="./pages/products.html" className="btns">
-                Explore More
-              </Link>
+                </div>
+              ))
+            }
             </div>
-          </div>
-
-          <div className="product-box">
-            <img src={hikingbags} alt="product" />
-            <div className="content-product">
-              <h3 className="desc-products">
-                Get your Hiking Bags now at Best Price. Grab it now.
-              </h3>
-              <Link to="./pages/products.html" className="btns">
-                Explore More
-              </Link>
-            </div>
-          </div>
-
-          <div className="product-box">
-            <img src={boots} alt="product" />
-            <div className="content-product">
-              <h3 className="desc-products">
-                Get your Hiking Boots now at Best Price. For Limited Period
-                Only.
-              </h3>
-              <Link to="./pages/products.html" className="btns">
-                Explore More
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section className="latest-brands" id="brands">
