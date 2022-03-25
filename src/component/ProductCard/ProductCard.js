@@ -10,7 +10,7 @@ import {
 
 export function ProductCard({ product }) {
   const {
-    cartState: { cart,wishList },
+    cartState: { cart, wishList },
     cartDispatch,
   } = useData();
 
@@ -27,7 +27,7 @@ export function ProductCard({ product }) {
   } = product;
 
   const isInCart = isProductInCart(cart, id);
-  const isInWishlist = isProductInWishlist(wishList, id)
+  const isInWishlist = isProductInWishlist(wishList, id);
 
   return (
     <div className="section-main" key={id}>
@@ -93,6 +93,13 @@ export function ProductCard({ product }) {
           {isInWishlist ? (
             <i
               className="fas fa-heart card-icons"
+              onClick={() =>
+                cartDispatch({
+                  type: "REMOVE_FROM_WISHLIST",
+                  payload: product,
+                  id: product.id,
+                })
+              }
             ></i>
           ) : (
             <i
