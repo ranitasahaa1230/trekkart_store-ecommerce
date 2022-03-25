@@ -7,7 +7,7 @@ import { CartPrice } from "./CartPrice";
 
 export function Cart() {
   const {
-    cartState: { cart, quantity },
+    cartState: { cart },
     cartDispatch,
   } = useData();
   const isCartHasItem = cart.length > 0;
@@ -23,7 +23,7 @@ export function Cart() {
           <ul className="cart-products">
             {isCartHasItem ? (
               cart.map((product) => (
-                <li className="cart-main">
+                <li className="cart-main" key={product._id}>
                   <div className="cardss cards-horizontals">
                     <div className="img-container">
                       <img
@@ -62,11 +62,11 @@ export function Cart() {
                         Quantity :
                         <button
                           className="cart-md-icons"
-                          disabled={quantity > 1 ? false : true}
+                          disabled={product.quantity > 1 ? false : true}
                           onClick={(e) =>
                             cartDispatch({
                               type: "DECREMENT_QTY",
-                              payload: quantity,
+                              payload: product.quantity,
                               id: product.id,
                             })
                           }
@@ -76,15 +76,14 @@ export function Cart() {
                         <input
                           type="text"
                           className="cart-input"
-                          value={quantity}
+                          value={product.quantity}
                         />
                         <button
                           className="cart-md-icons"
                           onClick={(e) =>
                             cartDispatch({
                               type: "INCREMENT_QTY",
-                              payload: product,
-                              id: product.id,
+                              payload:product._id
                             })
                           }
                         >

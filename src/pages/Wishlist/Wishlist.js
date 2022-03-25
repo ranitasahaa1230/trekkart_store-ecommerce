@@ -22,7 +22,7 @@ export function Wishlist() {
         <ul className="wishlist-products">
         {isWishlistHasItem ? (
           wishList.map((product) => (
-              <li className="section-main">
+              <li className="section-main" key={product._id}>
                 <div className="cards">
                   <div className="img-container">
                     <img

@@ -29,7 +29,7 @@ const [products, setProducts] = useState([]);
     products:products,
     cart:[],
     wishList:[],
-    quantity: 0
+    // quantity: 0
   })
   // console.log(products)
   
