@@ -1,197 +1,94 @@
 import React from 'react'
 // import "../../component/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
+import { useData } from '../../contexts';
 import "./Cart.css";
 
 export function Cart() {
+  const {
+    cartState: { cart },
+    cartDispatch,
+  } = useData();
+  const isCartHasItem = cart.length > 0;
+
   return (
     <div>
-    <h3 className="cart-heading">My Cart <span className="cart-desc">(5)</span></h3>
-    <h4 className="empty-list">Your Cart Is Empty ! ☹️</h4>
+    <h3 className="cart-heading">My Cart <span className="cart-desc">{isCartHasItem && `(${cart.length})`}</span></h3>
     <div className="cart-grid">
-    <main className="main-cart">
-        <ul className="cart-products">           
+        {
+          isCartHasItem ? (
+            cart.map((product)=>(
+              <main className="main-cart">
+              <ul className="cart-products">           
 
-            <li className="cart-main">
-                <div className="cardss cards-horizontals">
-                    <div className="img-container">
-                    <img
-                  src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
-                  alt="hiking"
-                  className="grid-col-img cards-horizontal-img"
-                />
-              </div>
-                     
-                    <div className="card-content padding-s">
-                      <h3 className="card-horizontal-grid">
-                        Stylish Bags
-                      </h3>
-      
-                      <div className="sm-gap md-gap">
-                        <span className="txt-bold"> Rs.3899</span>
-                        <span className="txt-crossed-off">Rs.2999</span>
-                        <span className="txt-high-light">10% Off</span>
-                      </div>
-                      
-                      <div className="txt-gray">
-                        Quantity :
-                            <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-minus cart-icons"></i>
-                        </button>
-                        <input
-              type="text"
-              className="cart-input"
-              value="18"
-            />
-                        <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-plus cart-icons"></i>
-                        </button>
-                      </div>
-                      
-                      <div className="card-footer">
-                      <button
-                        className="btn btn-text-icon-primary grid-horizontal-icons"
-                      >
-                        Remove from Cart
-                      </button>
-                     <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
-                    >
-                      Move to Wishlist
-                    </button></Link>
-                      </div>
-                    </div>
-                    <span className="horizontal-tag">New</span>
-                    <button type="button" className="btn-dismissal">
-                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
-              </button>            
-              </div>
-            </li>
+<li className="cart-main">
+    <div className="cardss cards-horizontals">
+        <div className="img-container">
+        <img
+      src={product.img}
+      alt={product.alt}
+      className="grid-col-img cards-horizontal-img"
+    />
+  </div>
+         
+        <div className="card-content padding-s">
+          <h3 className="card-horizontal-grid">
+            {product.name}
+          </h3>
 
-            <li className="cart-main">
-                <div className="cardss cards-horizontals">
-                    <div className="img-container">
-                    <img
-                  src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
-                  alt="hiking"
-                  className="grid-col-img cards-horizontal-img"
-                />
-              </div>
-                     
-                    <div className="card-content padding-s">
-                      <h3 className="card-horizontal-grid">
-                        Stylish Bags
-                      </h3>
-      
-                      <div className="sm-gap md-gap">
-                        <span className="txt-bold"> Rs.3899</span>
-                        <span className="txt-crossed-off">Rs.2999</span>
-                        <span className="txt-high-light">10% Off</span>
-                      </div>
-                      
-                      <div className="txt-gray">
-                        Quantity :
-                            <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-minus cart-icons"></i>
-                        </button>
-                        <input
-              type="text"
-              className="cart-input"
-              value="18"
-            />
-                        <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-plus cart-icons"></i>
-                        </button>
-                      </div>
-                      
-                      <div className="card-footer">
-                      <button
-                        className="btn btn-text-icon-primary grid-horizontal-icons"
-                      >
-                        Remove from Cart
-                      </button>
-                     <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
-                    >
-                      Move to Wishlist
-                    </button></Link>
-                      </div>
-                    </div>
-                    <span className="horizontal-tag">New</span>
-                    <button type="button" className="btn-dismissal">
-                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
-              </button>            
-              </div>
-            </li>
-            <li className="cart-main">
-                <div className="cardss cards-horizontals">
-                    <div className="img-container">
-                    <img
-                  src="https://github.com/ranitasahaa1230/Trekkart-Store/blob/d51db72677ff63c4de681f8b249d14fcab32f3ac/components/images/luggage2.jpg?raw=true"
-                  alt="hiking"
-                  className="grid-col-img cards-horizontal-img"
-                />
-              </div>
-                     
-                    <div className="card-content padding-s">
-                      <h3 className="card-horizontal-grid">
-                        Stylish Bags
-                      </h3>
-      
-                      <div className="sm-gap md-gap">
-                        <span className="txt-bold"> Rs.3899</span>
-                        <span className="txt-crossed-off">Rs.2999</span>
-                        <span className="txt-high-light">10% Off</span>
-                      </div>
-                      
-                      <div className="txt-gray">
-                        Quantity :
-                            <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-minus cart-icons"></i>
-                        </button>
-                        <input
-              type="text"
-              className="cart-input"
-              value="18"
-            />
-                        <button
-                          className="cart-md-icons"
-                        >
-                          <i className="fas fa-plus cart-icons"></i>
-                        </button>
-                      </div>
-                      
-                      <div className="card-footer">
-                      <button
-                        className="btn btn-text-icon-primary grid-horizontal-icons"
-                      >
-                        Remove from Cart
-                      </button>
-                     <Link to="/wishlist"> <button
-                      className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
-                    >
-                      Move to Wishlist
-                    </button></Link>
-                      </div>
-                    </div>
-                    <span className="horizontal-tag">New</span>
-                    <button type="button" className="btn-dismissal">
-                <i className="fa-solid fa-xmark card-btn-dismissal"></i>
-              </button>            
-              </div>
-            </li>  
-        </ul>
+          <div className="sm-gap md-gap">
+            <span className="txt-bold">{product.newPrice}</span>
+            <span className="txt-crossed-off">{product.originalPrice}</span>
+            <span className="txt-high-light">10% Off</span>
+          </div>
+          
+          <div className="txt-gray">
+            Quantity :
+                <button
+              className="cart-md-icons"
+            >
+              <i className="fas fa-minus cart-icons"></i>
+            </button>
+            <input
+  type="text"
+  className="cart-input"
+  value="18"
+/>
+            <button
+              className="cart-md-icons"
+            >
+              <i className="fas fa-plus cart-icons"></i>
+            </button>
+          </div>
+          
+          <div className="card-footer">
+          <button
+            className="btn btn-text-icon-primary grid-horizontal-icons"
+            onClick={() =>
+                  cartDispatch({ type: "REMOVE_FROM_CART", payload: product })
+                }
+          >
+            Remove from Cart
+          </button>
+         <Link to="/wishlist"> <button
+          className="btn btn-text-icon-primary grid-cards-icons gridd-icons"
+          onClick={() => cartDispatch({ type: "ADD_TO_WISHLIST", payload: product })}
+        >
+          Move to Wishlist
+        </button></Link>
+          </div>
+        </div>
+        <span className="horizontal-tag">New</span>
+        <button type="button" className="btn-dismissal">
+    <i className="fa-solid fa-xmark card-btn-dismissal"></i>
+  </button>            
+  </div>
+</li> 
+</ul>
     </main>
+            ))
+          ) : (<h4 className="empty-list">Your Cart Is Empty ! ☹️</h4>)
+        }
         
     <section className="section-cart">
         <h3 className="heading-carts btm-b">Price Details</h3>
