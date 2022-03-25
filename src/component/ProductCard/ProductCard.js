@@ -4,13 +4,13 @@ import { useData } from "../../contexts";
 import "./ProductCard.css";
 import {
   calcPercentage,
-  // isProductInWishlist,
+  isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
 
 export function ProductCard({ product }) {
   const {
-    cartState: { cart},
+    cartState: { cart,wishList },
     cartDispatch,
   } = useData();
 
@@ -27,7 +27,7 @@ export function ProductCard({ product }) {
   } = product;
 
   const isInCart = isProductInCart(cart, id);
-  // const isInWishlist = isProductInWishlist(wishList, id)
+  const isInWishlist = isProductInWishlist(wishList, id)
 
   return (
     <div className="section-main" key={id}>
@@ -54,7 +54,9 @@ export function ProductCard({ product }) {
             <span className="txt-crossed-off">
               ₹{new Intl.NumberFormat("en-IN").format(originalPrice)}
             </span>{" "}
-            <span className="txt-high-light">{calcPercentage(newPrice, originalPrice)}% Off</span>
+            <span className="txt-high-light">
+              {calcPercentage(newPrice, originalPrice)}% Off
+            </span>
             <div className="brand-name">
               <b>Brand: </b>
               <em className="brand-italic">{brand}</em>
@@ -84,13 +86,25 @@ export function ProductCard({ product }) {
                 Add to Cart
               </button>
             )}
-           
           </div>
         </div>
         <span className="tag">New</span>
         <span>
-          <i className="fas fa-heart cards-icon"></i>
-          {/* {isInWishlist ? "Go to Wishlist" : "Add to Wishlist"} */}
+          {isInWishlist ? (
+            <i
+              className="fas fa-heart card-icons"
+            ></i>
+          ) : (
+            <i
+              className="fas fa-heart cards-icon"
+              onClick={() =>
+                cartDispatch({
+                  type: "ADD_TO_WISHLIST",
+                  payload: product,
+                })
+              }
+            ></i>
+          )}
         </span>
       </div>
     </div>
