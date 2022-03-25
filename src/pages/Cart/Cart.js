@@ -7,7 +7,7 @@ import { CartPrice } from "./CartPrice";
 
 export function Cart() {
   const {
-    cartState: { cart, priced, quantity},
+    cartState: { cart, priced, quantity },
     cartDispatch,
   } = useData();
   const isCartHasItem = cart.length > 0;
@@ -19,10 +19,10 @@ export function Cart() {
         <span className="cart-desc">{isCartHasItem && `(${cart.length})`}</span>
       </h3>
       <div className="cart-grid">
-      <main className="main-cart">
-              <ul className="cart-products">
-        {isCartHasItem ? (
-          cart.map((product) => (
+        <main className="main-cart">
+          <ul className="cart-products">
+            {isCartHasItem ? (
+              cart.map((product) => (
                 <li className="cart-main">
                   <div className="cardss cards-horizontals">
                     <div className="img-container">
@@ -60,23 +60,35 @@ export function Cart() {
 
                       <div className="txt-gray">
                         Quantity :
-                        <button className="cart-md-icons"
-                      disabled={quantity > 1 ? false : true}
-                      onClick={(e) =>
-                      cartDispatch({
-                        type: "DECREMENT_QTY",
-                        payload:quantity,id:product.id})}>
+                        <button
+                          className="cart-md-icons"
+                          disabled={quantity > 1 ? false : true}
+                          onClick={(e) =>
+                            cartDispatch({
+                              type: "DECREMENT_QTY",
+                              payload: quantity,
+                              id: product.id,
+                            })
+                          }
+                        >
                           <i className="fas fa-minus cart-icons"></i>
                         </button>
-                        <input type="text" className="cart-input" value={quantity}/>
-                        <button className="cart-md-icons" 
-                      onClick={(e) =>
-                      cartDispatch({
-                        type: "INCREMENT_QTY",
-                        payload:product,
-                        id:product.id
-                    })}>  
-                        <i className="fas fa-plus cart-icons"></i>
+                        <input
+                          type="text"
+                          className="cart-input"
+                          value={quantity}
+                        />
+                        <button
+                          className="cart-md-icons"
+                          onClick={(e) =>
+                            cartDispatch({
+                              type: "INCREMENT_QTY",
+                              payload: product,
+                              id: product.id,
+                            })
+                          }
+                        >
+                          <i className="fas fa-plus cart-icons"></i>
                         </button>
                       </div>
 
@@ -87,7 +99,7 @@ export function Cart() {
                             cartDispatch({
                               type: "REMOVE_FROM_CART",
                               payload: product,
-                              id:product.id
+                              id: product.id,
                             })
                           }
                         >
@@ -110,19 +122,34 @@ export function Cart() {
                       </div>
                     </div>
                     <span className="horizontal-tag">New</span>
-                    <button type="button" className="btn-dismissal">
+                    <button
+                      type="button"
+                      className="btn-dismissal"
+                      onClick={() =>
+                        cartDispatch({
+                          type: "REMOVE_FROM_CART",
+                          payload: product,
+                          id: product.id,
+                        })
+                      }
+                    >
                       <i className="fa-solid fa-xmark card-btn-dismissal"></i>
                     </button>
                   </div>
                 </li>
-          ))
-        ) : (
-          <h3 className="centre-list">Your Cart Is Empty ! ☹️ <span>Or want to continue <Link to="/products">shopping?</Link></span></h3>
-        )}
-        </ul>
+              ))
+            ) : (
+              <h3 className="centre-list">
+                Your Cart Is Empty ! ☹️{" "}
+                <span>
+                  Or want to continue <Link to="/products">shopping?</Link>
+                </span>
+              </h3>
+            )}
+          </ul>
         </main>
 
-        {isCartHasItem && <CartPrice/>}
+        {isCartHasItem && <CartPrice />}
       </div>
     </div>
   );

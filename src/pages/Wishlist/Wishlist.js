@@ -6,7 +6,7 @@ import "./Wishlist.css";
 
 export function Wishlist() {
   const {
-    cartState: { wishList },
+    cartState: { wishList }, cartDispatch
   } = useData();
   const isWishlistHasItem = wishList.length > 0;
   return (
@@ -67,7 +67,15 @@ export function Wishlist() {
                     </div>
                   </div>
                   <span class="tag">New</span>
-                  <button type="button" class="btn-dismissal">
+                  <button type="button" class="btn-dismissal" 
+                  onClick={() =>
+                            cartDispatch({
+                              type: "REMOVE_FROM_WISHLIST",
+                              payload: product,
+                              id:product.id
+                            })
+                          }>
+                  
                     <i class="fa-solid fa-xmark card-btn-dismissal"></i>
                   </button>
                 </div>
