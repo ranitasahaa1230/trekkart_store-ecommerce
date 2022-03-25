@@ -29,6 +29,8 @@ const [products, setProducts] = useState([]);
     products:products,
     cart:[],
     wishList:[],
+    quantity: 0,
+    priced: 0
   })
   // console.log(products)
   

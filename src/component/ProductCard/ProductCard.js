@@ -4,13 +4,13 @@ import { useData } from "../../contexts";
 import "./ProductCard.css";
 import {
   calcPercentage,
-  // isProductInWishlist,
+  isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
 
 export function ProductCard({ product }) {
   const {
-    cartState: { cart },
+    cartState: { cart, wishList},
     cartDispatch,
   } = useData();
 
@@ -27,13 +27,13 @@ export function ProductCard({ product }) {
   } = product;
 
   const isInCart = isProductInCart(cart, id);
-  // const isInWishlist = isProductInWishlist(wishlist, id)
+  // const isInWishlist = isProductInWishlist(wishList, id)
 
   return (
     <div className="section-main" key={id}>
       <div className="cards">
         <div className="img-container">
-          <Link to="/">
+          <Link to="#">
             <img src={img} alt={alt} className="grid-col-img cards-img" />
           </Link>
         </div>
@@ -90,6 +90,7 @@ export function ProductCard({ product }) {
         <span className="tag">New</span>
         <span>
           <i className="fas fa-heart cards-icon"></i>
+          {/* {isInWishlist ? "Go to Wishlist" : "Add to Wishlist"} */}
         </span>
       </div>
     </div>
