@@ -28,6 +28,7 @@ export const productReducer = (state, action) => {
             return { ...state, searchQuery: action.payload };
     case "RESET":
       return {
+        ...state,
         sortBy: "",
         includeJackets: false,
         includeBags: false,
