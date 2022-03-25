@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useData } from "../../contexts";
+import { calcPercentage } from "../../utilities";
 import "./Wishlist.css";
 
 export function Wishlist() {
@@ -41,11 +42,17 @@ export function Wishlist() {
                     </h3>
 
                     <div className="sm-gap">
-                      <span className="txt-bold">{product.newPrice}</span>
-                      <span className="txt-crossed-off">
-                        {product.originalPrice}
-                      </span>
-                      <span className="txt-high-light">10% Off</span>
+                    <span className="txt-bold">
+              ₹{new Intl.NumberFormat("en-IN").format(product.newPrice)}
+            </span>{" "}
+            <span className="txt-crossed-off">
+              ₹{new Intl.NumberFormat("en-IN").format(product.originalPrice)}
+            </span>{" "}
+            <span className="txt-high-light">{calcPercentage(product.newPrice, product.originalPrice)}% Off</span>
+            <div className="brand-name">
+              <b>Brand: </b>
+              <em className="brand-italic">{product.brand}</em>
+            </div>
                     </div>
 
                     <div className="card-footer">

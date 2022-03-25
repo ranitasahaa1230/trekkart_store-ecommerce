@@ -4,7 +4,7 @@ import { useData } from "../../contexts";
 import "./ProductCard.css";
 import {
   calcPercentage,
-  isProductInWishlist,
+  // isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
 
@@ -50,11 +50,11 @@ export function ProductCard({ product }) {
           <div className="sm-gap">
             <span className="txt-bold">
               ₹{new Intl.NumberFormat("en-IN").format(newPrice)}
-            </span>
+            </span>{" "}
             <span className="txt-crossed-off">
               ₹{new Intl.NumberFormat("en-IN").format(originalPrice)}
-            </span>
-            <span className="txt-high-light">10% Off</span>
+            </span>{" "}
+            <span className="txt-high-light">{calcPercentage(newPrice, originalPrice)}% Off</span>
             <div className="brand-name">
               <b>Brand: </b>
               <em className="brand-italic">{brand}</em>

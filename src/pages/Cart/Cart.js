@@ -2,6 +2,7 @@ import React from 'react'
 // import "../../component/ProductCard/ProductCard";
 import { Link } from "react-router-dom";
 import { useData } from '../../contexts';
+import { calcPercentage } from '../../utilities';
 import "./Cart.css";
 
 export function Cart() {
@@ -37,9 +38,13 @@ export function Cart() {
           </h3>
 
           <div className="sm-gap md-gap">
-            <span className="txt-bold">{product.newPrice}</span>
-            <span className="txt-crossed-off">{product.originalPrice}</span>
-            <span className="txt-high-light">10% Off</span>
+          <span className="txt-bold">
+              ₹{new Intl.NumberFormat("en-IN").format(product.newPrice)}
+            </span>{" "}
+            <span className="txt-crossed-off">
+              ₹{new Intl.NumberFormat("en-IN").format(product.originalPrice)}
+             </span>{" "}
+            <span className="txt-high-light">{calcPercentage(product.newPrice, product.originalPrice)}% Off</span>
           </div>
           
           <div className="txt-gray">
