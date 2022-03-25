@@ -7,7 +7,7 @@ import { CartPrice } from "./CartPrice";
 
 export function Cart() {
   const {
-    cartState: { cart, priced, quantity },
+    cartState: { cart, quantity },
     cartDispatch,
   } = useData();
   const isCartHasItem = cart.length > 0;

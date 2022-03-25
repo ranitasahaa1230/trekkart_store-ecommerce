@@ -4,13 +4,13 @@ import { useData } from "../../contexts";
 import "./ProductCard.css";
 import {
   calcPercentage,
-  isProductInWishlist,
+  // isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
 
 export function ProductCard({ product }) {
   const {
-    cartState: { cart, wishList},
+    cartState: { cart},
     cartDispatch,
   } = useData();
 
