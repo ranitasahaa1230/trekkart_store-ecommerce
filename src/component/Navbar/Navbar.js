@@ -5,7 +5,10 @@ import logo from "../../assets/images/logo.png"
 import { useData } from '../../contexts'
 
 export function Navbar() {
-  const {dispatch}=useData()
+  const {
+    cartState: { cart,wishList },dispatch
+  } = useData()
+  
   return (
     <div>
       <header>
@@ -39,12 +42,12 @@ export function Navbar() {
 
         <Link to="/wishlist">
         <span class="badges-container"><i class="fas fa-heart"></i>
-                <span class="badge-number">99</span>
+                <span class="badge-number">{wishList.length}</span>
             </span>
         </Link>
         <Link to="/cart">
         <span class="badges-container"><i class="fas fa-shopping-cart"></i>
-                <span class="badge-number">2</span>
+                <span class="badge-number">{cart.length}</span>
             </span>
         </Link>
       </div>
