@@ -7,6 +7,7 @@ import {
   isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
+import { toast } from "react-toastify";
 
 export function ProductCard({ product }) {
   const {
@@ -86,6 +87,8 @@ export function ProductCard({ product }) {
                 Add to Cart
               </button>
             )}
+            {/* toast.success("Successfully Updated cart");
+            toast("Purchase Complete",{type:"success"}) */}
           </div>
         </div>
         <span className="tag">New</span>
@@ -110,7 +113,9 @@ export function ProductCard({ product }) {
                   payload: product,
                 })
               }
-            ></i>
+            >
+              {" "}
+            </i>
           )}
         </span>
       </div>
