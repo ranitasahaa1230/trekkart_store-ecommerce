@@ -62,12 +62,11 @@ export function Cart() {
                         Quantity :
                         <button
                           className="cart-md-icons"
-                          disabled={product.quantity > 1 ? false : true}
+                          disabled={product.qty > 1 ? false : true}
                           onClick={(e) =>
                             cartDispatch({
                               type: "DECREMENT_QTY",
-                              payload: product.quantity,
-                              id: product.id,
+                              payload:product._id
                             })
                           }
                         >
@@ -76,7 +75,7 @@ export function Cart() {
                         <input
                           type="text"
                           className="cart-input"
-                          value={product.quantity}
+                          value={product.qty}
                         />
                         <button
                           className="cart-md-icons"

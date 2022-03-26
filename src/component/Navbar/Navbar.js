@@ -36,18 +36,18 @@ export function Navbar() {
 
       <div className="font-icons">
         <Link to="/login">
-            <span class="badges-container"><i class="fas fa-user"></i>
+            <span className="badges-container"><i className="fas fa-user"></i>
             </span>
         </Link>
 
         <Link to="/wishlist">
-        <span class="badges-container"><i class="fas fa-heart"></i>
-                <span class="badge-number">{wishList.length}</span>
+        <span className="badges-container"><i className="fas fa-heart"></i>
+                <span className="badge-number">{wishList.length}</span>
             </span>
         </Link>
         <Link to="/cart">
-        <span class="badges-container"><i class="fas fa-shopping-cart"></i>
-                <span class="badge-number">{cart.length}</span>
+        <span className="badges-container"><i className="fas fa-shopping-cart"></i>
+                <span className="badge-number">{cart.length}</span>
             </span>
         </Link>
       </div>

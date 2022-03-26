@@ -66,8 +66,8 @@ export function Wishlist() {
                       </Link>
                     </div>
                   </div>
-                  <span class="tag">New</span>
-                  <button type="button" class="btn-dismissal" 
+                  <span className="tag">New</span>
+                  <button type="button" className="btn-dismissal" 
                   onClick={() =>
                             cartDispatch({
                               type: "REMOVE_FROM_WISHLIST",
@@ -76,7 +76,7 @@ export function Wishlist() {
                             })
                           }>
                   
-                    <i class="fa-solid fa-xmark card-btn-dismissal"></i>
+                    <i className="fa-solid fa-xmark card-btn-dismissal"></i>
                   </button>
                 </div>
               </li>
