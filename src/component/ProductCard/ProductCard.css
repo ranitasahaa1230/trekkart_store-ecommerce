@@ -45,7 +45,7 @@
   .card-content .sm-gap{
     margin-left:1rem;
   }
-  .cards-icon {
+  .cards-icon, .card-icons{
     color: var(--bg-code);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--primary-color);
@@ -56,7 +56,7 @@
     right: 3%;
     font-size: 2rem;
   }
-  .cards-icon:hover {
+  .cards-icon:hover, .card-icons {
     color: var(--wishlist);
     -webkit-text-stroke-color: var(--wishlist);
   }
