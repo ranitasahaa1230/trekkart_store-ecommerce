@@ -33,6 +33,14 @@ const getCategoryProducts=(categories, includeJackets, includeBags, includeShoes
         return categories;
 }
 
+// const getCategoryyProducts = ( productList, filterState) => {
+//     return [...productList].filter((item) =>
+//     filterState.Jackets || filterState.Backpacks || filterState.Shoes || filterState.Suitcases
+//         ? filterState[item.categoryName]
+//         : true
+//     );
+//   };
+
 const getBrandProducts=(brands, brandArnisa, brandGucci, brandCeline, brandBianyo,)=>{
     let newBrandData = [];
     let flag = false;

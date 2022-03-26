@@ -18,6 +18,7 @@ const [products, setProducts] = useState([]);
 
   const [state, dispatch] = useReducer(productReducer,{
     sortBy: "",
+    // Jackets : false, Backpacks : false, Shoes : false, Suitcases : false,
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
     brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
     priceRange: 5000,

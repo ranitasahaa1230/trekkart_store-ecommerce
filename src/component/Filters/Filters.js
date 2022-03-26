@@ -89,7 +89,7 @@ export function Filters() {
                 className="filter-categories"
                 value={category}
                 checked={category.includes(category)}
-                onChange={() => dispatch({ type: "ADD_CATEGORY", payload: category })}
+                onChange={() => dispatch({ type: "FILTER_BY_CATEGORY", payload: category })}
               />
               {category}
             </label>

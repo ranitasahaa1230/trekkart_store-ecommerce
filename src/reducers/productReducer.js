@@ -12,6 +12,11 @@ export const productReducer = (state, action) => {
       return { ...state, includeShoes: !state.includeShoes };
     case "INCLUDE_SUITCASE":
       return { ...state, includeSuitcase: !state.includeSuitcase };
+    // case "FILTER_BY_CATEGORY":
+    //   return {
+    //     ...state,
+    //     [action.payload]: !state[action.payload],
+    //   };
     case "RATING":
       return { ...state, byRating: action.payload };
     case "BRAND_ARNISA":
