@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 import "./Navbar.css"
 import logo from "../../assets/images/logo.png"
 import { useData } from '../../contexts'
@@ -8,6 +8,7 @@ export function Navbar() {
   const {
     cartState: { cart,wishList },dispatch
   } = useData()
+  const { pathname } = useLocation();
   
   return (
     <div>
@@ -23,7 +24,8 @@ export function Navbar() {
         <Link to="/products" className="href">Shop Now</Link>
       </nav>
 
-      <form  className="class-form">
+      {pathname ==="/products" && (
+        <form  className="class-form">
         <input
           type="search"
           id="search-bar"
@@ -33,6 +35,7 @@ export function Navbar() {
         />
         <label htmlFor="search-bar" className="fas fa-search search-label"></label>
       </form>
+      )}
 
       <div className="font-icons">
         <Link to="/login">
