@@ -69,12 +69,12 @@ header .font-icons a {
   margin-left: 2rem;
   position: relative;
 }
-.badge-number{
+.badge-number {
   position: absolute;
   background: none;
   bottom: 2.55vh;
   left: 2vh;
-  font-family:Cambria;
+  font-family: Cambria;
   background: var(--wishlist);
   border-radius: 50%;
   padding: 0 0.6rem;
@@ -83,7 +83,7 @@ header .font-icons a {
 header .font-icons a:hover {
   color: var(--secondary-hover);
 }
-.badge-number:hover{
+.badge-number:hover {
   color: var(--bg-code);
 }
 .logo-header {
