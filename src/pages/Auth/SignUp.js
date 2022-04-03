@@ -29,7 +29,7 @@ export function SignUp() {
 
   useEffect(() => {
     setFormErrors(() => validFormChecker(signUpForm));
-  }, [signUpForm]);
+  }, [signUpForm,setFormErrors]);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
