@@ -16,7 +16,6 @@ export function SignUp() {
   const [signUpForm, setSignUpForm] = useState(signUpFields);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [formErrors, setFormErrors] = useState({});
 
   const { updateUser } = useAuth();
   // const { setLoader } = useData();
@@ -28,7 +27,7 @@ export function SignUp() {
   };
 
   useEffect(() => {
-    setFormErrors(() => validFormChecker(signUpForm));
+    setError(() => validFormChecker(signUpForm));
   }, [signUpForm]);
 
   const handleFormSubmit = async (event) => {
@@ -42,7 +41,7 @@ export function SignUp() {
         updateUser(createdUser);
         localStorage.setItem("token", encodedToken);
         navigate("/");
-      } catch (formErrors) {
+      } catch (error) {
         setError("Something is wrong, please try later.");
       }
     }
