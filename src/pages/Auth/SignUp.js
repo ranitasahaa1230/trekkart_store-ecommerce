@@ -16,7 +16,7 @@ export function SignUp() {
   const [signUpForm, setSignUpForm] = useState(signUpFields);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [formErrors, setFormErrors] = useState({});
+  const [setFormErrors] = useState({});
 
   const { updateUser } = useAuth();
   // const { setLoader } = useData();
