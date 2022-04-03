@@ -5,6 +5,7 @@ import { Navbar } from "./component";
 import {
   Cart,
   Home,
+  NotFound,
   Products,
   // ProductPage,
   UserProfile,
@@ -15,7 +16,7 @@ import { Login, SignUp } from "./pages/Auth";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
@@ -26,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/userProfile" element={<UserProfile />} />
-        
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
