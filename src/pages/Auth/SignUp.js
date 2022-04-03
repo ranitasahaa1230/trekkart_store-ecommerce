@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts";
 import "./Auth.css";
@@ -16,6 +16,7 @@ export function SignUp() {
   const [signUpForm, setSignUpForm] = useState(signUpFields);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  // const [formErrors, setFormErrors] = useState({});
 
   const { updateUser } = useAuth();
   // const { setLoader } = useData();
@@ -26,9 +27,9 @@ export function SignUp() {
     setSignUpForm((prev) => ({ ...prev, [fieldName]: value }));
   };
 
-  useEffect(() => {
-    setError(() => validFormChecker(signUpForm));
-  }, [signUpForm]);
+  // useEffect(() => {
+  //   setFormErrors(() => validFormChecker(signUpForm));
+  // }, [signUpForm]);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
