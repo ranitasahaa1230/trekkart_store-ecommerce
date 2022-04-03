@@ -57,7 +57,7 @@ export function Login() {
             Email Address
           </label>
           <input
-            type="text"
+            type="text" id="inputbox"
             className="input-fields"
             placeholder="test@gmail.com"
             value={loginForm.email}
