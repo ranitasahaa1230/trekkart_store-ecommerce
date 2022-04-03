@@ -94,7 +94,7 @@ export function SignUp() {
           <div className="visibility">
           <input
             type={showPassword ? "text" : "password"}
-            className="input-fields"
+            className="visibility-fields"
             placeholder="Enter Password"
             value={signUpForm.password}
             autoComplete="off"
@@ -129,7 +129,7 @@ export function SignUp() {
             <p>{error}</p>
           </div>
           )}
-          
+
           <div className="input-account">
             Already registered?
             <Link to="/login" className="primary-account">
