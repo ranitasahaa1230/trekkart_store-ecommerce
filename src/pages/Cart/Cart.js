@@ -4,9 +4,9 @@ import { Link} from "react-router-dom";
 import { useData } from "../../contexts";
 import "./Cart.css";
 import { CartPrice } from "./CartPrice";
-// import { INITIALIZE_CART } from "../../reducers";
+import { INITIALIZE_CART } from "../../reducers";
 import {
-  // useToast,
+  useToast,
   useScrollToTop,
   useDocumentTitle,
 } from "../../hooks";
@@ -19,32 +19,32 @@ export function Cart() {
     cartState: { cart },
     cartDispatch,
   } = useData();
-  // const { showToast } = useToast();
+  const { showToast } = useToast();
   const isCartHasItem = cart.length > 0;
 
   useScrollToTop();
   useDocumentTitle("Cart");
   
-  // useEffect(() => {
-  //   (async () => {
-  //     try {
-  //       setLoader(true);
-  //       const {
-  //         data: { cart },
-  //       } = await axios.get("/api/user/cart", {
-  //         headers: { authorization: localStorage.getItem("token") },
-  //       });
+  useEffect(() => {
+    (async () => {
+      try {
+        setLoader(true);
+        const {
+          data: { cart },
+        } = await axios.get("/api/user/cart", {
+          headers: { authorization: localStorage.getItem("token") },
+        });
 
-  //       cartDispatch({
-  //         type: INITIALIZE_CART,
-  //         payload: cart,
-  //       });
-  //       setLoader(false);
-  //     } catch (error) {
-  //       showToast("error", "Something went wrong!");
-  //     }
-  //   })();
-  // }, []);
+        cartDispatch({
+          type: INITIALIZE_CART,
+          payload: cart,
+        });
+        setLoader(false);
+      } catch (error) {
+        showToast("error", "Something went wrong!");
+      }
+    })();
+  }, [cartDispatch,showToast]);
 
 
   return loader ? (
