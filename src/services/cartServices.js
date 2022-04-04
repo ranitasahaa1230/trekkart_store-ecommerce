@@ -9,7 +9,7 @@ import {
 const addToCart = async (product, cartDispatch, setLoader, showToast) => {
     try {
       setLoader(true);
-      const updatedCart = await axios.post(
+      await axios.post(
         "/api/user/cart",
         { product },
         {
@@ -30,7 +30,7 @@ const addToCart = async (product, cartDispatch, setLoader, showToast) => {
   
   const removeFromCart = async (productId, cartDispatch, showToast, isMoved) => {
     try {
-      const updatedCart = await axios.delete(`/api/user/cart/${productId}`, {
+      await axios.delete(`/api/user/cart/${productId}`, {
         headers: { authorization: localStorage.getItem("token") },
       });
   
@@ -54,7 +54,7 @@ const addToCart = async (product, cartDispatch, setLoader, showToast) => {
   ) => {
     try {
       setLoader(true);
-      const updatedCart = await axios.post(
+       await axios.post(
         `/api/user/cart/${productId}`,
         {
           action: {
