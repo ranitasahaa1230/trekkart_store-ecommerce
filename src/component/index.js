@@ -5,6 +5,8 @@ export { Footer } from "./Footer/Footer";
 export { ProductCard } from "./ProductCard/ProductCard";
 export { Filters } from "./Filters/Filters";
 export { Loader } from "./Loader/Loader"
+export { Toast } from "./Toast/Toast";
+
 
 
 
