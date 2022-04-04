@@ -59,7 +59,7 @@
     outline: none;
     color: var(--bg-code);
     border-radius: 1.2rem !important;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .submit-loginbtn{
     width: 35rem;
@@ -76,6 +76,10 @@
   }
   .submit-loginbtns:hover, .submit-loginbtn:hover{
     opacity: 0.9;
+  }
+  .submit-loginbtn:hover{
+    background: var(--primary-color);
+    color: var(--bg-code);
   }
   input.check-box {
     margin: 1.3rem 0.5rem 1rem 2.5rem;

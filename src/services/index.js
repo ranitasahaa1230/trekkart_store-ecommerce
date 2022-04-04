@@ -1,2 +1,2 @@
-// export { loginService } from "./login/loginService";
-// export { signUpService } from "./signUp/signUpService";
+export * from "./cartServices";
+export * from "./wishListServices";
