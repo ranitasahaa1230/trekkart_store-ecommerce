@@ -64,6 +64,7 @@ export function ProductCard({ product }) {
 
   return (
     <div className="section-main" key={id}>
+    {loader && <div>Loading products...</div>}
       <div className="cards">
         <div className="img-container">
           <Link to="#">

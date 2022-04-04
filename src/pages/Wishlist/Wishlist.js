@@ -5,11 +5,11 @@ import { useData } from "../../contexts";
 import { calcPercentage } from "../../utilities";
 import { INITIALIZE_WISHLIST } from "../../reducers";
 import { useToast, useScrollToTop, useDocumentTitle } from "../../hooks";
-import {
-  addToWishlist,
-  removeFromWishlist,
-  updateQuantity,
-} from "../../services";
+// import {
+//   addToWishlist,
+//   removeFromWishlist,
+//   updateQuantity,
+// } from "../../services";
 import "./Wishlist.css";
 
 export function Wishlist() {
@@ -43,7 +43,7 @@ export function Wishlist() {
         showToast("error", "Something went wrong!");
       }
     })();
-  }, []);
+  });
 
   return loader ? (
     <h2 className="text-center">Loading wishlist...</h2>
