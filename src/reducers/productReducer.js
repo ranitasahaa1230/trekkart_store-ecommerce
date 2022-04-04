@@ -47,6 +47,6 @@ export const productReducer = (state, action) => {
         byRating: 1,
       };
     default:
-      return state;
+      throw new Error("Action type not found.");
   }
 };
