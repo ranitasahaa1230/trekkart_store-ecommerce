@@ -60,6 +60,27 @@
     color: var(--wishlist);
     -webkit-text-stroke-color: var(--wishlist);
   }
+
+  .wishlist-badge i {
+    color: var(--bg-code);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--primary-color);
+    position: absolute;
+    border-radius: 6px;
+    padding: 8px;
+    top: 1%;
+    right: 3%;
+    font-size: 2rem;
+  }
+  
+  .wishlist-badge .wishlist-badge-active {
+    color: var(--wishlist);
+    background-color: var(--black-bg);
+  }
+  
+  .wishlist-badge-active {
+    background-color: var(--secondary-color);
+  }
   .txt-bold {
     font-weight: bolder;
     color: var(--black-bg);

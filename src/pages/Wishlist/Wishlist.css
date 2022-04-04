@@ -7,12 +7,17 @@
   .wishlist-desc {
     color: var(--gray);
   }
-  .empty-list{
+  #emptylist .empty-list{
     text-align: center;
     font-size: 2.6rem;
     font-weight: 800;
     color: var(--gray);
   }
+.empty-list-products{
+  font-size: 2rem;
+  color: var(--black-bg);
+  font-weight: bold;
+}
   .wishlist-products {
     margin: 4rem;
     display: flex;

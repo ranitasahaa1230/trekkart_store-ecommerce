@@ -1,18 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useData } from "../../contexts";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth, useData } from "../../contexts";
 import "./ProductCard.css";
 import {
   calcPercentage,
   isProductInWishlist,
   isProductInCart,
 } from "../../utilities/index";
+import { addToCart, addToWishlist, removeFromWishlist } from "../../services";
+import { useToast, useScrollToTop, useDocumentTitle } from "../../hooks";
 
 export function ProductCard({ product }) {
+  const { showToast } = useToast();
   const {
     cartState: { cart, wishList },
     cartDispatch,
   } = useData();
+  const [loader, setLoader] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate()
 
   const {
     _id: id,
@@ -26,8 +32,35 @@ export function ProductCard({ product }) {
     ratings,
   } = product;
 
+  useScrollToTop();
+  useDocumentTitle("Product Details");
+
   const isInCart = isProductInCart(cart, id);
   const isInWishlist = isProductInWishlist(wishList, id);
+
+  const handleAddToCart = () => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      if (isInCart) {
+        navigate("/cart");
+      } else {
+        addToCart(product, cartDispatch, setLoader, showToast);
+      }
+    }
+  };
+
+  const handleWishlistClick = () => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      if (isInWishlist){
+        addToWishlist(product, cartDispatch, showToast);
+      } else {
+        removeFromWishlist(product.id, cartDispatch, showToast);
+      }
+    }
+  };
 
   return (
     <div className="section-main" key={id}>
@@ -64,33 +97,35 @@ export function ProductCard({ product }) {
           </div>
 
           <div className="card-footer">
-            {isInCart ? (
-              <Link to="/cart">
-                <button className="btn btn-text-icon-primary grid-cards-icons">
-                  <span className="btn-card-icon">
-                    <i className="fas fa-shopping-cart"></i>{" "}
-                  </span>
-                  Go to Cart
-                </button>
-              </Link>
-            ) : (
-              <button
+          <button
                 className="btn btn-text-icon-primary grid-cards-icons"
-                onClick={() =>
-                  cartDispatch({ type: "ADD_TO_CART", payload: product })
-                }
+                onClick={handleAddToCart}
               >
                 <span className="btn-card-icon">
                   <i className="fas fa-shopping-cart"></i>{" "}
                 </span>
-                Add to Cart
-              </button>
-            )}
+        {isInCart 
+          ? "Go to cart"
+          : "Add to cart"}
+      </button>
+      
           </div>
         </div>
         <span className="tag">New</span>
         <span>
-          {isInWishlist ? (
+        <i
+              className="card-badge-bg wishlist-badge"
+              onClick={handleWishlistClick}
+            ></i>
+           <i
+        className={`${
+          isProductInWishlist ? "wishlist-badge-active" : ""
+        }fas fa heart`}
+      >
+        
+      </i>
+
+          {/* {isInWishlist ? (
             <i
               className="fas fa-heart card-icons"
               onClick={() =>
@@ -111,7 +146,7 @@ export function ProductCard({ product }) {
                 })
               }
             ></i>
-          )}
+          )} */}
         </span>
       </div>
     </div>
