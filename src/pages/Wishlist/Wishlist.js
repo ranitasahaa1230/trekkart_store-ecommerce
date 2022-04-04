@@ -43,7 +43,7 @@ export function Wishlist() {
         showToast("error", "Something went wrong!");
       }
     })();
-  });
+  }, []);
 
   return loader ? (
     <h2 className="text-center">Loading wishlist...</h2>

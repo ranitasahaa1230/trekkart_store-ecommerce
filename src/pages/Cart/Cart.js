@@ -44,7 +44,7 @@ export function Cart() {
         showToast("error", "Something went wrong!");
       }
     })();
-  });
+  }, []);
 
 
   return loader ? (

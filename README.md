@@ -19,16 +19,17 @@ $ npm start
 - Home Page
 - Product Listing Page
 - Filters by
-Price
-Category
-Ratings
-Search
+- Price
+  - Category
+  - Ratings
+  - Brands
+  - Search
 - Cart Management
 - Wishlist Management
 - Authentication
-Sign-up
-Login
-Logout
+  - Sign-up
+  - Login
+  - Logout
 - Single Product Page
 - Order Summary
 - Loading & Alerts
