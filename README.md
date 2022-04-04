@@ -48,7 +48,7 @@ Trekkart Store(https://trekkart-stores.netlify.app/)
 
 ## Demo
 
-(https://user-images.githubusercontent.com/37957073/161617462-1a26d450-9088-4c4d-9d85-60809b26111f.mp4)
+https://user-images.githubusercontent.com/37957073/161617462-1a26d450-9088-4c4d-9d85-60809b26111f.mp4
 
 ## 👩‍💻 Connect with me
 
