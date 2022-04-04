@@ -14,6 +14,7 @@ $ cd trekkart_store-ecommerce
 $ npm install
 $ npm start
 ```
+
 ## **Features -**
 
 - Home Page
@@ -46,7 +47,6 @@ $ npm start
 Trekkart Store(https://trekkart-stores.netlify.app/)
 
 ## Demo
-
 
 ## 👩‍💻 Connect with me
 
