@@ -1,7 +1,3 @@
-
-
-https://user-images.githubusercontent.com/37957073/161617462-1a26d450-9088-4c4d-9d85-60809b26111f.mp4
-
 <div align="center">
 <img alt="trekkart store lgo" src="./public/favicon.ico" width="150px" height="150px" />
 </div>
@@ -51,6 +47,8 @@ $ npm start
 Trekkart Store(https://trekkart-stores.netlify.app/)
 
 ## Demo
+
+(https://user-images.githubusercontent.com/37957073/161617462-1a26d450-9088-4c4d-9d85-60809b26111f.mp4)
 
 ## 👩‍💻 Connect with me
 
