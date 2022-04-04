@@ -6,7 +6,15 @@
 
 Trekkart Store is is an e-commerce platform for the ones who love travelling, Get Your Best Deal.
 
-## Contains
+## **How to install and run locally ?**
+
+```
+$ git clone https://github.com/ranitasahaa1230/trekkart_store-ecommerce.git
+$ cd trekkart_store-ecommerce
+$ npm install
+$ npm start
+```
+## **Features -**
 
 - Home Page
 - Product Listing Page
@@ -25,7 +33,7 @@ Logout
 - Order Summary
 - Loading & Alerts
 
-# Built with -
+## **Built with -**
 
 - React JS
 - React Context API + useReducer
