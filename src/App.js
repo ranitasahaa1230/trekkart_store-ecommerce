@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
           {/* {loader && <Loader />} */}
-      {/* <Loader/> */}
+      <Loader/>
       <Navbar />
       <Toast />
       <Routes>

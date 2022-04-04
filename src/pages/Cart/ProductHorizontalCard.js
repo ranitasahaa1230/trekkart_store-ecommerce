@@ -25,8 +25,8 @@ export const ProductHorizontalCard = ({ product }) => {
     // description,
     newPrice,
     originalPrice,
-    brand,
-    ratings,
+    // brand,
+    // ratings,
   } = product;
 
   const handleMoveToWishlist = () => {

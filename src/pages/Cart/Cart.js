@@ -1,12 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useData } from "../../contexts";
 import "./Cart.css";
 import { CartPrice } from "./CartPrice";
 import { INITIALIZE_CART } from "../../reducers";
 import {
-  useModal,
   useToast,
   useScrollToTop,
   useDocumentTitle,
@@ -15,7 +14,7 @@ import { ProductHorizontalCard } from "./ProductHorizontalCard";
 
 export function Cart() {
   const [loader, setLoader] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const {
     cartState: { cart },
     cartDispatch,
@@ -48,7 +47,8 @@ export function Cart() {
   }, []);
 
 
-  return (
+  return loader ? (
+    <h2 className="text-center">Loading CartItems...</h2>) :(
     <div>
       <h3 className="cart-heading">
         My Cart{" "}
@@ -75,5 +75,5 @@ export function Cart() {
         {isCartHasItem && <CartPrice />}
       </div>
     </div>
-  );
+    );
 }
