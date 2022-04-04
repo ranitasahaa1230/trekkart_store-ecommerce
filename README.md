@@ -19,7 +19,7 @@ $ npm start
 - Home Page
 - Product Listing Page
 - Filters by
-- Price
+  - Price
   - Category
   - Ratings
   - Brands
