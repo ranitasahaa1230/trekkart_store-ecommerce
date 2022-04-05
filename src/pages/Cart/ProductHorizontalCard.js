@@ -47,11 +47,13 @@ export const ProductHorizontalCard = ({ product }) => {
       <li className="cart-main" key={_id}>
         <div className="cardss cards-horizontals">
           <div className="img-container">
+          <Link to={`/product/${_id}`}>
             <img
               src={img}
               alt={alt}
               className="grid-col-img cards-horizontal-img"
             />
+            </Link>
           </div>
 
           <div className="card-content padding-s">

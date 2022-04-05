@@ -67,7 +67,7 @@ export function ProductCard({ product }) {
     {loader && <div>Loading products...</div>}
       <div className="cards">
         <div className="img-container">
-          <Link to="#">
+        <Link to={`/product/${id}`}>
             <img src={img} alt={alt} className="grid-col-img cards-img" />
           </Link>
         </div>

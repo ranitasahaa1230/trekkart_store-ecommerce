@@ -63,11 +63,13 @@ export function Wishlist() {
               <li className="section-main" key={product._id}>
                 <div className="cards">
                   <div className="img-container">
+                  <Link to={`/product/${product._id}`}>
                     <img
                       src={product.img}
                       alt={product.alt}
                       className="grid-col-img cards-img"
                     />
+                    </Link>
                   </div>
 
                   <div className="card-content padding-s">
