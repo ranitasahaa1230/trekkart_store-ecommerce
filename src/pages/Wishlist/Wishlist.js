@@ -11,6 +11,7 @@ import { useToast, useDocumentTitle } from "../../hooks";
 //   updateQuantity,
 // } from "../../services";
 import "./Wishlist.css";
+import { CircularProgress } from "@mui/material";
 
 export function Wishlist() {
   const [loader, setLoader] = useState(false);
@@ -44,9 +45,13 @@ export function Wishlist() {
     })();
   }, []);
 
-  return loader ? (
-    <h2 className="text-center">Loading wishlist...</h2>
-  ) : (
+  return (
+    <>
+      {loader ? (
+        <div className="text__circular">
+          <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
+        </div>
+      ) : (
     <div>
       <main className="wishlist-main">
         <h3 className="wishlist-heading">
@@ -150,5 +155,7 @@ export function Wishlist() {
         </ul>
       </main>
     </div>
+    )}
+    </>
   );
 }
