@@ -16,10 +16,10 @@ export function Navbar() {
       <header>
         <div id="menu-bar" className="fas fa-bars menu-bar"></div>
         <div className="logo-header">
-          <img src={logo} alt="logo" className="logo-design" />
-          <a href="/" className="logo">
-            Trekkart Store
-          </a>
+        <img src={logo} alt="logo" className="logo-design" />
+          <Link to="/" className="logo">
+            Trekkart Stores
+          </Link>
         </div>
 
         <nav className="navbar">

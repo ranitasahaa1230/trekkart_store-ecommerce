@@ -2,9 +2,9 @@
 <img alt="trekkart store lgo" src="./public/favicon.ico" width="150px" height="150px" />
 </div>
 
-# Trekkart Store
+# Trekkart Stores
 
-Trekkart Store is is an e-commerce platform for the ones who love travelling, Get Your Best Deal.
+Trekkart Stores is is an e-commerce platform for the ones who love travelling, Get Your Best Deal.
 
 ## **How to install and run locally ?**
 
@@ -44,7 +44,7 @@ $ npm start
 
 ## Live Link
 
-Trekkart Store(https://trekkart-stores.netlify.app/)
+Trekkart Stores(https://trekkart-stores.netlify.app/)
 
 ## Demo
 
