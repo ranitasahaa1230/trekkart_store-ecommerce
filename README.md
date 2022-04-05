@@ -2,9 +2,9 @@
 <img alt="trekkart store lgo" src="./public/favicon.ico" width="150px" height="150px" />
 </div>
 
-# Trekkart Stores
+# Trekkart Store
 
-Trekkart Stores is is an e-commerce platform for the ones who love travelling, Get Your Best Deal.
+Trekkart Store is is an e-commerce platform for the ones who love travelling, Get Your Best Deal.
 
 ## **How to install and run locally ?**
 
