@@ -159,3 +159,7 @@
     background: var(--primary-color);
     padding: 0.8rem 1rem;
   }
+
+  .text__circulars{
+    margin: auto;
+  }    

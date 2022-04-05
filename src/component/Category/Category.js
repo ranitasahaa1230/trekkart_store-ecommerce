@@ -1,9 +1,10 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { landingPageImages } from "../../assets/LandingPage";
-import {Loader} from "../Loader/Loader";
 import { Link } from "react-router-dom";
 import "./Category.css";
 import { useCategory } from "../../contexts/data/categoryContext";
+import { CircularProgress } from "@mui/material";
 
 export function Category() {
   const {
@@ -13,7 +14,25 @@ export function Category() {
     review: { john, lara, mohit },
   } = landingPageImages;
 
-  const { categories, loader, error} = useCategory();
+  const { categories, setCategories} = useCategory();
+  const [loader, setLoader] = useState(false);
+  const [error, setError] = useState("");
+  useEffect(() => {
+    (async () => {
+      try {
+        setLoader(true);
+        setError("");
+        const res = await axios.get("/api/categories");
+        if (res.status === 200) {
+          setCategories(res.data.categories);
+          setLoader(false);
+        }
+      } catch (err) {
+        setError("Cannot fetch the categories");
+        setLoader(false);
+      }
+    })();
+  }, []);
 
 
   return (
@@ -50,26 +69,31 @@ export function Category() {
       </section>
 
       <section className="latest-products" id="products">
-      {loader && <Loader/>}
-    {error && <div>{error}</div>}
+        {error && <div>{error}</div>}
         <h2 className="heading">Latest Collections</h2>
         <div className="products-containerbox">
-            {
-              categories.map(({_id,categoryName,description,image})=>(
-                <div className="product-box" key={_id}>
-                <img src={image} alt="product" />
-            <div className="content-product">
-              <h3 className="desc-products">
-                {description}
-              </h3>
-              <Link to="/products" className="btns">
-                Explore More
-              </Link>
-            </div>
-                </div>
-              ))
-            }
-            </div>
+          {loader ? (
+            <div className="text__circulars">
+          <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
+          </div>
+          ) 
+          : (
+            <>
+              {categories &&
+                categories.map(({ _id, description, image }) => (
+                  <div className="product-box" key={_id}>
+                    <img src={image} alt="product" />
+                    <div className="content-product">
+                      <h3 className="desc-products">{description}</h3>
+                      <Link to="/products" className="btns">
+                        Explore More
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+            </>
+          )}
+        </div>
       </section>
 
       <section className="latest-brands" id="brands">
@@ -167,7 +191,9 @@ export function Category() {
               placeholder="Enter your email"
               className="inputbox"
             />
-            <button type="submit" className="send-btns">Send</button>
+            <button type="submit" className="send-btns">
+              Send
+            </button>
           </form>
         </div>
       </section>

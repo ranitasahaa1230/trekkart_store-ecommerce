@@ -123,10 +123,8 @@
   .brand-name{
     font-size: 1.7rem;
   }
-  
   #tag-stock{
     background: var(--wishlist);
     top:3%;
     padding:3.5px 8px;
   }
-
