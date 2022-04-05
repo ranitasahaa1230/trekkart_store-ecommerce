@@ -49,6 +49,8 @@ body {
   --secondary-active-color: #1e3344;
   --card-border-color: #9e9eff;
   --card-color: #001219;
+  --filled-green: #2e7d32;
+  --light-gray: #d8d8d8;
 }
 
 h2.heading {

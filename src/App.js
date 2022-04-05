@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
-import {Loader, Navbar, Toast } from "./component";
+import {Navbar, Toast } from "./component";
 import {
   Cart,
   Home,
@@ -16,8 +16,6 @@ import { Login, SignUp } from "./pages/Auth";
 function App() {
   return (
     <div className="App">
-      {/* {loader && <Loader />} */}
-      <Loader />
       <Navbar />
       <Toast />
       <Routes>
