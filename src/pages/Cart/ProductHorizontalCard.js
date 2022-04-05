@@ -27,6 +27,7 @@ export const ProductHorizontalCard = ({ product }) => {
     originalPrice,
     // brand,
     // ratings,
+    newStock
   } = product;
 
   const handleMoveToWishlist = () => {
@@ -109,7 +110,7 @@ export const ProductHorizontalCard = ({ product }) => {
               </Link>
             </div>
           </div>
-          <span className="horizontal-tag">New</span>
+          {newStock && <span className="tag">New</span>}
           <button
             type="button"
             className="btn-dismissal"

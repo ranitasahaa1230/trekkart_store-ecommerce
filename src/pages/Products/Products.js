@@ -21,11 +21,15 @@ export function Products() {
     <main className="main-product">
     {loader && <Loader/>}
     {error && <div>{error}</div>}
-    <h2>Showing All Products</h2>
+    <h2>Showing All Products:{" "}
+    <span className="prod-length">{searchedProductList.length}</span>
+
+    </h2>
     <div className="section-products">
-      {searchedProductList.map((product) => (
-        <ProductCard product={product} key={product._id}/>
-      ))}
+      { searchedProductList.length ? searchedProductList.map((product) => (
+        <ProductCard product={product} key={product._id}/>))
+        : (<div className="text__quiz">No Products Available...</div>)
+      }
     </div>
     </main>
     </div>

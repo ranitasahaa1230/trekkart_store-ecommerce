@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useData } from "../../contexts";
 import { calcPercentage } from "../../utilities";
 import { INITIALIZE_WISHLIST } from "../../reducers";
-import { useToast, useScrollToTop, useDocumentTitle } from "../../hooks";
+import { useToast, useDocumentTitle } from "../../hooks";
 // import {
 //   addToWishlist,
 //   removeFromWishlist,
@@ -21,7 +21,6 @@ export function Wishlist() {
   } = useData();
   const isWishlistHasItem = wishList.length > 0;
 
-  useScrollToTop();
   useDocumentTitle("Wishlist");
 
   useEffect(() => {
@@ -118,7 +117,7 @@ export function Wishlist() {
                       </Link>
                     </div>
                   </div>
-                  <span className="tag">New</span>
+                  {product.newStock && <span className="tag">New</span>}
                   <button
                     type="button"
                     className="btn-dismissal"

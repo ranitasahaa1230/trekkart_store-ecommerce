@@ -2,10 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts";
+import { useDocumentTitle } from "../../hooks";
 import "./Auth.css";
 import { validFormChecker } from "./utils";
 
 export function SignUp() {
+  useDocumentTitle("SignUp");
+
   const signUpFields = {
     email: "",
     password: "",

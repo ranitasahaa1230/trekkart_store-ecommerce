@@ -2,6 +2,6 @@ import { useEffect } from "react";
 
 export const useDocumentTitle = (title) => {
   useEffect(() => {
-    document.title = `Evolt | ${title}`;
+    document.title = `Trekkart Store | ${title}`;
   }, [title]);
 };

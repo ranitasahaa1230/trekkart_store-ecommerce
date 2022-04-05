@@ -2,6 +2,7 @@ import axios from "axios";
 import React, {useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts";
+import { useDocumentTitle } from "../../hooks";
 import "./Auth.css";
 
 export function Login() {
@@ -12,6 +13,8 @@ export function Login() {
     password: "",
   });
   const navigate = useNavigate();
+  useDocumentTitle("Login");
+
   
   // const { setLoader } = useData();
 

@@ -7,7 +7,6 @@ import { CartPrice } from "./CartPrice";
 import { INITIALIZE_CART } from "../../reducers";
 import {
   useToast,
-  useScrollToTop,
   useDocumentTitle,
 } from "../../hooks";
 import { ProductHorizontalCard } from "./ProductHorizontalCard";
@@ -22,7 +21,6 @@ export function Cart() {
   const { showToast } = useToast();
   const isCartHasItem = cart.length > 0;
 
-  useScrollToTop();
   useDocumentTitle("Cart");
   
   useEffect(() => {

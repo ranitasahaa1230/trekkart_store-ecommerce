@@ -20,3 +20,13 @@
     list-style: none;
     gap: 4rem;
   }
+
+  .prod-length{
+    color: var(--darkblue-bg);
+  }
+  .text__quiz{
+    color: var(--gray);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }

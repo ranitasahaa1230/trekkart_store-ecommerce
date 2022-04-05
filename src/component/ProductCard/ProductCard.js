@@ -8,7 +8,7 @@ import {
   isProductInCart,
 } from "../../utilities/index";
 import { addToCart, addToWishlist, removeFromWishlist } from "../../services";
-import { useToast, useScrollToTop, useDocumentTitle } from "../../hooks";
+import { useToast,useDocumentTitle } from "../../hooks";
 
 export function ProductCard({ product }) {
   const { showToast } = useToast();
@@ -25,14 +25,15 @@ export function ProductCard({ product }) {
     alt,
     img,
     name,
+    newStock,
     // description,
     newPrice,
     originalPrice,
     brand,
     ratings,
+    inStock,
   } = product;
 
-  useScrollToTop();
   useDocumentTitle("Product Details");
 
   const isInCart = isProductInCart(cart, id);
@@ -99,20 +100,24 @@ export function ProductCard({ product }) {
 
           <div className="card-footer">
           <button
-                className="btn btn-text-icon-primary grid-cards-icons"
-                onClick={handleAddToCart}
+                  disabled={!inStock}
+                  onClick={handleAddToCart}
+                className='btn btn-text-icon-primary grid-cards-icons'
               >
                 <span className="btn-card-icon">
                   <i className="fas fa-shopping-cart"></i>{" "}
                 </span>
-        {isInCart 
-          ? "Go to cart"
-          : "Add to cart"}
+                {isInCart
+          ? "Go to Cart"
+          : !inStock
+          ? "Out of Stock"
+          : "Add to Cart"}
       </button>
       
           </div>
         </div>
-        <span className="tag">New</span>
+        {newStock && <span className="tag">New</span>}
+        {!inStock && <span className="tag" id="tag-stock">Out Of Stock</span>}
         <span>
         <i
               className="card-badge-bg wishlist-badge"
