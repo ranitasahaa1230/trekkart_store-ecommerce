@@ -22,25 +22,23 @@ export const ProductHorizontalCard = ({ product }) => {
     img,
     name,
     qty,
-    // description,
     newPrice,
     originalPrice,
     // brand,
-    // ratings,
     newStock
   } = product;
 
   const handleMoveToWishlist = () => {
     addToWishlist(product, cartDispatch, showToast);
-    removeFromCart(product._id, cartDispatch, showToast, true);
+    removeFromCart(product, cartDispatch, showToast, true);
   };
 
   const handleRemoveFromCart = () => {
-    removeFromCart(_id, cartDispatch, showToast);
+    removeFromCart(product, cartDispatch, showToast);
   };
 
   const handleUpdateQuantity = (updateType) => {
-    updateQuantity(_id, updateType, cartDispatch, setIsLoading, showToast);
+    updateQuantity(product, updateType, cartDispatch, setIsLoading, showToast);
   };
 
   return (
@@ -82,7 +80,7 @@ export const ProductHorizontalCard = ({ product }) => {
               >
                 <i className="fas fa-minus cart-icons"></i>
               </button>
-              <input type="text" className="cart-input" value={qty} />
+              <span type="text" className="cart-input">{qty}</span>
               <button
                 className="cart-md-icons"
                 disabled={isloading}

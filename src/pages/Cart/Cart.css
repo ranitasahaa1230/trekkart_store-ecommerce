@@ -105,11 +105,11 @@
     padding: 6px;
   }
 
-  input.cart-input {
+  span.cart-input {
     width: 3.8rem;
     border: 2px solid var(--black-bg);
     text-align: center;
-    padding: 2px;
+    padding: 4px 10px;
     font-size: 1.6rem;
     border-radius: 5px;
     margin: 0 6px;

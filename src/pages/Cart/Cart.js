@@ -1,46 +1,26 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React,{useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useData } from "../../contexts";
 import "./Cart.css";
 import { CartPrice } from "./CartPrice";
-import { INITIALIZE_CART } from "../../reducers";
-import { useToast, useDocumentTitle } from "../../hooks";
+import { useDocumentTitle } from "../../hooks";
 import { ProductHorizontalCard } from "./ProductHorizontalCard";
 import { CircularProgress } from "@mui/material";
 
 export function Cart() {
   const [loader, setLoader] = useState(false);
-  // const navigate = useNavigate();
   const {
     cartState: { cart },
-    cartDispatch,
   } = useData();
-  const { showToast } = useToast();
   const isCartHasItem = cart.length > 0;
 
   useDocumentTitle("Cart");
 
   useEffect(() => {
-    (async () => {
-      try {
-        setLoader(true);
-        const {
-          data: { cart },
-        } = await axios.get("/api/user/cart", {
-          headers: { authorization: localStorage.getItem("token") },
-        });
-
-        cartDispatch({
-          type: INITIALIZE_CART,
-          payload: cart,
-        });
-        setLoader(false);
-      } catch (error) {
-        showToast("error", "Something went wrong!");
-      }
-    })();
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+    }, 1000);
   }, []);
 
   return (
