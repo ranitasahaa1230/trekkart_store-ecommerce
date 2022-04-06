@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Mockman from "mockman-js";
-import {Navbar, Toast } from "./component";
+import {Footer, Navbar, Toast } from "./component";
 import {
   Cart,
   Home,
@@ -39,6 +39,7 @@ function App() {
         {" "}
         <i className="fas fa-arrow-up"></i>
       </button>
+      <Footer/>
     </div>
   );
 }

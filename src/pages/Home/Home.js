@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carouselbar, Category, Footer } from "../../component";
+import { Carouselbar, Category} from "../../component";
 import { useDocumentTitle } from '../../hooks';
 
 export function Home() {
@@ -9,7 +9,6 @@ export function Home() {
     <div>
       <Carouselbar/>
       <Category/>
-      <Footer/>
     </div>
   )
 }

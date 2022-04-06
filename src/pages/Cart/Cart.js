@@ -49,7 +49,7 @@ export function Cart() {
           <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
         </div>
       ) : (
-        <div>
+        <div className="cart-main">
           <h3 className="cart-heading">
             My Cart{" "}
             <span className="cart-desc">

@@ -59,29 +59,29 @@ export const ProductPage = () => {
     })();
   }, []);
 
-  //   const handleAddToCart = () => {
-  //     if (!user) {
-  //       navigate("/login");
-  //     } else {
-  //       if (isInCart(_id, cart)) {
-  //         navigate("/cart");
-  //       } else {
-  //         addToCart(product, cartDispatch, setProductLoader, showToast);
-  //       }
-  //     }
-  //   };
+  const handleAddToCart = () => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      if (isInCart) {
+        navigate("/cart");
+      } else {
+        addToCart(product, cartDispatch, setLoader, showToast);
+      }
+    }
+  };
 
-  //   const handleWishlistClick = () => {
-  //     if (!user) {
-  //       navigate("/login");
-  //     } else {
-  //       if (!isInWishlist(_id, wishList)) {
-  //         addToWishlist(product, cartDispatch, showToast);
-  //       } else {
-  //         removeFromWishlist(product._id, cartDispatch, showToast);
-  //       }
-  //     }
-  //   };
+  const handleWishlistClick = () => {
+    if (!user) {
+      navigate("/login");
+    } else {
+      if (isInWishlist) {
+        navigate("/wishlist");
+      } else {
+        addToWishlist(product, cartDispatch, showToast);
+      }
+    }
+  };
 
   return (
     <div className="products-main" key={_id}>
@@ -126,7 +126,7 @@ export const ProductPage = () => {
               <div className="card-footer">
                 <button
                   disabled={!inStock}
-                  //   onClick={handleAddToCart}
+                  onClick={handleAddToCart}
                   className="btn btn-text-icon-primary grid-cards-icons"
                 >
                   <span className="btn-card-icon">
@@ -139,11 +139,14 @@ export const ProductPage = () => {
                     : "Add to Cart"}
                 </button>
 
-                <button className="btn btn-text-icon-primary grid-cards-icons cards-heart">
+                <button
+                  className="btn btn-text-icon-primary grid-cards-icons cards-heart"
+                  onClick={handleWishlistClick}
+                >
                   <span className="btn-card-icon card-heart">
                     <i className="fas fa-heart"></i>{" "}
                   </span>
-                  WishList
+                  {isInWishlist ? "Added in WishList" : "WishList"}
                 </button>
               </div>
             </div>

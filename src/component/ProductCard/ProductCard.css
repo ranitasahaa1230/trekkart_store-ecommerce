@@ -61,7 +61,7 @@
     -webkit-text-stroke-color: var(--wishlist);
   }
 
-  .wishlist-badge i {
+  /* .wishlist-badge i {
     color: var(--bg-code);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--primary-color);
@@ -80,7 +80,7 @@
   
   .wishlist-badge-active {
     background-color: var(--secondary-color);
-  }
+  } */
   .txt-bold {
     font-weight: bolder;
     color: var(--black-bg);

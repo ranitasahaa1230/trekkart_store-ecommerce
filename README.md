@@ -50,6 +50,22 @@ Trekkart Stores(https://trekkart-stores.netlify.app/)
 
 https://user-images.githubusercontent.com/37957073/161617462-1a26d450-9088-4c4d-9d85-60809b26111f.mp4
 
+## Contribute!
+
+This project is meant to be open source! Do feel free to add bugs and fork the repo for contribution. Here's how you can contribute:
+
+- Fork the project repository
+- Clone your fork
+- Create a new branch with a proper feature name, in your local repo
+- Make chages, commit and push
+- Raise a Pull Request
+
+### Liked the project? Do please ⭐ it :)
+
+## Authors
+
+- [@ranitasahaa1230](https://github.com/ranitasahaa1230)
+
 ## 👩‍💻 Connect with me
 
 <a href="https://twitter.com/Ifullofsunshine"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>

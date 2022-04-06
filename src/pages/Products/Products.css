@@ -4,6 +4,7 @@
     grid-template-columns: 1.2fr 4.6fr;
     grid-template-areas: "aside main";
     gap: 10px;
+    min-height: calc(100vh - 200px);
   }
   
 .main-product {

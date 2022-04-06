@@ -8,7 +8,7 @@ import {
   isProductInCart,
 } from "../../utilities/index";
 import { addToCart, addToWishlist, removeFromWishlist } from "../../services";
-import { useToast,useDocumentTitle } from "../../hooks";
+import { useToast, useDocumentTitle } from "../../hooks";
 
 export function ProductCard({ product }) {
   const { showToast } = useToast();
@@ -18,7 +18,7 @@ export function ProductCard({ product }) {
   } = useData();
   const [loader, setLoader] = useState(false);
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const {
     _id: id,
@@ -55,19 +55,24 @@ export function ProductCard({ product }) {
     if (!user) {
       navigate("/login");
     } else {
-      if (isInWishlist){
-        addToWishlist(product, cartDispatch, showToast);
+      if (isInWishlist) {
+        navigate("/wishlist");
+        //   removeFromWishlist(product.id, cartDispatch, showToast);
       } else {
-        removeFromWishlist(product.id, cartDispatch, showToast);
+        addToWishlist(product, cartDispatch, showToast);
       }
     }
+  };
+
+  const handleRemoveFromWishList = () => {
+    removeFromWishlist(product.id, cartDispatch, showToast);
   };
 
   return (
     <div className="section-main" key={id}>
       <div className="cards">
         <div className="img-container">
-        <Link to={`/product/${id}`}>
+          <Link to={`/product/${id}`}>
             <img src={img} alt={alt} className="grid-col-img cards-img" />
           </Link>
         </div>
@@ -98,37 +103,37 @@ export function ProductCard({ product }) {
           </div>
 
           <div className="card-footer">
-          <button
-                  disabled={!inStock}
-                  onClick={handleAddToCart}
-                className='btn btn-text-icon-primary grid-cards-icons'
-              >
-                <span className="btn-card-icon">
-                  <i className="fas fa-shopping-cart"></i>{" "}
-                </span>
-                {isInCart
-          ? "Go to Cart"
-          : !inStock
-          ? "Out of Stock"
-          : "Add to Cart"}
-      </button>
-      
+            <button
+              disabled={!inStock}
+              onClick={handleAddToCart}
+              className="btn btn-text-icon-primary grid-cards-icons"
+            >
+              <span className="btn-card-icon">
+                <i className="fas fa-shopping-cart"></i>{" "}
+              </span>
+              {isInCart
+                ? "Go to Cart"
+                : !inStock
+                ? "Out of Stock"
+                : "Add to Cart"}
+            </button>
           </div>
         </div>
         {newStock && <span className="tag">New</span>}
-        {!inStock && <span className="tag" id="tag-stock">Out Of Stock</span>}
+        {!inStock && (
+          <span className="tag" id="tag-stock">
+            Out Of Stock
+          </span>
+        )}
         <span>
-        <i
-              className="card-badge-bg wishlist-badge"
-              onClick={handleWishlistClick}
+          {isInWishlist ? (
+            <i
+              className="fas fa-heart card-icons"
+              onClick={handleRemoveFromWishList}
             ></i>
-           <i
-        className={`${
-          isProductInWishlist ? "wishlist-badge-active" : ""
-        }fas fa heart`}
-      >
-        
-      </i>
+          ) : (
+            <i className="fas fa-heart cards-icon" onClick={handleWishlistClick}></i>
+          )}
 
           {/* {isInWishlist ? (
             <i
