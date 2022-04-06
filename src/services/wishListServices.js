@@ -16,7 +16,7 @@ const addToWishlist = async (product, cartDispatch, showToast) => {
       payload: product,
     });
 
-    showToast("success", `${product.name} added in wishlist.`);
+    showToast("success", `${product.name} added in WishList.`);
   } catch (error) {
     showToast("error", "Something went wrong, please try again.");
   }
@@ -36,7 +36,7 @@ const removeFromWishlist = async (product, cartDispatch, showToast) => {
       payload: product._id,
     });
 
-    showToast("success", `${product.name} is removed from wishlist.`);
+    showToast("success", `${product.name} is removed from WishList.`);
   } catch (error) {
     showToast("error", "Something went wrong, please try again.");
   }

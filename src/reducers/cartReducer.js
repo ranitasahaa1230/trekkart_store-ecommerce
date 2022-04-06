@@ -21,8 +21,9 @@ export const cartReducer = (state, action) => {
       };
     case ADD_TO_WISHLIST:
       return {
-        ...state,
-        wishList: [...state.wishList, { ...action.payload, qty: 1 }],
+        ...state, 
+        wishList: state.wishList.length &&
+        state.wishList.some(({_id})=>_id ===action.payload._id) ? [...state.wishList] :[...state.wishList, { ...action.payload, qty: 1 }]
       };
     case REMOVE_FROM_WISHLIST:
       return {

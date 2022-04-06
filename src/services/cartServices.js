@@ -21,7 +21,7 @@ const addToCart = async (product, cartDispatch, setLoader, showToast) => {
       type: ADD_TO_CART,
       payload: product,
     });
-    showToast("success", `${product.name} added in cart`);
+    showToast("success", `${product.name} added in Cart`);
     setLoader(false);
   } catch (error) {
     showToast("error", "Something went wrong, please try again.");
@@ -40,7 +40,7 @@ const removeFromCart = async (product, cartDispatch, showToast, isMoved) => {
     });
 
     !isMoved &&
-      showToast("success", `${product.name} is removed from cart`);
+      showToast("success", `${product.name} is removed from Cart`);
   } catch (error) {
     showToast("error", "Something went wrong, please try again.");
   }
