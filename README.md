@@ -57,7 +57,7 @@ This project is meant to be open source! Do feel free to add bugs and fork the r
 - Fork the project repository
 - Clone your fork
 - Create a new branch with a proper feature name, in your local repo
-- Make chages, commit and push
+- Make changes, commit and push
 - Raise a Pull Request
 
 ### Liked the project? Do please ⭐ it :)
