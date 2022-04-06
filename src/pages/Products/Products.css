@@ -5,6 +5,7 @@
     grid-template-areas: "aside main";
     gap: 10px;
     min-height: calc(100vh - 200px);
+    max-width: 1800px;
   }
   
 .main-product {
@@ -37,3 +38,18 @@
     justify-content: center;
     height: 60vh;
   }
+
+  /* @media only screen and (max-width: 600px) {
+    .products-container{
+      grid-template-columns: repeat(2,1fr);
+    }
+  } */
+/* 
+@media only screen and (max-width: 1300px) {
+  .aside-product{
+    display: none;
+  }
+  .products-container .main-product{
+    max-width: 1800px;
+  }
+} */

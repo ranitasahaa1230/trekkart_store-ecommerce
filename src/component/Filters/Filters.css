@@ -4,16 +4,23 @@ h2{
 }
 .aside-product {
     grid-area: aside;
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 0 10px 0 var(--primary-color);
     border-right: 2px solid var(--black-bg);
-    margin: 0.2rem;
-    border-radius: 5px;
-    position: fixed;
+    margin: 0.15rem;
+    border-radius: 2px;
+    /* position: fixed;
     left: 0;
     overflow-y: auto;
     z-index: 5;
     height: 100%;
-    width: 300px;
+    width: 300px; */
+  position: sticky;
+  top: 0;
+  /* height: 800px; */
+  padding: 1rem 0;
+  transition: all 0.2s ease-in-out;
+  overflow: scroll;
+  z-index: 2;
   }
   ul {
     list-style: none;
@@ -37,7 +44,7 @@ h2{
   }
   
   .flex-categories {
-    padding:4px 12px;
+    padding:8px 12px;
     margin: 4px 12px;
   }
   .flex-height{
@@ -49,7 +56,7 @@ h2{
  
   
   .filter-categories {
-    margin: 0 5px;
+    margin: 2px 5px;
     cursor: pointer;
     font-size: 1.6rem;
   }
