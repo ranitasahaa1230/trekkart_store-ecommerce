@@ -17,8 +17,7 @@ export function Products() {
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
   const {
-    products,
-    setProducts,
+    products,setProducts,
     state: {
       sortBy,
       priceRange,
@@ -34,24 +33,6 @@ export function Products() {
       brandBianyo,
     },
   } = useData();
-
-  useEffect(() => {
-    (async () => {
-      try {
-        setError("");
-        setLoader(true);
-        const res = await axios.get("/api/products");
-        if (res.status === 200) {
-          setProducts(res.data.products);
-          setLoader(false);
-        }
-      } catch (err) {
-        setError(err.message);
-        // showToast("error", "Something went wrong!");
-        setLoader(false);
-      }
-    })();
-  }, []);
 
   const sortedProductList = getSortedProducts(products, sortBy);
   const categoryProductList = getCategoryProducts(
@@ -75,6 +56,25 @@ export function Products() {
     searchQuery
   );
   // console.log(searchQuery)
+
+  useEffect(() => {
+    (async () => {
+      try {
+        setError("");
+        setLoader(true);
+        const res = await axios.get("/api/products");
+        if (res.status === 200) {
+          setProducts(res.data.products);
+          setLoader(false);
+        }
+      } catch (err) {
+        setError(err.message);
+        // showToast("error", "Something went wrong!");
+        setLoader(false);
+      }
+    })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="products-container">

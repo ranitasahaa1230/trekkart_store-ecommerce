@@ -57,7 +57,8 @@ export const ProductPage = () => {
         showToast("error", "Could not fetch the product.");
       }
     })();
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleAddToCart = () => {
     if (!user) {
@@ -147,9 +148,7 @@ export const ProductPage = () => {
                   <span className="btn-card-icon card-heart">
                     <i className="fas fa-heart"></i>{" "}
                   </span>
-                  {isInWishlist
-                    ? "Added in WishList"
-                    : "WishList"}
+                  {isInWishlist ? "Added in WishList" : "WishList"}
                 </button>
               </div>
             </div>

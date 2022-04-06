@@ -27,7 +27,7 @@ const [products, setProducts] = useState([]);
     cart:[],
     wishList:[],
   })
-
+  
   return (
     <DataContext.Provider value={{products,setProducts, state, dispatch, cartState,cartDispatch}}>
         {children}

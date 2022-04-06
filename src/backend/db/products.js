@@ -179,7 +179,6 @@ export const products = [
     ratings: 3.5,
     brand: "Arnisa",
     category: "Shoes",
-    inStock:true,
     inStock:false,
   },
   {

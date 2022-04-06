@@ -14,9 +14,10 @@ export function Category() {
     review: { john, lara, mohit },
   } = landingPageImages;
 
-  const { categories, setCategories} = useCategory();
+  const { categories, setCategories } = useCategory();
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
+
   useEffect(() => {
     (async () => {
       try {
@@ -32,8 +33,8 @@ export function Category() {
         setLoader(false);
       }
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
 
   return (
     <div>
@@ -74,10 +75,13 @@ export function Category() {
         <div className="products-containerbox">
           {loader ? (
             <div className="text__circulars">
-          <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
-          </div>
-          ) 
-          : (
+              <CircularProgress
+                style={{ margin: 15 }}
+                size={120}
+                thickness={1}
+              />
+            </div>
+          ) : (
             <>
               {categories &&
                 categories.map(({ _id, description, image }) => (
