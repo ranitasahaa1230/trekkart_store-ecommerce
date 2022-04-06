@@ -40,6 +40,7 @@ export function Cart() {
         showToast("error", "Something went wrong!");
       }
     })();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

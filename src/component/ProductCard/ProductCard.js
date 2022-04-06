@@ -98,7 +98,7 @@ export function ProductCard({ product }) {
 
           <div className="card-footer">
             <button
-              disabled={!inStock}
+              disabled={!inStock || loader}
               onClick={handleAddToCart}
               className="btn btn-text-icon-primary grid-cards-icons"
             >
@@ -120,11 +120,9 @@ export function ProductCard({ product }) {
           </span>
         )}
         <span onClick={handleWishlistClick}>
-        <i className="fas fa-heart cards-icon"></i>
-          {isInWishlist ? (
-            <i className="fas fa-heart card-icons"></i>
-          ) : ('')}
-          
+          <i className="fas fa-heart cards-icon"></i>
+          {isInWishlist ? <i className="fas fa-heart card-icons"></i> : ""}
+
           {/* {isInWishlist ? (
             <i
               className="fas fa-heart card-icons"
