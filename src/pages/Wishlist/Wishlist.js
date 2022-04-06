@@ -64,7 +64,7 @@ export function Wishlist() {
   // };
 
   return (
-    <>
+    <div className="wishlist-section">
       {loader ? (
         <div className="text__circular">
           <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
@@ -184,6 +184,6 @@ export function Wishlist() {
           </main>
         </div>
       )}
-    </>
+    </div>
   );
 }

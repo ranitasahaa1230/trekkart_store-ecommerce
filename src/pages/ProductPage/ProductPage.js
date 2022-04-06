@@ -57,7 +57,7 @@ export const ProductPage = () => {
         showToast("error", "Could not fetch the product.");
       }
     })();
-  }, []);
+  },[]);
 
   const handleAddToCart = () => {
     if (!user) {
@@ -66,7 +66,7 @@ export const ProductPage = () => {
       if (isInCart) {
         navigate("/cart");
       } else {
-        addToCart(product, cartDispatch, setLoader, showToast);
+        addToCart(product, cartDispatch, setProductLoader, showToast);
       }
     }
   };
@@ -75,10 +75,10 @@ export const ProductPage = () => {
     if (!user) {
       navigate("/login");
     } else {
-      if (isInWishlist) {
-        navigate("/wishlist");
-      } else {
+      if (!isInWishlist) {
         addToWishlist(product, cartDispatch, showToast);
+      } else {
+        removeFromWishlist(product._id, cartDispatch, showToast);
       }
     }
   };
@@ -140,13 +140,16 @@ export const ProductPage = () => {
                 </button>
 
                 <button
+                  disabled={productLoader}
                   className="btn btn-text-icon-primary grid-cards-icons cards-heart"
                   onClick={handleWishlistClick}
                 >
                   <span className="btn-card-icon card-heart">
                     <i className="fas fa-heart"></i>{" "}
                   </span>
-                  {isInWishlist ? "Added in WishList" : "WishList"}
+                  {isInWishlist
+                    ? "Added in WishList"
+                    : "WishList"}
                 </button>
               </div>
             </div>
@@ -166,40 +169,6 @@ export const ProductPage = () => {
               Out Of Stock
             </span>
           )}
-          <span>
-            <i
-              className="card-badge-bg wishlist-badge"
-              //   onClick={handleWishlistClick}
-            ></i>
-            <i
-              className={`${
-                isProductInWishlist ? "wishlist-badge-active" : ""
-              }fas fa heart`}
-            ></i>
-
-            {/* {isInWishlist ? (
-            <i
-              className="fas fa-heart card-icons"
-              onClick={() =>
-                cartDispatch({
-                  type: "REMOVE_FROM_WISHLIST",
-                  payload: product,
-                  id: product.id,
-                })
-              }
-            ></i>
-          ) : (
-            <i
-              className="fas fa-heart cards-icon"
-              onClick={() =>
-                cartDispatch({
-                  type: "ADD_TO_WISHLIST",
-                  payload: product,
-                })
-              }
-            ></i>
-          )} */}
-          </span>
         </div>
       )}
     </div>

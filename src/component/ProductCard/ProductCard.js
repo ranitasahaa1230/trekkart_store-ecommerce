@@ -26,7 +26,6 @@ export function ProductCard({ product }) {
     img,
     name,
     newStock,
-    // description,
     newPrice,
     originalPrice,
     brand,
@@ -55,17 +54,12 @@ export function ProductCard({ product }) {
     if (!user) {
       navigate("/login");
     } else {
-      if (isInWishlist) {
-        navigate("/wishlist");
-        //   removeFromWishlist(product.id, cartDispatch, showToast);
-      } else {
+      if (!isInWishlist) {
         addToWishlist(product, cartDispatch, showToast);
+      } else {
+        removeFromWishlist(product._id, cartDispatch, showToast);
       }
     }
-  };
-
-  const handleRemoveFromWishList = () => {
-    removeFromWishlist(product.id, cartDispatch, showToast);
   };
 
   return (
@@ -125,16 +119,12 @@ export function ProductCard({ product }) {
             Out Of Stock
           </span>
         )}
-        <span>
+        <span onClick={handleWishlistClick}>
+        <i className="fas fa-heart cards-icon"></i>
           {isInWishlist ? (
-            <i
-              className="fas fa-heart card-icons"
-              onClick={handleRemoveFromWishList}
-            ></i>
-          ) : (
-            <i className="fas fa-heart cards-icon" onClick={handleWishlistClick}></i>
-          )}
-
+            <i className="fas fa-heart card-icons"></i>
+          ) : ('')}
+          
           {/* {isInWishlist ? (
             <i
               className="fas fa-heart card-icons"

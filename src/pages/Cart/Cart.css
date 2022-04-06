@@ -1,5 +1,8 @@
-.cart-main{
+.cart-section{
   min-height: calc(100vh - 200px);
+}
+.cart-main{
+  margin: 2.5rem 6.5rem;
 }
 .cart-grid {
     display: grid;
@@ -31,9 +34,7 @@
     color: var(--black-bg);
     margin-top: 1.2rem;
   }
-  .cart-main {
-    margin: 2.5rem 6.5rem;
-  }
+  
   .section-cart {
     margin-top: 2.5rem;
     box-shadow: var(--shadow-card);

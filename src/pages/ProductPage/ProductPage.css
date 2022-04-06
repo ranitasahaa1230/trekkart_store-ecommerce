@@ -1,6 +1,7 @@
 .products-main{
     margin-top: 12rem;
     text-align: center;
+    min-height: calc(100vh - 200px);
 }
 
 .display-flex{

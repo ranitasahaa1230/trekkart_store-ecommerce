@@ -52,7 +52,7 @@ export function SignUp() {
   };
 
   return (
-    <div>
+    <div className="form-login">
       <div className="form-box">
         <div className="button-box">
           <h3 className="toggle-btn">SIGN UP</h3>

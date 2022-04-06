@@ -46,7 +46,7 @@ export function Login() {
     }));
   }
   return (
-    <div>
+    <div className="form-login">
       <div className="form-box">
         <div className="button-box">
           <div id="btn"></div>

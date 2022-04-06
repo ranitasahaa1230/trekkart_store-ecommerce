@@ -43,7 +43,7 @@ export function Cart() {
   }, []);
 
   return (
-    <>
+    <div className="cart-section">
       {loader ? (
         <div className="text__circular">
           <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
@@ -81,6 +81,6 @@ export function Cart() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

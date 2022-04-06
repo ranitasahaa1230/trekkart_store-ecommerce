@@ -1,10 +1,14 @@
+.form-login{
+  min-height: calc(100vh - 200px);
+  margin-bottom: 14rem;
+}
 .form-box {
     width: 100%;
     max-width: 50rem;
     position: relative;
+    padding: 12px 0;
     top: 8rem;
     margin: 5rem auto;
-    padding: 12px 0;
     border-radius: 1rem;
     box-shadow: 0 0 10px 0 var(--primary-color);
   }
