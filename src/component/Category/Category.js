@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { landingPageImages } from "../../assets/LandingPage";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Category.css";
 import { CircularProgress } from "@mui/material";
 import { useData, useCategory } from "../../contexts";
@@ -19,7 +19,7 @@ export function Category() {
     review: { john, lara, mohit },
   } = landingPageImages;
 
-  const { categories, setCategories } = useCategory();
+  const { setCategories } = useCategory();
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
   const { dispatch } = useData();

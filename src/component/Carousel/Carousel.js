@@ -1,6 +1,5 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import "./Carousel.css";
 import trekking from "../../assets/images/trekking.png"
 import travel from "../../assets/images/travel.jpg"
