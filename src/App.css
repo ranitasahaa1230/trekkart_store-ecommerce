@@ -91,12 +91,14 @@ section {
 
   header {
     padding: 2rem;
+    height: 7rem;
   }
   section {
     padding: 2rem;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 863px) {
   #menu-bar {
     display: block;
   }
@@ -106,6 +108,9 @@ section {
     left: -120%;
     width: 100%;
     background: var(--bg-code);
+  }
+  div .font-icons {
+    display: none;
   }
   header .navbar.active {
     left: 0;
@@ -133,10 +138,6 @@ section {
     margin: 5rem 2rem;
   }
 
-  header {
-    flex-flow: column;
-  }
-
   header .class-form {
     /* width: 100%; */
     margin: 2rem 0;
@@ -148,7 +149,6 @@ section {
   /* .cart-grid */ {
     margin-top: 18rem;
   }
-  .wishlist-main,
   .products-container,
   .single-product-page {
     margin-top: 26rem;
