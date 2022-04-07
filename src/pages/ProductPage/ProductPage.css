@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
+    margin: 2rem;
 }
 
 .display-flex .img-contain{
@@ -28,6 +29,7 @@
 }
 .cards-grid h3{
     font-size: 2.4rem;
+    margin: 0 auto;
 }
 
 .cards-grid h2{
@@ -77,4 +79,14 @@
   color: var(--gray);
   padding: 1rem;
   line-height: 1.5;
+}
+@media (max-width: 555px) {
+    .display-flex{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    .display-flex .img-contain{
+        margin:3rem;
+    }
 }

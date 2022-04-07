@@ -1,4 +1,4 @@
-import React,{useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useData } from "../../contexts";
 import "./Cart.css";
@@ -48,12 +48,20 @@ export function Cart() {
                     />
                   ))
                 ) : (
-                  <h3 className="centre-list">
-                    Your Cart Is Empty ! ☹️{" "}
-                    <span>
-                      Or want to continue <Link to="/products">shopping?</Link>
-                    </span>
-                  </h3>
+                  <div id="emptylist-items">
+                    <div>
+                      <div className="centre-list">
+                        Your Cart Is Empty ! ☹️{" "}
+                      </div>
+                      <div className="empty-list-products">
+                        Explore more products, or want to{" "}
+                        <Link to="/products" className="continue">
+                          continue shopping
+                        </Link>
+                        .
+                      </div>
+                    </div>
+                  </div>
                 )}
               </ul>
             </main>

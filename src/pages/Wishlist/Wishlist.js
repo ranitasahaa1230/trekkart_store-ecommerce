@@ -42,12 +42,11 @@ export function Wishlist() {
             <ul className="wishlist-products">
               {isWishlistHasItem ? (
                 wishList.map((product) => (
-                  <ProductCard product={product}/>
+                  <ProductCard product={product} key={product._id}/>
                 ))
               ) : (
                 <div id="emptylist">
-                  <h4 className="empty-list">Your Wishlist Is Empty ! ☹️</h4>
-                  <br />
+                  <div className="empty-list">Your Wishlist Is Empty ! ☹️</div>
                   <div className="empty-list-products">
                     Explore more products,{" "}
                     <Link to="/products" className="continue">

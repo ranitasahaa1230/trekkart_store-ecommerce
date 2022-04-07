@@ -9,7 +9,7 @@ export function CartPrice() {
       const { newPrice, discount } = getPriceDetails(cart);
       
   return (
-    <div>
+    <div className='section-price'>
         <section className="section-cart">
           <h3 className="heading-carts btm-b">Price Details</h3>
 
