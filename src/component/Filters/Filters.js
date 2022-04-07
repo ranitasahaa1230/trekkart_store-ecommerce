@@ -1,20 +1,48 @@
 import React from "react";
 import "./Filters.css";
-import {useData} from "../../contexts"
+import { useData } from "../../contexts";
+import { actionTypes } from "../../reducers/constants/productConstant";
 // import { useCategory } from "../../contexts/data/categoryContext";
 
 export function Filters() {
-  const {state:{sortBy,includeJackets,includeBags,includeShoes,includeSuitcase, priceRange, byRating, brandArnisa, brandGucci, brandCeline, brandBianyo,},dispatch}=useData()
+  const {
+    state: {
+      sortBy,
+      includeJackets,
+      includeBags,
+      includeShoes,
+      includeSuitcase,
+      priceRange,
+      byRating,
+      brandArnisa,
+      brandGucci,
+      brandCeline,
+      brandBianyo,
+    },
+    dispatch,
+  } = useData();
   // const {categories}=useCategory();
   // const categoryNames = categories.map(category => category.categoryName);
   // console.log(categoryNames)
+  const {
+    INCLUDE_BAGS,
+    INCLUDE_JACKETS,
+    INCLUDE_SHOES,
+    INCLUDE_SUITCASE,
+    RESET,
+  } = actionTypes;
 
   return (
     <div>
-      <aside className="aside-product">
+      <aside className="aside-product" id='products-categories'>
         <div className="flex-filters flex-categories btm-b flex-height">
           <h2>Filters</h2>
-          <span className="filters-desc" onClick={() => dispatch({ type: "RESET" })}>Clear All</span>
+          <span
+            className="filters-desc"
+            onClick={() => dispatch({ type: RESET })}
+          >
+            Clear All
+          </span>
         </div>
 
         <ul className="flex-categories btm-b">
@@ -28,10 +56,10 @@ export function Filters() {
                 className="filter-categories"
                 value="low to high"
                 checked={sortBy === "LOW_TO_HIGH"}
-                onChange={()=>dispatch({type:"LOW_TO_HIGH"})}
+                onChange={() => dispatch({ type: "LOW_TO_HIGH" })}
               />
               Price - Low to High
-            </label>        
+            </label>
           </li>
 
           <li className="filter-sorts">
@@ -43,38 +71,39 @@ export function Filters() {
                 className="filter-categories"
                 value="high to low"
                 checked={sortBy === "HIGH_TO_LOW"}
-                onChange={()=>dispatch({type:"HIGH_TO_LOW"})}
+                onChange={() => dispatch({ type: "HIGH_TO_LOW" })}
               />
               Price - High to Low
             </label>
           </li>
         </ul>
 
-      <ul className="flex-categories btm-b filter-ranges">
-      <h3 className="filter-desc-categories">Select Price Range</h3>
-      <li className="filter-range">
-      <datalist id="tickmarks">
-            <option value="0" label="0"></option>
-            <option value="500" label="500"></option>
-            <option value="1000" label="1000"></option>
-            <option value="2000" label="2000"></option>
-            <option value="3500" label="3000"></option>
-            <option value="5000" label="5000"></option>
-          </datalist>
-          <input
-            list="tickmarks"
-            type="range"
-            name="rangeInput"
-            className="slider"
-            min="0"
-            max="5000"
-            value={priceRange}
-            onChange={(e) =>
-              dispatch({ type: "PRICE", payload: e.target.value })
-            }
-          />
-      </li>
-      </ul>
+        <ul className="flex-categories btm-b filter-ranges">
+          <h3 className="filter-desc-categories">Select Price Range</h3>
+          <li className="filter-range">
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="1000" label="1000"></option>
+              <option value="2000" label="2000"></option>
+              <option value="3000" label="3000"></option>
+              <option value="4000" label="4000"></option>
+              <option value="5000" label="5000"></option>
+            </datalist>
+            <input
+              list="tickmarks"
+              type="range"
+              name="rangeInput"
+              className="slider"
+              min="0"
+              step="1000"
+              max="5000"
+              value={priceRange}
+              onChange={(e) =>
+                dispatch({ type: "PRICE", payload: e.target.value })
+              }
+            />
+          </li>
+        </ul>
 
         <ul className="flex-categories btm-b">
           <h3 className="filter-desc-categories">Category</h3>
@@ -95,6 +124,8 @@ export function Filters() {
             </label>
           </li>
           )})}  */}
+          {/* checked={state.catagoryName.includeBags}
+           onChange={() => dispatch({type: "CATEGORY_NAME", payload: "includeBags" })} */}
 
           <li className="filter-sorts">
             <label htmlFor="jackets" className="filter-categories">
@@ -104,14 +135,14 @@ export function Filters() {
                 id="jackets"
                 className="filter-categories"
                 value="jackets"
-                checked={includeJackets} 
-                onChange={ ()=> dispatch({type:"INCLUDE_JACKETS"})}
+                checked={includeJackets}
+                onChange={() => dispatch({ type: INCLUDE_JACKETS })}
               />
               Jackets
             </label>
           </li>
-          
-           <li className="filter-sorts">
+
+          <li className="filter-sorts">
             <label htmlFor="bags" className="filter-categories">
               <input
                 type="checkbox"
@@ -119,8 +150,8 @@ export function Filters() {
                 id="bags"
                 className="filter-categories"
                 value="bags"
-                checked={includeBags} 
-                onChange={ ()=> dispatch({type:"INCLUDE_BAGS"})}
+                checked={includeBags}
+                onChange={() => dispatch({ type: INCLUDE_BAGS })}
               />
               Backpacks
             </label>
@@ -134,8 +165,8 @@ export function Filters() {
                 id="shoes"
                 className="filter-categories"
                 value="shoes"
-                checked={includeShoes} 
-                onChange={ ()=> dispatch({type:"INCLUDE_SHOES"})}
+                checked={includeShoes}
+                onChange={() => dispatch({ type: INCLUDE_SHOES })}
               />
               Travelling Shoes
             </label>
@@ -149,8 +180,8 @@ export function Filters() {
                 id="suitcase"
                 className="filter-categories"
                 value="suitcase"
-                checked={includeSuitcase} 
-               onChange={ ()=> dispatch({type:"INCLUDE_SUITCASE"})}
+                checked={includeSuitcase}
+                onChange={() => dispatch({ type: INCLUDE_SUITCASE })}
               />
               Travel Bags
             </label>
@@ -168,7 +199,7 @@ export function Filters() {
                 className="filter-categories"
                 value="arnisa"
                 checked={brandArnisa}
-                onChange={ ()=> dispatch({type:"BRAND_ARNISA"})}
+                onChange={() => dispatch({ type: "BRAND_ARNISA" })}
               />
               Arnisa
             </label>
@@ -182,7 +213,7 @@ export function Filters() {
                 className="filter-categories"
                 value="bianyo"
                 checked={brandBianyo}
-                onChange={ ()=> dispatch({type:"BRAND_BIANYO"})}
+                onChange={() => dispatch({ type: "BRAND_BIANYO" })}
               />
               Bianyo
             </label>
@@ -196,7 +227,7 @@ export function Filters() {
                 className="filter-categories"
                 value="celine"
                 checked={brandCeline}
-                onChange={ ()=> dispatch({type:"BRAND_CELINE"})}
+                onChange={() => dispatch({ type: "BRAND_CELINE" })}
               />
               Celine
             </label>
@@ -210,7 +241,7 @@ export function Filters() {
                 className="filter-categories"
                 value="gucci"
                 checked={brandGucci}
-                onChange={ ()=> dispatch({type:"BRAND_GUCCI"})}
+                onChange={() => dispatch({ type: "BRAND_GUCCI" })}
               />
               Gucci
             </label>
@@ -221,17 +252,17 @@ export function Filters() {
           <h3 className="filter-desc-categories">Ratings</h3>
           {[4, 3, 2, 1].map((rating) => (
             <label className="filter-categories" key={rating}>
-                <input
-                  type="radio"
-                  name="rating"
-                  id="ratingbar"
-                  value="rating-bar"
+              <input
+                type="radio"
+                name="rating"
+                id="ratingbar"
+                value="rating-bar"
                 className="filter-categories"
-                  checked={byRating === rating}
-                  onChange={() => dispatch({ type: "RATING", payload: rating })}
-                />
-                {rating} stars and above
-              </label>
+                checked={byRating === rating}
+                onChange={() => dispatch({ type: "RATING", payload: rating })}
+              />
+              {rating} stars and above
+            </label>
           ))}
         </ul>
       </aside>

@@ -1,41 +1,48 @@
-import {
-  createContext,
-  useContext,
-  useReducer,
-  useState,
-} from 'react';
-import { cartReducer } from '../../reducers/cartReducer';
-import { productReducer } from '../../reducers/productReducer';
+import { createContext, useContext, useReducer, useState } from "react";
+import { cartReducer } from "../../reducers/cartReducer";
+import { productReducer } from "../../reducers/productReducer";
 
-const DataContext=createContext();
+const DataContext = createContext();
 
-const DataProvider=({children})=>{
-const [products, setProducts] = useState([]);
+const DataProvider = ({ children }) => {
+  const [products, setProducts] = useState([]);
 
-  const [state, dispatch] = useReducer(productReducer,{
+  const [state, dispatch] = useReducer(productReducer, {
     sortBy: "",
-    // Jackets : false, Backpacks : false, Shoes : false, Suitcases : false,
+    // catagoryName: {
+    //   Jackets : false, Backpacks : false, Shoes : false, Suitcases : false},
     includeJackets : false, includeBags : false, includeShoes : false, includeSuitcase : false,
-    brandArnisa:false, brandGucci:false, brandCeline:false, brandBianyo:false,
+    brandArnisa: false,
+    brandGucci: false,
+    brandCeline: false,
+    brandBianyo: false,
     priceRange: 5000,
     byRating: 1,
-    searchQuery:''
-  })
+    searchQuery: "",
+  });
 
-  const [cartState,cartDispatch]=useReducer(cartReducer,{
-    products:products,
-    cart:[],
-    wishList:[],
-  })
-  
+  const [cartState, cartDispatch] = useReducer(cartReducer, {
+    products: products,
+    cart: [],
+    wishList: [],
+  });
+
   return (
-    <DataContext.Provider value={{products,setProducts, state, dispatch, cartState,cartDispatch}}>
-        {children}
+    <DataContext.Provider
+      value={{
+        products,
+        setProducts,
+        state,
+        dispatch,
+        cartState,
+        cartDispatch,
+      }}
+    >
+      {children}
     </DataContext.Provider>
-  )
-}
+  );
+};
 
-const useData=()=>useContext(DataContext);
+const useData = () => useContext(DataContext);
 
-
-export {DataProvider, useData}
+export { DataProvider, useData };

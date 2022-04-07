@@ -17,7 +17,7 @@ export function Footer() {
         <div className="box">
           <h3>Quick Links</h3>
           <a href="https://trekkart-stores.netlify.app/">Home</a>
-          <a href="#products">Products</a>
+          <a href="#categories">Products</a>
           <a href="#brands">Featured Brands</a>
           <a href="#review">Reviews</a>
         </div>

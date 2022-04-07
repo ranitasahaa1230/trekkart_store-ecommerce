@@ -7,6 +7,7 @@ import { CircularProgress } from "@mui/material";
 import {
   getSortedProducts,
   getCategoryProducts,
+  // getCategoriesProducts,
   getRatingProducts,
   getBrandProducts,
   getPricedProducts,
@@ -17,7 +18,8 @@ export function Products() {
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
   const {
-    products,setProducts,
+    products,
+    setProducts,
     state: {
       sortBy,
       priceRange,
@@ -73,7 +75,7 @@ export function Products() {
         setLoader(false);
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -83,7 +85,7 @@ export function Products() {
         {error && <div>{error}</div>}
         {loader ? (
           <div className="text__circular">
-          <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
+            <CircularProgress style={{ margin: 15 }} size={120} thickness={1} />
           </div>
         ) : (
           <>

@@ -1,16 +1,33 @@
+import { actionTypes } from "./index";
+const {
+  INCLUDE_BAGS,
+  INCLUDE_JACKETS,
+  INCLUDE_SHOES,
+  INCLUDE_SUITCASE,
+  RESET,
+} = actionTypes;
+
 export const productReducer = (state, action) => {
   switch (action.type) {
     case "LOW_TO_HIGH":
       return { ...state, sortBy: action.type };
     case "HIGH_TO_LOW":
       return { ...state, sortBy: action.type };
-    case "INCLUDE_JACKETS":
+      // case "CATEGORY_NAME":
+      //   return {
+      //     ...state,
+      //     catagoryName: {
+      //       ...state.catagoryName,
+      //       [action.payload]: !state.catagoryName[action.payload],
+      //     },
+      //   };
+    case INCLUDE_JACKETS:
       return { ...state, includeJackets: !state.includeJackets };
-    case "INCLUDE_BAGS":
+    case INCLUDE_BAGS:
       return { ...state, includeBags: !state.includeBags };
-    case "INCLUDE_SHOES":
+    case INCLUDE_SHOES:
       return { ...state, includeShoes: !state.includeShoes };
-    case "INCLUDE_SUITCASE":
+    case INCLUDE_SUITCASE:
       return { ...state, includeSuitcase: !state.includeSuitcase };
     // case "FILTER_BY_CATEGORY":
     //   return {
@@ -28,10 +45,10 @@ export const productReducer = (state, action) => {
     case "BRAND_GUCCI":
       return { ...state, brandGucci: !state.brandGucci };
     case "PRICE":
-        return { ...state, priceRange: action.payload };
+      return { ...state, priceRange: action.payload };
     case "FILTER_BY_SEARCH":
-            return { ...state, searchQuery: action.payload };
-    case "RESET":
+      return { ...state, searchQuery: action.payload };
+    case RESET:
       return {
         ...state,
         sortBy: "",

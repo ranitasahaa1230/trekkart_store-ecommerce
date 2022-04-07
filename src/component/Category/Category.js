@@ -1,12 +1,17 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { landingPageImages } from "../../assets/LandingPage";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Category.css";
-import { useCategory } from "../../contexts/data/categoryContext";
 import { CircularProgress } from "@mui/material";
+import { useData, useCategory } from "../../contexts";
+import { actionTypes } from "../../reducers";
 
 export function Category() {
+  const navigate = useNavigate();
+  const {
+    collections: { jackets, travelbags, hikingbags, boots },
+  } = landingPageImages;
   const {
     brands: { bianyo, arnisa, celine, gucci },
   } = landingPageImages;
@@ -17,6 +22,20 @@ export function Category() {
   const { categories, setCategories } = useCategory();
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
+  const { dispatch } = useData();
+  const {
+    INCLUDE_BAGS,
+    INCLUDE_JACKETS,
+    INCLUDE_SHOES,
+    INCLUDE_SUITCASE,
+    RESET,
+  } = actionTypes;
+
+  const navigateHandler = (typeVal) => {
+    dispatch({ type: RESET });
+    dispatch({ type: typeVal });
+    navigate("/products");
+  };
 
   useEffect(() => {
     (async () => {
@@ -69,7 +88,7 @@ export function Category() {
         </div>
       </section>
 
-      <section className="latest-products" id="products">
+      <section className="latest-products" id="categories">
         {error && <div>{error}</div>}
         <h2 className="heading">Latest Collections</h2>
         <div className="products-containerbox">
@@ -83,18 +102,82 @@ export function Category() {
             </div>
           ) : (
             <>
-              {categories &&
-                categories.map(({ _id, description, image }) => (
-                  <div className="product-box" key={_id}>
+              {/* {categories &&
+                categories.map(({ _id, description, image, category }) => (  */}
+              {/* <div className="product-box" key={_id}>
                     <img src={image} alt="product" />
                     <div className="content-product">
                       <h3 className="desc-products">{description}</h3>
-                      <Link to="/products" className="btns">
+                      <Link
+                        to="/products"
+                        className="btns"
+                        onClick={() => navigateHandler(INCLUDE_JACKETS)}
+                      >
                         Explore More
                       </Link>
                     </div>
+                  </div> *
+               {/* ))} */}
+              <div className="product-box">
+                <a
+                  href="#products-categories"
+                  onClick={() => navigateHandler(INCLUDE_JACKETS)}
+                >
+                  <img src={jackets} alt="product" />
+
+                  <div className="content-product">
+                    <h3 className="desc-products">
+                      Get your Jackets now at Best Price. For Limited Period
+                      Only.
+                    </h3>
+                    <button className="btns">Explore More</button>
                   </div>
-                ))}
+                </a>
+              </div>
+              <div className="product-box">
+                <a
+                  href="#products-categories"
+                  onClick={() => navigateHandler(INCLUDE_SUITCASE)}
+                >
+                  <img src={travelbags} alt="product" />
+                  <div className="content-product">
+                    <h3 className="desc-products">
+                      Get your Travel Bags now at Best Price. Offer only for
+                      Today!
+                    </h3>
+                    <button className="btns">Explore More</button>
+                  </div>
+                </a>
+              </div>
+              <div className="product-box">
+                <a
+                  href="#products-categories"
+                  onClick={() => navigateHandler(INCLUDE_BAGS)}
+                >
+                  <img src={hikingbags} alt="product" />
+                  <div className="content-product">
+                    <h3 className="desc-products">
+                      Get your Hiking Bags now at Best Price. Grab it now.
+                    </h3>
+                    <button className="btns">Explore More</button>
+                  </div>
+                </a>
+              </div>
+              <div className="product-box">
+                <a
+                  href="#products-categories"
+                  onClick={() => navigateHandler(INCLUDE_SHOES)}
+                >
+                  <img src={boots} alt="product" />
+                  <div className="content-product">
+                    <h3 className="desc-products">
+                      Get your Hiking Boots now at Best Price. For Limited
+                      Period Only.
+                    </h3>
+                    <button className="btns">Explore More</button>
+                  </div>
+                </a>
+              </div>
             </>
           )}
         </div>

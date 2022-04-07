@@ -46,6 +46,10 @@
     flex: 1 1 30rem;
     padding-bottom: 1rem;
   }
+  .latest-products .products-containerbox .product-box img{
+    height: 35rem;
+    width: 100%;
+  }
   
   .latest-products .products-containerbox .product-box:hover img {
     transform: scale(1.04);
