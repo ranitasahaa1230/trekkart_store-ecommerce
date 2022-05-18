@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, {useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts";
-import { useDocumentTitle } from "../../hooks";
+import { useDocumentTitle, useToast } from "../../hooks";
 import "./Auth.css";
 
 export function Login() {
@@ -13,37 +13,34 @@ export function Login() {
     password: "",
   });
   const navigate = useNavigate();
+  const location = useLocation();
+  const { dispatch } = useAuth();
+  const { showToast } = useToast();
   useDocumentTitle("Login");
 
-  
-  // const { setLoader } = useData();
 
-  const { updateUser } = useAuth();
   const handleFormHandler = async (event) => {
     event.preventDefault();
     try {
-      const {
-        data: { foundUser, encodedToken },
-      } = await axios.post("/api/auth/login", loginForm);
-
-      updateUser(foundUser);
-      // cartDispatch({ type: INITIALIZE_CART, payload: foundUser.cart });
-      // cartDispatch({
-      //   type: INITIALIZE_WISHLIST,
-      //   payload: foundUser.wishlist,
-      // });
-
+      const response = await axios.post("/api/auth/login", loginForm);
+      const { foundUser: user, encodedToken } = response.data;
+      dispatch({ type: "AUTH_SUCCESS", payload: { user, encodedToken } });
+      localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("token", encodedToken);
-      navigate("/");
+      if (location.state !== null) {
+        navigate(location?.state?.from?.pathname);
+      } else {
+        navigate("/");
+      }
+      showToast("Logged In!", "success");
     } catch (error) {
+      showToast("error",error.response.data.errors[0]);
       setError("Email or password is incorrect");
     }
   };
 
   function loginHandler() {
-    setLoginForm(({email: "ranitasaha123@gmail.com",
-      password: "ranitasaha",
-    }));
+    setLoginForm({ email: "ranitasaha123@gmail.com", password: "ranitasaha" });
   }
   return (
     <div className="form-login">

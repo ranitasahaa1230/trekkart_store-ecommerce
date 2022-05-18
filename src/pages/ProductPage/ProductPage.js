@@ -16,7 +16,9 @@ export const ProductPage = () => {
   const [loader, setLoader] = useState(false);
   const [productLoader, setProductLoader] = useState(false);
   const [product, setProduct] = useState(null);
-  const { user } = useAuth();
+  const {
+    state: { encodedToken },
+  } = useAuth();
   const { showToast } = useToast();
   const navigate = useNavigate();
   const { productId } = useParams();
@@ -61,8 +63,8 @@ export const ProductPage = () => {
   }, []);
 
   const handleAddToCart = () => {
-    if (!user) {
-      navigate("/login");
+    if (!encodedToken) {
+      showToast("error", "Please Login to continue!");
     } else {
       if (isInCart) {
         navigate("/cart");
@@ -73,8 +75,8 @@ export const ProductPage = () => {
   };
 
   const handleWishlistClick = () => {
-    if (!user) {
-      navigate("/login");
+    if (!encodedToken) {
+      showToast("error", "Please Login to continue!");
     } else {
       if (!isInWishlist) {
         addToWishlist(product, cartDispatch, showToast);

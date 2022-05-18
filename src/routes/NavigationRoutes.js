@@ -9,8 +9,10 @@ import {
   ProductPage,
   UserProfile,
   Wishlist,
+  Login,
+  SignUp,
 } from "../pages";
-import { Login, SignUp } from "../pages/Auth";
+import { RequireAuth } from "../component";
 
 export const NavigationRoutes = () => {
   return (
@@ -19,12 +21,40 @@ export const NavigationRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route
+          path="/wishlist"
+          element={
+            <RequireAuth>
+              <Wishlist />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/product/:productId"
+          element={
+            <RequireAuth>
+              <ProductPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <RequireAuth>
+              <Cart />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/userProfile" element={<UserProfile />} />
+        <Route
+          path="/userProfile"
+          element={
+            <RequireAuth>
+              <UserProfile />
+            </RequireAuth>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
