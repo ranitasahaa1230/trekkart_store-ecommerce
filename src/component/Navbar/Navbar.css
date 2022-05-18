@@ -68,7 +68,9 @@ header .font-icons a {
   color: var(--bg-code);
   margin-left: 2rem;
   position: relative;
+  
 }
+
 .badge-number {
   position: absolute;
   background: none;
@@ -92,6 +94,63 @@ header .font-icons a:hover {
 }
 .logo-design {
   width: 4rem;
+}
+.font-icons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__icons {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  cursor: pointer;
+}
+
+.header__icons i {
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.header__icons:hover{
+  color: var(--secondary-hover);
+}
+
+.header__icons button#header__logout{
+  visibility: hidden;
+  cursor: pointer;
+  background: var(--primary-hover);
+  color: var(--bg-code);
+  border: 0;
+  outline: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  z-index: 1;
+  top: 62%;
+  right: 3%;
+  font-size: 1.38rem;
+}
+.header__user {
+  position: relative;
+  margin-top: -0.28rem;
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+.header__icons:hover button#header__logout{
+  visibility: visible;
+}
+.header__icons button#header__logout:hover {
+  background: var(--primary-blue);
+  color: var(--bg-code);
+}
+span.font__icons {
+  margin-right: 0;
+  font-size: 1.6rem;
 }
 
 .menu-bar {

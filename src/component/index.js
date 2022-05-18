@@ -5,6 +5,8 @@ export { Footer } from "./Footer/Footer";
 export { ProductCard } from "./ProductCard/ProductCard";
 export { Filters } from "./Filters/Filters";
 export { Toast } from "./Toast/Toast";
+export { RequireAuth } from "./RequireAuth/RequireAuth";
+
 
 
 
