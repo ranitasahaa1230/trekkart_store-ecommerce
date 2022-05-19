@@ -16,7 +16,6 @@ export function Navbar() {
   } = useAuth();
 
   return (
-    <div>
       <header>
         <div id="menu-bar" className="fas fa-bars menu-bar"></div>
         <div className="logo-header">
@@ -88,6 +87,5 @@ export function Navbar() {
           )}
         </div>
       </header>
-    </div>
   );
 }
