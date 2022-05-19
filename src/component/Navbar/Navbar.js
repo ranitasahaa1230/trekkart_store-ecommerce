@@ -2,7 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
-import { useData } from "../../contexts";
+import { useAuth, useData } from "../../contexts";
+import { FaAngleRight } from "react-icons/fa";
 
 export function Navbar() {
   const {
@@ -10,13 +11,15 @@ export function Navbar() {
     dispatch,
   } = useData();
   const { pathname } = useLocation();
+  const {
+    state: { isAuth, user },
+  } = useAuth();
 
   return (
-    <div>
       <header>
         <div id="menu-bar" className="fas fa-bars menu-bar"></div>
         <div className="logo-header">
-        <img src={logo} alt="logo" className="logo-design" />
+          <img src={logo} alt="logo" className="logo-design" />
           <Link to="/" className="logo">
             Trekkart Stores
           </Link>
@@ -50,26 +53,39 @@ export function Navbar() {
         )}
 
         <div className="font-icons">
-          <Link to="/login">
-            <span className="badges-container">
-              <i className="fas fa-user"></i>
-            </span>
-          </Link>
+          <span className="font__icons__span">
+            <Link to="/wishlist">
+              <span className="badges-container">
+                <i className="fas fa-heart"></i>
+                <span className="badge-number">{wishList.length}</span>
+              </span>
+            </Link>
 
-          <Link to="/wishlist">
-            <span className="badges-container">
-              <i className="fas fa-heart"></i>
-              <span className="badge-number">{wishList.length}</span>
-            </span>
-          </Link>
-          <Link to="/cart">
-            <span className="badges-container">
-              <i className="fas fa-shopping-cart"></i>
-              <span className="badge-number">{cart.length}</span>
-            </span>
-          </Link>
+            <Link to="/cart">
+              <span className="badges-container">
+                <i className="fas fa-shopping-cart"></i>
+                <span className="badge-number">{cart.length}</span>
+              </span>
+            </Link>
+          </span>
+
+          {isAuth ? (
+            <Link to="/userProfile" className="header__icons">
+              <span className="header__user">
+                {user?.firstName}
+                <FaAngleRight size={22} />
+              </span>
+              <button id="header__logout" className="header__logout">View Profile</button>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <div className="header__icons">
+                <i className="fa-solid fa-user"></i>
+                <span className="font__icons">LOGIN</span>
+              </div>
+            </Link>
+          )}
         </div>
       </header>
-    </div>
   );
 }
