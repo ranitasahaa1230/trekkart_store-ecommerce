@@ -22,13 +22,21 @@ export const productReducer = (state, action) => {
       //     },
       //   };
     case INCLUDE_JACKETS:
-      return { ...state, includeJackets: !state.includeJackets };
+      return { ...state, includeJackets: !state.includeJackets, 
+        // includeBags:false,includeShoes:false, includeSuitcase:false
+      };
     case INCLUDE_BAGS:
-      return { ...state, includeBags: !state.includeBags };
+      return { ...state, includeBags: !state.includeBags, 
+        // includeJackets:false,includeShoes:false, includeSuitcase:false
+      };
     case INCLUDE_SHOES:
-      return { ...state, includeShoes: !state.includeShoes };
+      return { ...state, includeShoes: !state.includeShoes,
+        // includeBags:false,includeJackets:false, includeSuitcase:false
+      };
     case INCLUDE_SUITCASE:
-      return { ...state, includeSuitcase: !state.includeSuitcase };
+      return { ...state, includeSuitcase: !state.includeSuitcase,
+        // includeBags:false,includeShoes:false, includeJackets:false
+      };
     // case "FILTER_BY_CATEGORY":
     //   return {
     //     ...state,
