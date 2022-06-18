@@ -116,3 +116,19 @@ b{
 .update-red{
     color: var(--wishlist);
 }
+
+.address-contain{
+    max-width: 60rem;
+    margin: 2.2rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 var(--primary-color);
+    position: relative;
+}
+
+.address-form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
