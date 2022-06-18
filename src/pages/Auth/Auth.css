@@ -1,14 +1,14 @@
 .form-login{
-  min-height: calc(100vh - 200px);
-  margin-bottom: 14rem;
+  min-height: calc(100vh-180px);
+  margin-bottom: 14.5rem;
 }
 .form-box {
     width: 100%;
     max-width: 50rem;
     position: relative;
-    padding: 12px 0;
-    top: 8rem;
-    margin: 5rem auto;
+    padding: 5.5px 0;
+    top: 5rem;
+    margin: 6rem auto;
     border-radius: 1rem;
     box-shadow: 0 0 10px 0 var(--primary-color);
   }
@@ -18,7 +18,7 @@
     position: relative;
   }
   .toggle-btn {
-    padding: 8px 0;
+    padding: 5px 0;
     color: var(--primary-color);
     font-size: 2.5rem;
   }
@@ -56,8 +56,8 @@
     width: 35rem;
     display: block;
     cursor: pointer;
-    padding: 8px 3rem;
-    margin: 1rem 4.5rem !important;
+    padding: 6px 3rem;
+    margin: 0.5rem 4.5rem !important;
     background: var(--primary-color);
     border: 0;
     outline: none;

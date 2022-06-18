@@ -50,7 +50,7 @@ export function CartPrice() {
           </div>
 
           <div>
-            <Link to="#">
+            <Link to="/address">
               <button className="btn btn-text-icon-primary grid-cards-icons details-icon">
                 PLACE ORDER
               </button>
