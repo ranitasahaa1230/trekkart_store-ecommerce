@@ -1,14 +1,13 @@
-.order-container{
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    height: 100vh;    
+.order-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 100vh;
 }
 
-.cart-head{
-    margin-top: 15rem;
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--black-bg);
-  }
-
+.cart-head {
+  margin-top: 25rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--black-bg);
+}

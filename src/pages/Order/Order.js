@@ -10,17 +10,15 @@ export const Order = () => {
 
   return (
     <>
-        <div className="cart-section">
-          <div className="order-container">
-            <h3 className="cart-head">Yayyy, Order Placed Successfully !🎉</h3>
-            <button
-              className="submit-loginbtn"
-              onClick={handleConitnueShopping}
-            >
-              Continue Shopping
-            </button>
-          </div>
+      <div className="cart-section">
+        <div className="order-container">
+          <img src="" />
+          <h3 className="cart-head">Yayyy, Order Placed Successfully !🎉</h3>
+          <button className="submit-loginbtn" onClick={handleConitnueShopping}>
+            Continue Shopping
+          </button>
         </div>
+      </div>
       <Confetti />
     </>
   );

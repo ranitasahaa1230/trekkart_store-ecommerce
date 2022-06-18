@@ -36,7 +36,7 @@ export function CartPrice() {
       key: "rzp_test_VSdp7X3K39GwBK",
       amount: (newPrice-discount) * 100,
       curreny: "INR",
-      name: "Trekkart Store",
+      name: "Trekkart Stores",
       description: "Thank you for shopping with us.",
       
 
