@@ -1,0 +1,14 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 100vh;    
+}
+
+.cart-head{
+    /* margin-top: 20rem; */
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--black-bg);
+  }
+
