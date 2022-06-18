@@ -38,8 +38,7 @@ export function CartPrice() {
       curreny: "INR",
       name: "Trekkart Store",
       description: "Thank you for shopping with us.",
-      image:
-        "https://therightfit.netlify.app/assets/The%20Right%20Fit-logos.jpeg",
+      
 
       handler: ({ payment_id }) => {
         // cartDispatch({ type: "CLEAR_CART" });
