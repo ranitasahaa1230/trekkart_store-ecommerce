@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useData } from "../../contexts";
+import {  useData } from "../../contexts";
 import { useToast } from "../../hooks";
 import { getPriceDetails } from "../../utilities";
 
@@ -30,17 +30,19 @@ export function CartPrice() {
 
     if (!response) {
       showToast("error", "Razorpay SDK failed to load");
+      return;
     }
 
     const options = {
-      key: "rzp_test_VSdp7X3K39GwBK",
+      key: "rzp_test_Q4WcLMWlIe6qSa",
       amount: (newPrice-discount) * 100,
       curreny: "INR",
       name: "Trekkart Store",
       description: "Thank you for shopping with us.",
-      
+      image:
+        "logo",
 
-      handler: ({ payment_id }) => {
+      handler: ({ razorpay_payment_id }) => {
         // cartDispatch({ type: "CLEAR_CART" });
         navigate("/order");
       },
@@ -97,7 +99,7 @@ export function CartPrice() {
           {pathname === "/cart" && (
             <Link to="/address">
               <button className="btn btn-text-icon-primary grid-cards-icons details-icon">
-                PLACE ORDER
+                CHECKOUT
               </button>
             </Link>
           )}
@@ -107,7 +109,7 @@ export function CartPrice() {
               className="btn btn-text-icon-primary grid-cards-icons details-icon"
               onClick={displayRazorpay}
             >
-              CHECKOUT
+              PLACE ORDER
             </button>
           )}
         </div>
