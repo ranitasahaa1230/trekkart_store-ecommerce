@@ -11,6 +11,9 @@ import {
   Wishlist,
   Login,
   SignUp,
+  Address,
+  Checkout,
+  Order,
 } from "../pages";
 import { RequireAuth } from "../component";
 
@@ -52,6 +55,30 @@ export const NavigationRoutes = () => {
           element={
             <RequireAuth>
               <UserProfile />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/address"
+          element={
+            <RequireAuth>
+              <Address />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        />
+         <Route
+          path="/order"
+          element={
+            <RequireAuth>
+              <Order />
             </RequireAuth>
           }
         />
