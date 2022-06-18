@@ -1,13 +1,34 @@
 .order-container {
   display: flex;
-  flex-direction: column;
-  place-items: center;
+  align-items: center;
   height: 100vh;
+  justify-content: center;
 }
 
 .cart-head {
-  margin-top: 25rem;
   text-align: center;
   font-size: 2.5rem;
   color: var(--black-bg);
+}
+
+.order-container img {
+  height: 60%;
+  margin: 2rem;
+  border-radius: 2rem;
+}
+
+@media (max-width: 1251px) {
+  .order-container {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .cart-head {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-container img {
+    height: 40%;
+  }
 }

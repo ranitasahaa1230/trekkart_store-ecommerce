@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Confetti from "react-confetti";
+import order from "../../assets/images/order.png";
 import "./Order.css";
 
 export const Order = () => {
@@ -9,17 +10,17 @@ export const Order = () => {
   };
 
   return (
-    <>
-      <div className="cart-section">
-        <div className="order-container">
-          <img src="" />
-          <h3 className="cart-head">Yayyy, Order Placed Successfully !🎉</h3>
+    <div className="cart-section">
+      <div className="order-container">
+        <img src={order} alt="order-placed" />
+        <div className="cart-head">
+          <h2 className="cart-heads">Yayyy, Order Placed Successfully !🎉</h2>
           <button className="submit-loginbtn" onClick={handleConitnueShopping}>
             Continue Shopping
           </button>
         </div>
       </div>
       <Confetti />
-    </>
+    </div>
   );
 };
