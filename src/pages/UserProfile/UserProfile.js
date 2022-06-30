@@ -23,7 +23,7 @@ export function UserProfile() {
   return (
     <div className="wishlist-section">
     <div className="profile__details">
-    <div className="details">Account Details</div>
+    <h1 className="details-acc">Account Details</h1>
     <div className="box__page">
       <div className="profile__account">Your Profile</div>
       <div className="label__block">

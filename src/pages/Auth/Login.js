@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts";
 import { useDocumentTitle, useToast } from "../../hooks";
@@ -8,7 +8,7 @@ import "./Auth.css";
 export function Login() {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const[loginForm, setLoginForm] = useState({
+  const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
   });
@@ -17,7 +17,6 @@ export function Login() {
   const { dispatch } = useAuth();
   const { showToast } = useToast();
   useDocumentTitle("Login");
-
 
   const handleFormHandler = async (event) => {
     event.preventDefault();
@@ -28,13 +27,13 @@ export function Login() {
       localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("token", encodedToken);
       if (location.state !== null) {
-        navigate(location?.state?.from?.pathname);
+        navigate(location.state?.from?.pathname);
       } else {
         navigate("/");
       }
-      showToast("Logged In!", "success");
+      showToast("success","Logged In!");
     } catch (error) {
-      showToast("error",error.response.data.errors[0]);
+      showToast("error", error.response.data.errors[0]);
       setError("Email or password is incorrect");
     }
   };
@@ -49,56 +48,62 @@ export function Login() {
           <div id="btn"></div>
           <h3 className="toggle-btn">LOGIN</h3>
         </div>
-        <form
-          className="input-group login"
-          onSubmit={handleFormHandler}
-        >
+        <form className="input-group login" onSubmit={handleFormHandler}>
           <label className="password-label" htmlFor="mail">
             Email Address
           </label>
           <input
-            type="text" id="inputbox"
+            type="text"
+            id="inputbox"
             className="input-fields"
             placeholder="test@gmail.com"
             value={loginForm.email}
             onChange={(e) =>
-                setLoginForm((form) => ({ ...form, email: e.target.value }))
-              }
+              setLoginForm((form) => ({ ...form, email: e.target.value }))
+            }
             required
           />
           <label className="password-label">Password</label>
           <div className="visibility">
-          <input
-            type={showPassword ? "text" : "password"}
-            className="visibility-fields"
-            placeholder="test1234"
-            autoComplete="off"
-            value={loginForm.password}
-            onChange={(e) =>
+            <input
+              type={showPassword ? "text" : "password"}
+              className="visibility-fields"
+              placeholder="test1234"
+              autoComplete="off"
+              value={loginForm.password}
+              onChange={(e) =>
                 setLoginForm((form) => ({ ...form, password: e.target.value }))
               }
-            required
-          />
-           {
-            <span
-              className="visibility-icon"
-              onClick={() => setShowPassword((showPassword) => !showPassword)}
-            >
-              {showPassword ? <i className="fa-solid fa-eye"></i> : <i className="fa-solid fa-eye-slash"></i>}
-            </span>
-          }
+              required
+            />
+            {
+              <span
+                className="visibility-icon"
+                onClick={() => setShowPassword((showPassword) => !showPassword)}
+              >
+                {showPassword ? (
+                  <i className="fa-solid fa-eye-slash"></i>
+                ) : (
+                  <i className="fa-solid fa-eye"></i>
+                )}{" "}
+              </span>
+            }
           </div>
           <div>
             <div className="checkbox-block">
-              <input type="checkbox" className="check-box" />
+              <input type="checkbox" className="check-box" checked />
               <span className="check-psswd">Remember Me</span>
-              <Link to="/">
+              {/* <Link to="/">
                 <span className="forget-psswd" onClick={() => navigate("/forgetPwd")}>Forgot Your Password?</span>
-              </Link>
+              </Link> */}
             </div>
-            <button type="submit" className="submit-loginbtns" onClick={() => {
-              loginHandler();
-            }}>
+            <button
+              type="submit"
+              className="submit-loginbtns"
+              onClick={() => {
+                loginHandler();
+              }}
+            >
               Login with Test Credentials
             </button>
             <button type="submit" className="submit-loginbtn">
@@ -106,11 +111,11 @@ export function Login() {
             </button>
 
             {error && (
-          <div className="login-error-msg">
-          <i className="fa-solid fa-square-xmark"></i>
-            <p>{error}</p>
-          </div>
-        )}
+              <div className="login-error-msg">
+                <i className="fa-solid fa-square-xmark"></i>
+                <p>{error}</p>
+              </div>
+            )}
 
             <div className="input-account">
               Not a user yet?

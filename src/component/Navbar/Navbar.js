@@ -19,7 +19,9 @@ export function Navbar() {
       <header>
         <div id="menu-bar" className="fas fa-bars menu-bar"></div>
         <div className="logo-header">
+        <Link to="/">
           <img src={logo} alt="logo" className="logo-design" />
+          </Link>
           <Link to="/" className="logo">
             Trekkart Stores
           </Link>

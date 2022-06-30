@@ -264,7 +264,7 @@ export function Category() {
         </div>
       </section>
 
-      <section className="newsletter" id="newsletter">
+      {/* <section className="newsletter" id="newsletter">
         <div className="content">
           <h2 className="heading">Monthly Newsletter</h2>
           <p>
@@ -283,7 +283,7 @@ export function Category() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

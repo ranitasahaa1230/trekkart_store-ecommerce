@@ -109,9 +109,7 @@ section {
     width: 100%;
     background: var(--bg-code);
   }
-  div .font-icons {
-    display: none;
-  }
+ 
   header .navbar.active {
     left: 0;
   }
